@@ -1,0 +1,216 @@
+
+import React from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Layout from "@/components/layout/Layout";
+
+const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    alert("Form submitted! This is a demo - no actual submission occurs.");
+  };
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 bg-ecomotech-dark-blue text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Contact Us</h1>
+            <p className="text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
+              Have questions about our products or services? Get in touch with our team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
+                <Phone className="h-6 w-6 text-ecomotech-green" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Phone</h3>
+              <a href="tel:18810799128" className="text-gray-600 hover:text-ecomotech-green transition-colors">
+                18810799128
+              </a>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
+                <Mail className="h-6 w-6 text-ecomotech-green" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <a href="mailto:ecomotech@outlook.com" className="text-gray-600 hover:text-ecomotech-green transition-colors">
+                ecomotech@outlook.com
+              </a>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
+                <MapPin className="h-6 w-6 text-ecomotech-green" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Address</h3>
+              <p className="text-gray-600">
+                123 Green Energy Street<br />
+                Renewable City, 10001
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
+                <Clock className="h-6 w-6 text-ecomotech-green" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Business Hours</h3>
+              <p className="text-gray-600">
+                Monday - Friday: 9AM - 6PM<br />
+                Saturday: 10AM - 4PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 bg-ecomotech-gray">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+              <div className="w-24 h-1 bg-ecomotech-green mb-6"></div>
+              <p className="text-gray-700 mb-8">
+                We'd love to hear from you. Fill out the form below and our team will get back to you as soon as possible.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                      Name
+                    </label>
+                    <Input 
+                      id="name" 
+                      name="name" 
+                      placeholder="Your name" 
+                      required 
+                      className="w-full"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                      Email
+                    </label>
+                    <Input 
+                      id="email" 
+                      name="email" 
+                      type="email" 
+                      placeholder="Your email" 
+                      required 
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                    Subject
+                  </label>
+                  <Input 
+                    id="subject" 
+                    name="subject" 
+                    placeholder="Subject of your message" 
+                    required 
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                    Message
+                  </label>
+                  <Textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Your message" 
+                    required 
+                    className="w-full min-h-[150px]"
+                  />
+                </div>
+
+                <Button type="submit" className="bg-ecomotech-green hover:bg-ecomotech-dark-green text-white px-8 py-6">
+                  Send Message
+                </Button>
+              </form>
+            </div>
+
+            <div>
+              <div className="h-full min-h-[400px] md:min-h-0 bg-gray-300 rounded-lg overflow-hidden shadow-md">
+                {/* Replace with actual Google Map integration or a map image */}
+                <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://maps.googleapis.com/maps/api/staticmap?center=40.7128,-74.0060&zoom=13&size=600x600&markers=color:green%7C40.7128,-74.0060&key=YOUR_API_KEY')" }}>
+                  <div className="w-full h-full flex items-center justify-center bg-ecomotech-dark-blue bg-opacity-50">
+                    <p className="text-white text-center px-4">
+                      Map visualization placeholder.<br/>
+                      In a real implementation, this would be an interactive Google Map.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <div className="w-24 h-1 bg-ecomotech-blue mx-auto mb-6"></div>
+            <p className="max-w-2xl mx-auto text-lg text-gray-600">
+              Find answers to the most common questions about our products and services.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-6">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">What types of solar panels do you offer?</h3>
+                <p className="text-gray-600">
+                  Ecomotech offers a wide range of solar panels including monocrystalline, polycrystalline, and thin-film panels. Our product line caters to various needs, from residential installations to commercial and industrial applications.
+                </p>
+              </div>
+              
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">How long do solar panels typically last?</h3>
+                <p className="text-gray-600">
+                  Our solar panels are designed for durability and longevity. Most Ecomotech panels come with a 25-year performance warranty and can continue producing electricity for 30+ years, though efficiency may gradually decrease over time.
+                </p>
+              </div>
+              
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">Do you provide installation services?</h3>
+                <p className="text-gray-600">
+                  Yes, Ecomotech offers professional installation services through our network of certified installation partners. We handle everything from initial site assessment to final system commissioning to ensure optimal performance.
+                </p>
+              </div>
+              
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">What financing options are available?</h3>
+                <p className="text-gray-600">
+                  We offer various financing options including direct purchase, leasing, and power purchase agreements (PPAs). Our team can help determine the best financing solution based on your specific needs and circumstances.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Contact;
