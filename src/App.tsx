@@ -10,6 +10,7 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
+import JoinUs from "./pages/JoinUs";
 import SolarProducts from "./components/products/SolarProducts";
 import SolarInverters from "./components/products/SolarInverters";
 import HomeSystems from "./components/products/HomeSystems";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/products/electric-tricycles" element={<ElectricTricycles />} />
           <Route path="/products/ev-chargers" element={<EVChargers />} />
           <Route path="/news" element={<News />} />
+          <Route path="/join-us" element={<JoinUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
