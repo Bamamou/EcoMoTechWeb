@@ -1,22 +1,21 @@
-
-import React from "react";
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Calendar, ArrowRight, Search } from "lucide-react";
+import { Calendar, ArrowRight, Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Layout from "@/components/layout/Layout";
 
-const newsItems = [
+export const newsItems = [
   {
     id: 1,
     title: "Ecomotech Launches New High-Efficiency Solar Panel Series",
     excerpt: "Our latest solar panel technology achieves record-breaking efficiency rates, making solar energy more accessible and affordable than ever before.",
-    content: "Ecomotech is proud to announce the launch of our latest innovation in solar technology: the EcoMax Pro series. These panels achieve a remarkable 23% efficiency rate, setting a new standard in the industry. The EcoMax Pro series features our proprietary cell structure that maximizes sunlight capture even in low-light conditions, ensuring optimal performance year-round.\n\nThis breakthrough is the result of three years of intensive R&D by our engineering team, combining cutting-edge materials science with advanced manufacturing techniques. The new panels are not only more efficient but also more durable, with an expected lifespan exceeding 30 years under normal operating conditions.\n\n'We believe the EcoMax Pro series represents a significant step forward in making solar energy more accessible and cost-effective,' said Sarah Rodriguez, Chief Technology Officer at Ecomotech. 'By increasing efficiency while maintaining competitive pricing, we're helping customers achieve faster returns on their renewable energy investments.'",
-    date: "April 10, 2023",
+    content: "Ecomotech is proud to announce the launch of our latest innovation in solar technology...",
+    date: "April 15, 2024",
     author: "David Chen",
     category: "Product News",
     image: "https://images.unsplash.com/photo-1497440001736-76dde04f31b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
-    link: "/news/1"
+    link: "/news/new-solar-panel-series"
   },
   {
     id: 2,
@@ -27,7 +26,7 @@ const newsItems = [
     author: "Michael Johnson",
     category: "Company News",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
-    link: "/news/2"
+    link: "/news/distribution-center"
   },
   {
     id: 3,
@@ -38,7 +37,7 @@ const newsItems = [
     author: "Emma Nelson",
     category: "Projects",
     image: "https://images.unsplash.com/photo-1534949522533-7c851c1bc891?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
-    link: "/news/3"
+    link: "/news/remote-communities"
   },
   {
     id: 4,
@@ -49,7 +48,7 @@ const newsItems = [
     author: "Dr. James Williams",
     category: "Research & Development",
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
-    link: "/news/4"
+    link: "/news/research-partnership"
   },
   {
     id: 5,
@@ -60,7 +59,7 @@ const newsItems = [
     author: "Elena Gomez",
     category: "Sustainability",
     image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1141&q=80",
-    link: "/news/5"
+    link: "/news/sustainability-report"
   },
   {
     id: 6,
@@ -71,21 +70,79 @@ const newsItems = [
     author: "Robert Kim",
     category: "Case Studies",
     image: "https://images.unsplash.com/photo-1611365892117-00ac5ef44f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80",
-    link: "/news/6"
+    link: "/news/street-lighting"
+  },
+  {
+    id: 7,
+    title: "Revolutionizing Transportation: Electric Mobility Takes Root in Africa",
+    excerpt: "Ecomotech's electric motorcycle and tricycle initiatives are transforming urban mobility across major African cities, reducing emissions and creating sustainable transportation solutions.",
+    content: "Ecomotech's pioneering electric mobility program has reached a significant milestone in its African expansion, with over 1,000 electric motorcycles and tricycles now operating across five major cities. This initiative is reshaping urban transportation while addressing environmental concerns and economic opportunities for local communities.\n\nThe program has created over 500 direct jobs and reduced carbon emissions by an estimated 1,200 tons annually. Our vehicles are specifically designed to handle local conditions and are supported by our growing network of charging stations and service centers.",
+    date: "October 15, 2022",
+    author: "Marcus Adebayo",
+    category: "Electric Mobility",
+    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    link: "/news/electric-mobility-africa"
+  },
+  {
+    id: 8,
+    title: "Expanding EV Charging Infrastructure Across African Cities",
+    excerpt: "Ecomotech announces comprehensive plan to install 200 solar-powered EV charging stations across major African urban centers, supporting the growing electric vehicle ecosystem.",
+    content: "In a landmark move for sustainable transportation in Africa, Ecomotech has unveiled plans to install 200 solar-powered EV charging stations across major urban centers. This initiative represents the largest electric vehicle charging infrastructure project in the region to date.\n\nThe charging stations will be powered by our high-efficiency solar panels and equipped with energy storage systems, ensuring reliable charging capability even during grid outages. The first phase of installations will focus on major metropolitan areas, with expansion plans for secondary cities and intercity corridors.",
+    date: "September 28, 2022",
+    author: "Sarah Okonjo",
+    category: "Infrastructure",
+    image: "https://images.unsplash.com/photo-1615228939096-9530e0016767?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    link: "/news/ev-charging-africa"
   }
 ];
 
-const categories = [
-  "All Categories",
-  "Product News",
-  "Company News",
-  "Projects",
-  "Research & Development",
-  "Sustainability",
-  "Case Studies"
-];
+const News = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const itemsPerPage = 4;
 
-const NewsPage = () => {
+  // Filter news items based on search query and selected category
+  const filteredNews = useMemo(() => {
+    return newsItems.filter((item) => {
+      const matchesSearch = 
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.author.toLowerCase().includes(searchQuery.toLowerCase());
+
+      const matchesCategory = 
+        selectedCategory === "All Categories" || 
+        item.category === selectedCategory;
+
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchQuery, selectedCategory]);
+
+  // Calculate pagination
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredNews.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+
+  // Reset to first page when search changes
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1);
+  };
+
+  // Handle category selection
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1); // Reset to first page when changing category
+  };
+
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0); // Scroll to top when changing pages
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -93,7 +150,7 @@ const NewsPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Company News</h1>
-            <p className="text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <p className="text-xl opacity-90 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Stay updated with the latest developments, innovations, and announcements from Ecomotech.
             </p>
           </div>
@@ -104,98 +161,18 @@ const NewsPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
-            {/* Main Content */}
-            <div className="lg:w-2/3">
-              <div className="space-y-12">
-                {newsItems.map((item) => (
-                  <article key={item.id} className="bg-ecomotech-light-gray rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                    <div className="md:flex">
-                      <div className="md:w-1/3">
-                        <div className="h-64 md:h-full overflow-hidden">
-                          <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
-                        </div>
-                      </div>
-                      <div className="md:w-2/3 p-6 md:p-8">
-                        <div className="flex flex-wrap items-center text-gray-500 text-sm mb-3 gap-4">
-                          <div className="flex items-center">
-                            <Calendar className="h-4 w-4 mr-2" />
-                            <span>{item.date}</span>
-                          </div>
-                          <div>
-                            <span className="bg-ecomotech-green bg-opacity-10 text-ecomotech-dark-green px-3 py-1 rounded-full">
-                              {item.category}
-                            </span>
-                          </div>
-                        </div>
-                        <h2 className="text-2xl font-bold mb-4 hover:text-ecomotech-green transition-colors">
-                          <Link to={item.link}>{item.title}</Link>
-                        </h2>
-                        <p className="text-gray-600 mb-6">{item.excerpt}</p>
-                        <Link 
-                          to={item.link} 
-                          className="inline-flex items-center text-ecomotech-blue hover:text-ecomotech-dark-blue font-medium"
-                        >
-                          <span>Read Full Story</span>
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-
-              {/* Pagination */}
-              <div className="mt-12 flex justify-center">
-                <nav className="inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                  <a
-                    href="#"
-                    className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-ecomotech-light-gray"
-                  >
-                    <span className="sr-only">Previous</span>
-                    <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-current="page"
-                    className="relative inline-flex items-center px-4 py-2 border border-ecomotech-green bg-ecomotech-green bg-opacity-10 text-sm font-medium text-ecomotech-green"
-                  >
-                    1
-                  </a>
-                  <a
-                    href="#"
-                    className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-ecomotech-light-gray"
-                  >
-                    2
-                  </a>
-                  <a
-                    href="#"
-                    className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-ecomotech-light-gray"
-                  >
-                    <span className="sr-only">Next</span>
-                    <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </nav>
-              </div>
-            </div>
-
             {/* Sidebar */}
             <div className="lg:w-1/3">
               {/* Search */}
               <div className="bg-ecomotech-light-gray p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-4">Search News</h3>
                 <div className="relative">
-                  <Input 
-                    type="text" 
-                    placeholder="Search..." 
+                  <Input
+                    type="text"
+                    placeholder="Search..."
                     className="pr-10"
+                    value={searchQuery}
+                    onChange={handleSearch}
                   />
                   <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                 </div>
@@ -205,18 +182,18 @@ const NewsPage = () => {
               <div className="bg-ecomotech-light-gray p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2">
-                  {categories.map((category, index) => (
-                    <li key={index}>
-                      <a 
-                        href="#" 
-                        className={`block px-3 py-2 rounded-md transition-colors ${
-                          index === 0 ? 
-                          'bg-ecomotech-green text-white' : 
-                          'hover:bg-white hover:text-ecomotech-green'
+                  {["All Categories", "Product News", "Company News", "Projects", "Research & Development", "Sustainability", "Case Studies", "Electric Mobility", "Infrastructure"].map((category) => (
+                    <li key={category}>
+                      <button
+                        onClick={() => handleCategoryClick(category)}
+                        className={`w-full text-left block px-3 py-2 rounded-md transition-colors ${
+                          selectedCategory === category
+                            ? 'bg-ecomotech-green text-white'
+                            : 'hover:bg-white hover:text-ecomotech-green'
                         }`}
                       >
                         {category}
-                      </a>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -229,9 +206,9 @@ const NewsPage = () => {
                   Stay informed with our latest news, product updates, and industry insights.
                 </p>
                 <div className="space-y-4">
-                  <Input 
-                    type="email" 
-                    placeholder="Your email address" 
+                  <Input
+                    type="email"
+                    placeholder="Your email address"
                     className="bg-white text-gray-800"
                   />
                   <Button className="w-full bg-white hover:bg-gray-100 text-ecomotech-green">
@@ -240,6 +217,98 @@ const NewsPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* Main Content */}
+            <div className="lg:w-2/3">
+              {filteredNews.length === 0 ? (
+                <div className="text-center py-12">
+                  <p className="text-gray-600">No results found for "{searchQuery}"</p>
+                </div>
+              ) : (
+                <>
+                  <div className="space-y-8">
+                    {currentItems.map((item) => (
+                      <article key={item.id} className="bg-ecomotech-light-gray rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
+                        <div className="flex flex-col md:flex-row">
+                          <div className="md:w-1/3">
+                            <div className="h-64 md:h-full overflow-hidden">
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              />
+                            </div>
+                          </div>
+                          <div className="md:w-2/3 p-6 md:p-8">
+                            <div className="flex flex-wrap items-center text-gray-500 text-sm mb-3 gap-4">
+                              <div className="flex items-center">
+                                <Calendar className="h-4 w-4 mr-2" />
+                                <span>{item.date}</span>
+                              </div>
+                              <div>
+                                <span className="bg-ecomotech-green bg-opacity-10 text-ecomotech-dark-green px-3 py-1 rounded-full">
+                                  {item.category}
+                                </span>
+                              </div>
+                            </div>
+                            <h2 className="text-2xl font-bold mb-4 hover:text-ecomotech-green transition-colors">
+                              <Link
+                                to={item.link}
+                                className="hover:text-ecomotech-blue transition-colors"
+                              >
+                                {item.title}
+                              </Link>
+                            </h2>
+                            <p className="text-gray-600 mb-6">{item.excerpt}</p>
+                            <Link
+                              to={item.link}
+                              className="inline-flex items-center text-ecomotech-blue hover:text-ecomotech-dark-blue font-medium"
+                            >
+                              <span>Read Full Story</span>
+                              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </Link>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+
+                  {/* Pagination */}
+                  {totalPages > 1 && (
+                    <div className="flex justify-center items-center gap-2 mt-12">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => paginate(currentPage - 1)}
+                        disabled={currentPage === 1}
+                      >
+                        <ChevronLeft className="h-4 w-4" />
+                      </Button>
+
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
+                        <Button
+                          key={number}
+                          variant={currentPage === number ? "default" : "outline"}
+                          onClick={() => paginate(number)}
+                          className="w-10"
+                        >
+                          {number}
+                        </Button>
+                      ))}
+
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => paginate(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -247,4 +316,4 @@ const NewsPage = () => {
   );
 };
 
-export default NewsPage;
+export default News;

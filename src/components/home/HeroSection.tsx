@@ -1,9 +1,11 @@
-
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative h-screen flex items-center">
       {/* Background with overlay */}
@@ -21,10 +23,17 @@ const HeroSection = () => {
             Ecomotech delivers innovative solar power solutions that help businesses and homeowners reduce their carbon footprint while saving on energy costs.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-            <Button className="bg-ecomotech-green hover:bg-ecomotech-dark-green text-white px-8 py-6 text-lg">
+            <Button 
+              onClick={() => navigate('/products')}
+              className="bg-ecomotech-green hover:bg-ecomotech-dark-green text-white px-8 py-6 text-lg"
+            >
               Explore Products
             </Button>
-            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg">
+            <Button 
+              onClick={() => navigate('/contact')}
+              variant="outline" 
+              className="bg-transparent border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg"
+            >
               <span>Contact Us</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

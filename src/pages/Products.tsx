@@ -28,7 +28,43 @@ const ProductsPage = () => {
               Discover our comprehensive range of solar power products designed for efficiency, durability, and performance.
             </p>
           </div>
-          <SolarProducts />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link to="/products/solar-panels" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                alt="Solar Panels"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Solar Panels</h3>
+                <p className="text-gray-600">High-efficiency solar panels for residential and commercial use.</p>
+              </div>
+            </Link>
+
+            <Link to="/products/solar-inverters" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1592833159117-ac790d4066e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                alt="Solar Inverters"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Solar Inverters</h3>
+                <p className="text-gray-600">Advanced inverter technology for optimal power conversion.</p>
+              </div>
+            </Link>
+
+            <Link to="/products/home-systems" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                alt="Home Systems"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Home Systems</h3>
+                <p className="text-gray-600">Complete solar solutions for residential applications.</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -86,7 +122,6 @@ const ProductsPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 bg-ecomotech-green text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
