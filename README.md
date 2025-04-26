@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# Ecomotech Solar Solutions
 
-## Project info
+A modern web application showcasing renewable energy and electric mobility solutions, built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/63cc79eb-c00d-4e37-a775-c642f932247a
+## Overview
 
-## How can I edit this code?
+Ecomotech Solar Solutions is a comprehensive platform that presents sustainable energy products and solutions including:
+- Solar Energy Solutions (panels, inverters, home systems)
+- Electric Mobility Products (motorcycles, tricycles, charging stations)
+- Smart Energy Management Systems
+- Renewable Energy Infrastructure
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Responsive Design**: Fully responsive interface that works seamlessly across desktop, tablet, and mobile devices
+- **Modern UI**: Clean and professional design with smooth animations and transitions
+- **Product Showcase**: Detailed product pages with comprehensive information
+- **News Section**: Latest updates about company developments and industry news
+- **Interactive Components**: Dynamic navigation and user-friendly interface
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/63cc79eb-c00d-4e37-a775-c642f932247a) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend Framework**: React 18
+- **Type Safety**: TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router v6
+- **State Management**: React Query
+- **UI Components**: Radix UI with custom styling
+- **Icons**: Lucide React
+- **Build Tool**: Vite
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/eco-tech-solar-site.git
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Navigate to the project directory:
+```bash
+cd eco-tech-solar-site
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. Open your browser and visit `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+eco-tech-solar-site/
+├── src/
+│   ├── components/
+│   │   ├── home/           # Home page components
+│   │   ├── layout/         # Layout components
+│   │   ├── products/       # Product-related components
+│   │   └── ui/            # Reusable UI components
+│   ├── pages/
+│   │   ├── articles/      # News article pages
+│   │   └── ...           # Other page components
+│   ├── styles/           # Global styles
+│   └── App.tsx          # Main application component
+├── public/             # Static assets
+└── package.json       # Project dependencies
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Available Scripts
 
-## What technologies are used for this project?
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The site can be deployed to any static hosting platform (Vercel, Netlify, etc.). Build the project using:
 
-## How can I deploy this project?
+```bash
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/63cc79eb-c00d-4e37-a775-c642f932247a) and click on Share -> Publish.
+The built files will be in the `dist` directory.
 
-## Can I connect a custom domain to my Lovable project?
+## Browser Support
 
-Yes, you can!
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

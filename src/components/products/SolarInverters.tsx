@@ -1,28 +1,223 @@
 import React from "react";
 import Layout from "@/components/layout/Layout";
+import { Check } from "lucide-react";
 
 const SolarInverters = () => {
+  const inverters = [
+    {
+      name: "Growatt MIN 5000TL-X",
+      power: "5kW",
+      image: "https://images.unsplash.com/photo-1592833159117-ac790d4066e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.4%",
+        "Dual MPP trackers",
+        "Smart monitoring via app",
+        "Integrated DC switch",
+        "Wide voltage range",
+        "Compact design"
+      ],
+      description: "Perfect for residential installations, the 5kW inverter offers excellent efficiency and smart features for optimal solar power conversion."
+    },
+    {
+      name: "Growatt MAX 10KTL3-X",
+      power: "10kW",
+      image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.6%",
+        "Multiple MPP trackers",
+        "Advanced grid support",
+        "IP65 protection rating",
+        "Touch-key design",
+        "Extended warranty"
+      ],
+      description: "Ideal for commercial applications, this 10kW inverter combines high performance with advanced monitoring capabilities."
+    },
+    {
+      name: "Growatt MAX 15KTL3-X",
+      power: "15kW",
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.8%",
+        "Triple MPP trackers",
+        "Enhanced safety features",
+        "Remote monitoring",
+        "Anti-PID technology",
+        "Low voltage ride through"
+      ],
+      description: "Our premium 15kW inverter delivers exceptional performance for large commercial installations with advanced grid support features."
+    },
+    {
+      name: "Sungrow SG8.0RT",
+      power: "8kW",
+      image: "https://images.unsplash.com/photo-1522333837763-46f4df0d3020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.3%",
+        "Three MPPT channels",
+        "Built-in WiFi monitoring",
+        "Touch-free commissioning",
+        "AI-powered yield optimization",
+        "12-year warranty"
+      ],
+      description: "Sungrow's versatile 8kW inverter designed for medium-sized residential and small commercial installations."
+    },
+    {
+      name: "Sungrow SG10RT",
+      power: "10kW",
+      image: "https://images.unsplash.com/photo-1579373791421-d7c8c96464a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.5%",
+        "Four MPPT tracking",
+        "Online firmware updates",
+        "Smart I-V curve diagnosis",
+        "IP66 protection rating",
+        "Built-in PID recovery"
+      ],
+      description: "Advanced 10kW commercial inverter with cutting-edge monitoring and diagnostic capabilities."
+    },
+    {
+      name: "Sungrow SG12RT",
+      power: "12kW",
+      image: "https://images.unsplash.com/photo-1584949514490-73fc1a2d114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.7%",
+        "Five MPPT channels",
+        "Smart string monitoring",
+        "Integrated AFCI protection",
+        "DC Type II SPD protection",
+        "Low voltage ride through"
+      ],
+      description: "High-performance 12kW inverter perfect for large residential and commercial solar installations."
+    },
+    {
+      name: "Goodwe GW3000-NS",
+      power: "3kW",
+      image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 97.8%",
+        "Single MPPT tracker",
+        "Built-in WiFi/GPRS",
+        "Compact and lightweight",
+        "Modern OLED display",
+        "10-year warranty"
+      ],
+      description: "Compact and reliable 3kW inverter perfect for small residential solar installations with excellent monitoring capabilities."
+    },
+    {
+      name: "Goodwe GW6000-DT",
+      power: "6kW",
+      image: "https://images.unsplash.com/photo-1587168173357-99c139860618?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.2%",
+        "Dual MPPT trackers",
+        "Smart monitoring system",
+        "Arc fault protection",
+        "IP65 protection class",
+        "Integrated export control"
+      ],
+      description: "Versatile 6kW dual-MPPT inverter designed for medium-sized residential solar systems with advanced safety features."
+    },
+    {
+      name: "Goodwe GW10K-DT",
+      power: "10kW",
+      image: "https://images.unsplash.com/photo-1591964006776-90b32e88f5ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.4%",
+        "Dual MPPT design",
+        "Remote firmware updates",
+        "DC switch integrated",
+        "Type II SPD protection",
+        "Wide voltage range"
+      ],
+      description: "High-performance 10kW inverter suitable for larger residential and small commercial installations with comprehensive protection features."
+    },
+    {
+      name: "Ecoverter5",
+      power: "5kW",
+      image: "https://images.unsplash.com/photo-1525598912003-663126343e1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.5%",
+        "Dual MPPT channels",
+        "Smart home integration",
+        "AI-powered monitoring",
+        "Dual AC/DC protection",
+        "15-year warranty"
+      ],
+      description: "Our flagship 5kW inverter featuring smart home integration and industry-leading efficiency for residential installations."
+    },
+    {
+      name: "Ecoverter8",
+      power: "8kW",
+      image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.7%",
+        "Triple MPPT system",
+        "Cloud monitoring platform",
+        "Zero export control",
+        "Advanced grid support",
+        "IP66 protection"
+      ],
+      description: "Advanced 8kW inverter with cloud-based monitoring and superior grid integration capabilities for larger homes."
+    },
+    {
+      name: "Ecoverter10",
+      power: "10kW",
+      image: "https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      features: [
+        "Maximum efficiency of 98.9%",
+        "Quad MPPT technology",
+        "Remote diagnostics",
+        "Battery ready design",
+        "Surge protection",
+        "Smart grid ready"
+      ],
+      description: "Premium 10kW inverter with future-ready features including battery storage compatibility and smart grid integration."
+    }
+  ];
+
   return (
     <Layout>
-      <section className="py-16 bg-ecomotech-gray">
+      <section className="pt-24 pb-16 bg-ecomotech-dark-blue text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Solar Inverters</h2>
-            <div className="w-24 h-1 bg-ecomotech-blue mx-auto mb-6"></div>
-            <p className="max-w-2xl mx-auto text-lg text-gray-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Solar Inverters</h1>
+            <p className="text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
               Advanced inverter technology to convert DC electricity to usable AC power, designed for maximum efficiency and reliability.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Coming Soon Message */}
-            <div className="md:col-span-2 text-center p-12 bg-white rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold text-ecomotech-blue mb-4">Coming Soon</h3>
-              <p className="text-gray-600">
-                Our new line of high-efficiency solar inverters is currently under development. 
-                Check back soon for more information about our upcoming products.
-              </p>
-            </div>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {inverters.map((inverter, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={inverter.image} 
+                    alt={inverter.name}
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{inverter.name}</h3>
+                      <p className="text-ecomotech-green font-medium">{inverter.power}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-4">{inverter.description}</p>
+                  <div className="space-y-2">
+                    {inverter.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-gray-600">
+                        <Check className="h-5 w-5 text-ecomotech-green mr-2 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
