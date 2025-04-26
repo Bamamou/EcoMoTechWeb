@@ -55,13 +55,36 @@ const ProductsPage = () => {
 
             <Link to="/products/home-systems" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                src="/images/HomeSystem/6kW.jpg" 
                 alt="Home Systems"
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">Home Systems</h3>
                 <p className="text-gray-600">Complete solar solutions for residential applications.</p>
+              </div>
+            </Link>
+
+            <Link to="/products/street-lights" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="/images/streetlights/road.jpg" 
+                alt="Street Lights"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Street Lights</h3>
+                <p className="text-gray-600">Advanced solar-powered lighting solutions for urban and rural applications, featuring smart controls and high efficiency.</p>
+              </div>
+            </Link>
+            <Link to="/products/energy-storage" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="/images/BESS/battery system.webp" 
+                alt="Battery energy storage systems"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Battery energy storage systems</h3>
+                <p className="text-gray-600">Advanced lithium battery storage systems for residential and commercial applications.</p>
               </div>
             </Link>
           </div>
