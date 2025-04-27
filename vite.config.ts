@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     
   },
   plugins: [react()],
-  base: '/EcoMoTech-Website/', // Replace <repository-name> with your GitHub repository name
+  base: '/EcoMoTechWeb/', // Replace <repository-name> with your GitHub repository name
   resolve: {  
     alias: {
       "@": path.resolve(__dirname, "./src"),

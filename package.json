@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "url": "https://Bamamou.github.io/EcoMoTech-Website",
+  "url": "https://Bamamou.github.io/EcoMoTechWeb",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
