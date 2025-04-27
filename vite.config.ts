@@ -8,13 +8,17 @@ export default defineConfig(({ mode }) => ({
     host: true,
     port: 8080,
     open: true, // Automatically open the app in the browser
-    
   },
   plugins: [react()],
   base: '/EcoMoTechWeb/', // Replace <repository-name> with your GitHub repository name
   resolve: {  
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      crypto: "crypto-browserify",
     },
+  },
+  define: {
+    global: {},
+    "process.env": {},
   },
 }));
