@@ -23,8 +23,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/EcoMoTechWeb/assets/index-CR8BYxen.js"></script>
-    <link rel="stylesheet" crossorigin href="/EcoMoTechWeb/assets/index-DvbWc__a.css">
+
+    <script>
+      // Check if we have a saved path from 404.html
+      (function() {
+        const savedPath = localStorage.getItem('path');
+        if (savedPath) {
+          localStorage.removeItem('path');
+          if (savedPath !== window.location.pathname) {
+            window.history.replaceState(null, null, savedPath);
+          }
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/EcoMoTechWeb/assets/index-DkDHBm97.js"></script>
+    <link rel="modulepreload" crossorigin href="/EcoMoTechWeb/assets/react-vendor-B62yHdLg.js">
+    <link rel="modulepreload" crossorigin href="/EcoMoTechWeb/assets/ui-components-CM625m-7.js">
+    <link rel="modulepreload" crossorigin href="/EcoMoTechWeb/assets/utils-vendor-BTGVH9Kg.js">
+    <link rel="modulepreload" crossorigin href="/EcoMoTechWeb/assets/form-vendor-oMffXaQb.js">
+    <link rel="stylesheet" crossorigin href="/EcoMoTechWeb/assets/index-BqrmBOQF.css">
   </head>
 
   <body>
