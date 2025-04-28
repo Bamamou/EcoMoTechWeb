@@ -22,21 +22,21 @@ const products = [
     id: "home-systems",
     title: "Solar Home Systems",
     description: "Complete residential solutions for energy independence and savings.",
-    image: "/images/HomeSystem/6kW.jpg",
+    image: "/EcoMoTechWeb/images/HomeSystem/6kW.jpg",
     link: "/products/home-systems"
   },
   {
     id: "street-lights",
     title: "Solar Street Lights",
     description: "Autonomous lighting solutions for roadways, pathways, and public spaces.",
-    image:"/images/streetlights/road.jpg",
+    image:"/EcoMoTechWeb/images/streetlights/road.jpg",
     link: "/products/street-lights"
   },
   {
     id: "energy-storage",
     title: "Energy Storage Systems",
     description: "Battery solutions to store excess energy for use when needed.",
-    image: "/images/BESS/battery system.webp",
+    image: "/EcoMoTechWeb/images/BESS/battery system.webp",
     link: "/products/energy-storage"
   },
 ];

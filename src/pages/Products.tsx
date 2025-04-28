@@ -55,7 +55,7 @@ const ProductsPage = () => {
 
             <Link to="/products/home-systems" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="/images/HomeSystem/6kW.jpg" 
+                src="/EcoMoTechWeb/images/HomeSystem/6kW.jpg" 
                 alt="Home Systems"
                 className="w-full h-60 object-cover"
               />
@@ -67,7 +67,7 @@ const ProductsPage = () => {
 
             <Link to="/products/street-lights" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="/images/streetlights/road.jpg" 
+                src="/EcoMoTechWeb/images/streetlights/road.jpg" 
                 alt="Street Lights"
                 className="w-full h-60 object-cover"
               />
@@ -78,7 +78,7 @@ const ProductsPage = () => {
             </Link>
             <Link to="/products/energy-storage" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="/images/BESS/battery system.webp" 
+                src="/EcoMoTechWeb/images/BESS/battery system.webp" 
                 alt="Battery energy storage systems"
                 className="w-full h-60 object-cover"
               />

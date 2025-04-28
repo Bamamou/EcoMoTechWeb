@@ -35,7 +35,7 @@ const streetlights = [
   {
     name: "EcoLight Urban 40",
     power: "40W",
-    image: "/images/streetlights/60W.jpeg",
+    image: "/EcoMoTechWeb/images/streetlights/60W.jpeg",
     description: "Smart solar street light perfect for residential areas and walkways",
     price: "Starting from $799",
     details: {
@@ -79,7 +79,7 @@ const streetlights = [
   {
     name: "EcoLight Highway 100",
     power: "100W",
-    image: "/images/streetlights/highway.jpg",
+    image: "/EcoMoTechWeb/images/streetlights/highway.jpg",
     description: "High-performance solar street light for highways and major roads",
     price: "Starting from $1,499",
     details: {
@@ -123,7 +123,7 @@ const streetlights = [
   {
     name: "EcoLight Smart 60",
     power: "60W",
-    image: "/images/streetlights/80W.jpg",
+    image: "/EcoMoTechWeb/images/streetlights/80W.jpg",
     description: "Smart solar street light with advanced IoT features for urban applications",
     price: "Starting from $999",
     details: {
@@ -167,7 +167,7 @@ const streetlights = [
   {
     name: "EcoLight Pro 80",
     power: "80W",
-    image: "/images/streetlights/400W.jpg",
+    image: "/EcoMoTechWeb/images/streetlights/400W.jpg",
     description: "Professional-grade solar street light with enhanced durability and performance",
     price: "Starting from $1,299",
     details: {
@@ -211,7 +211,7 @@ const streetlights = [
   {
     name: "EcoLight Ultra 120",
     power: "120W",
-    image: "/images/streetlights/ultra.jpg",
+    image: "/EcoMoTechWeb/images/streetlights/ultra.jpg",
     description: "Ultra-high performance solar street light for industrial and commercial areas",
     price: "Starting from $1,899",
     details: {
@@ -255,7 +255,7 @@ const streetlights = [
   {
     name: "EcoLight Smart Plus 50",
     power: "50W",
-    image: "/images/streetlights/smart Plus.jpg",
+    image: "/EcoMoTechWeb/images/streetlights/smart Plus.jpg",
     description: "Energy-efficient smart street light with advanced connectivity features",
     price: "Starting from $899",
     details: {
@@ -299,7 +299,7 @@ const streetlights = [
   {
     name: "EcoLight Premium 150",
     power: "150W",
-    image: "/images/streetlights/school.jpg",
+    image: "/EcoMoTechWeb/images/streetlights/school.jpg",
     description: "Premium high-output solar street light for large commercial areas and highways",
     price: "Starting from $2,299",
     details: {
@@ -343,7 +343,7 @@ const streetlights = [
   {
     name: "EcoLight Solar Max 200",
     power: "200W",
-    image: "/images/streetlights/good solar.webp",
+    image: "/EcoMoTechWeb/images/streetlights/good solar.webp",
     description: "Maximum performance solar street light for major highways and industrial complexes",
     price: "Starting from $2,999",
     details: {
@@ -387,7 +387,7 @@ const streetlights = [
   {
     name: "EcoLight Smart City 100",
     power: "100W",
-    image: "/images/streetlights/sans battery.webp",
+    image: "/EcoMoTechWeb/images/streetlights/sans battery.webp",
     description: "Smart city-focused solar street light with integrated IoT capabilities",
     price: "Starting from $1,699",
     details: {

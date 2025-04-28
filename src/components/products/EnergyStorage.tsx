@@ -31,7 +31,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 300",
     capacity: "300W",
-    image: "/images/batteries/aio300.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio300.jpg",
     description: "Compact all-in-one energy storage system with built-in inverter",
     price: "Starting from $699",
     details: {
@@ -75,7 +75,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 500",
     capacity: "500W",
-    image: "/images/batteries/aio500.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio500.jpg",
     description: "Versatile all-in-one solution for home backup power",
     price: "Starting from $999",
     details: {
@@ -120,7 +120,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 600",
     capacity: "600W",
-    image: "/images/batteries/aio600.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio600.jpg",
     description: "Professional all-in-one ESS for small offices and homes",
     price: "Starting from $1,299",
     details: {
@@ -165,7 +165,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 800",
     capacity: "800W",
-    image: "/images/batteries/aio800.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio800.jpg",
     description: "High-performance all-in-one ESS for demanding applications",
     price: "Starting from $1,599",
     details: {
@@ -212,7 +212,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 1000",
     capacity: "1kW",
-    image: "/images/batteries/aio1000.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio1000.jpg",
     description: "Professional-grade all-in-one ESS for medium-sized applications",
     price: "Starting from $1,999",
     details: {
@@ -257,7 +257,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 1500",
     capacity: "1.5kW",
-    image: "/images/batteries/aio1500.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio1500.jpg",
     description: "Advanced all-in-one ESS for large homes and small businesses",
     price: "Starting from $2,499",
     details: {
@@ -303,7 +303,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 2000",
     capacity: "2kW",
-    image: "/images/batteries/aio2000.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio2000.jpg",
     description: "Commercial all-in-one ESS with advanced features",
     price: "Starting from $2,999",
     details: {
@@ -350,7 +350,7 @@ const batteryProducts = [
   {
     name: "EcoStore AIO 3000",
     capacity: "3kW",
-    image: "/images/batteries/aio3000.jpg",
+    image: "/EcoMoTechWeb/images/batteries/aio3000.jpg",
     description: "Industrial all-in-one ESS for demanding commercial applications",
     price: "Starting from $3,999",
     details: {
@@ -400,7 +400,7 @@ const batteryProducts = [
   {
     name: "EcoStore Home 5",
     capacity: "5kWh",
-    image: "/images/batteries/home5.jpg",
+    image: "/EcoMoTechWeb/images/batteries/home5.jpg",
     description: "Perfect entry-level battery storage for residential solar systems",
     price: "Starting from $3,499",
     details: {
@@ -444,7 +444,7 @@ const batteryProducts = [
   {
     name: "EcoStore Pro 10",
     capacity: "10kWh",
-    image: "/images/batteries/pro10.jpg",
+    image: "/EcoMoTechWeb/images/batteries/pro10.jpg",
     description: "Advanced energy storage solution for medium-sized homes",
     price: "Starting from $5,999",
     details: {
@@ -489,7 +489,7 @@ const batteryProducts = [
   {
     name: "EcoStore Max 15",
     capacity: "15kWh",
-    image: "/images/batteries/max15.jpg",
+    image: "/EcoMoTechWeb/images/batteries/max15.jpg",
     description: "High-capacity storage for large residential and small commercial applications",
     price: "Starting from $8,499",
     details: {
@@ -535,7 +535,7 @@ const batteryProducts = [
   {
     name: "EcoStore Commercial 20",
     capacity: "20kWh",
-    image: "/images/batteries/commercial20.jpg",
+    image: "/EcoMoTechWeb/images/batteries/commercial20.jpg",
     description: "Industrial-grade energy storage for commercial and industrial use",
     price: "Starting from $11,999",
     details: {
