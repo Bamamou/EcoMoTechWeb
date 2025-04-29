@@ -16,7 +16,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MIN 5000TL-X",
       power: "5kW",
-      image: "/EcoMoTechWeb/images/Inverters/Growatt 5kW.png",
+      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 10KTL3-X.jpg",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPP trackers",
@@ -30,7 +30,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MAX 10KTL3-X",
       power: "10kW",
-      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 10KTL3-X.jpg",
+      image: "/EcoMoTechWeb/images/Inverters/Growatt MIN 5000TL-X.webp",
       features: [
         "Maximum efficiency of 98.6%",
         "Multiple MPP trackers",
@@ -44,7 +44,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MAX 15KTL3-X",
       power: "15kW",
-      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 15KTL3-X.png",
+      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 15KTL3-X in.avif",
       features: [
         "Maximum efficiency of 98.8%",
         "Triple MPP trackers",
@@ -58,7 +58,7 @@ const SolarInverters = () => {
     {
       name: "Sungrow SG8.0RT",
       power: "8kW",
-      image: "https://images.unsplash.com/photo-1522333837763-46f4df0d3020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Sungrow SG8.0RT.png",
       features: [
         "Maximum efficiency of 98.3%",
         "Three MPPT channels",
@@ -72,7 +72,7 @@ const SolarInverters = () => {
     {
       name: "Sungrow SG10RT",
       power: "10kW",
-      image: "https://images.unsplash.com/photo-1579373791421-d7c8c96464a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Sungrow SG10RT.webp",
       features: [
         "Maximum efficiency of 98.5%",
         "Four MPPT tracking",
@@ -86,7 +86,7 @@ const SolarInverters = () => {
     {
       name: "Sungrow SG12RT",
       power: "12kW",
-      image: "https://images.unsplash.com/photo-1584949514490-73fc1a2d114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Sungrow SG12RT.webp",
       features: [
         "Maximum efficiency of 98.7%",
         "Five MPPT channels",
@@ -100,7 +100,7 @@ const SolarInverters = () => {
     {
       name: "Goodwe GW3000-NS",
       power: "3kW",
-      image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Goodwe GW3000-NS.jpg",
       features: [
         "Maximum efficiency of 97.8%",
         "Single MPPT tracker",
@@ -114,7 +114,7 @@ const SolarInverters = () => {
     {
       name: "Goodwe GW6000-DT",
       power: "6kW",
-      image: "https://images.unsplash.com/photo-1587168173357-99c139860618?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Goodwe GW6000-DT.jpg",
       features: [
         "Maximum efficiency of 98.2%",
         "Dual MPPT trackers",
