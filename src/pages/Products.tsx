@@ -43,7 +43,7 @@ const ProductsPage = () => {
 
             <Link to="/products/solar-inverters" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1592833159117-ac790d4066e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                src= "/EcoMoTechWeb/images/Inverters/Growatt poducts inv.png"
                 alt="Solar Inverters"
                 className="w-full h-60 object-cover"
               />

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
+import styles from '@/styles/SolarInverters.module.css';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const SolarInverters = () => {
   const inverters = [
     {
       name: "Growatt MIN 5000TL-X",
       power: "5kW",
-      image: "https://images.unsplash.com/photo-1592833159117-ac790d4066e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Growatt 5kW.png",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPP trackers",
@@ -21,7 +30,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MAX 10KTL3-X",
       power: "10kW",
-      image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 10KTL3-X.jpg",
       features: [
         "Maximum efficiency of 98.6%",
         "Multiple MPP trackers",
@@ -35,7 +44,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MAX 15KTL3-X",
       power: "15kW",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 15KTL3-X.png",
       features: [
         "Maximum efficiency of 98.8%",
         "Triple MPP trackers",
@@ -176,11 +185,11 @@ const SolarInverters = () => {
 
   return (
     <Layout>
-      <section className="pt-24 pb-16 bg-ecomotech-dark-blue text-white">
+      <section className={styles.heroSection}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Solar Inverters</h1>
-            <p className="text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>Solar Inverters</h1>
+            <p className={styles.heroDescription} style={{animationDelay: "0.2s"}}>
               Advanced inverter technology to convert DC electricity to usable AC power, designed for maximum efficiency and reliability.
             </p>
           </div>
@@ -189,32 +198,75 @@ const SolarInverters = () => {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className={styles.invertersGrid}>
             {inverters.map((inverter, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                <div className="h-64 overflow-hidden">
+              <div key={index} className={styles.inverterCard}>
+                <div className={styles.imageContainer}>
                   <img 
                     src={inverter.image} 
                     alt={inverter.name}
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                    className={styles.inverterImage}
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
+                <div className={styles.contentContainer}>
+                  <div className={styles.headerContainer}>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{inverter.name}</h3>
-                      <p className="text-ecomotech-green font-medium">{inverter.power}</p>
+                      <h3 className={styles.inverterName}>{inverter.name}</h3>
+                      <p className={styles.powerRating}>{inverter.power}</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4">{inverter.description}</p>
-                  <div className="space-y-2">
-                    {inverter.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-gray-600">
-                        <Check className="h-5 w-5 text-ecomotech-green mr-2 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                  <p className={styles.description}>{inverter.description}</p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button className={styles.specButton}>
+                        <span>View Specifications</span>
+                        <svg 
+                          className="w-5 h-5" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className={styles.specDialog}>
+                      <DialogHeader>
+                        <DialogTitle className={styles.specTitle}>
+                          {inverter.name} Specifications
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className={styles.specGrid}>
+                        <div className={styles.specSection}>
+                          <h4 className={styles.specSectionTitle}>Key Features</h4>
+                          <div className={styles.specList}>
+                            {inverter.features.map((feature, idx) => (
+                              <div key={idx} className={styles.specItem}>
+                                <Check className="w-5 h-5 text-green-500" />
+                                <span>{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <div className={styles.specSection}>
+                          <h4 className={styles.specSectionTitle}>Details</h4>
+                          <div className={styles.specList}>
+                            <div className={styles.specItem}>
+                              <span className="font-medium">Power Rating:</span>
+                              <span>{inverter.power}</span>
+                            </div>
+                            {/* Add more specifications here */}
+                          </div>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             ))}

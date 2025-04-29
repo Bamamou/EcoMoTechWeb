@@ -15,7 +15,7 @@ const products = [
     id: "solar-inverters",
     title: "Solar Inverters",
     description: "Advanced inverter technology to convert DC electricity to usable AC power.",
-    image: "https://images.unsplash.com/photo-1569281312527-a0bfd6b2de1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/Inverters/Growatt poducts inv.png",
     link: "/products/solar-inverters"
   },
   {

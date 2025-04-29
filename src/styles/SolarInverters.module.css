@@ -1,0 +1,179 @@
+.fadeInDelay {
+  animation-delay: 0.2s;
+}
+
+.imageContainer {
+  @apply relative h-64 overflow-hidden;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.productImage:hover {
+  transform: scale(1.05);
+}
+
+.heroSection {
+  @apply bg-gradient-to-r from-green-600 to-green-800 py-20;
+}
+
+.heroContent {
+  @apply max-w-4xl mx-auto text-center px-4;
+}
+
+.heroTitle {
+  @apply text-4xl md:text-5xl font-bold text-white mb-6;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.heroDescription {
+  @apply text-lg md:text-xl text-white/90;
+  animation: fadeIn 0.8s ease-out 0.2s backwards;
+}
+
+.invertersGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.inverterCard {
+  @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+         border border-gray-100 overflow-hidden hover:-translate-y-1;
+}
+
+.inverterImage {
+  @apply w-full h-full object-cover transition-transform duration-500 
+         hover:scale-110 object-center;
+}
+
+.contentContainer {
+  @apply p-6 space-y-4;
+}
+
+.headerContainer {
+  @apply flex justify-between items-start border-b border-gray-100 pb-4;
+}
+
+.inverterName {
+  @apply text-xl font-semibold text-gray-900 mb-1;
+}
+
+.powerRating {
+  @apply text-green-600 font-medium text-lg;
+}
+
+.description {
+  @apply text-gray-600 text-sm leading-relaxed;
+}
+
+.featuresList {
+  @apply grid grid-cols-1 gap-3 mt-4;
+}
+
+.featureItem {
+  @apply flex items-center gap-2 text-gray-700;
+}
+
+.featureIcon {
+  @apply w-5 h-5 text-green-500 flex-shrink-0;
+}
+
+.featureText {
+  @apply text-sm;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.inverterCard:hover .inverterName {
+  @apply text-green-600 transition-colors;
+}
+
+.featureItem:hover {
+  @apply text-green-600 transition-colors;
+}
+
+.featureItem:hover .featureIcon {
+  @apply text-green-400 scale-110 transition-transform;
+}
+
+.specButton {
+  @apply w-full mt-4 relative overflow-hidden
+         text-white font-medium py-3.5 px-6 rounded-xl
+         bg-gradient-to-br from-green-400 via-green-500 to-green-600
+         hover:bg-gradient-to-br hover:from-green-500 hover:via-green-600 hover:to-green-700
+         transition-all duration-300 ease-out
+         hover:shadow-[0_10px_20px_-10px_rgba(34,197,94,0.7)]
+         active:scale-[0.98];
+}
+
+/* Add group class separately */
+.specButton {
+  composes: group from global;
+}
+
+.specButton::before {
+  content: '';
+  @apply absolute top-0 left-[-100%] w-full h-full
+         bg-gradient-to-r from-transparent via-white/20 to-transparent
+         skew-x-[-25deg] transition-all duration-700 ease-out;
+}
+
+.specButton:hover::before {
+  @apply left-[100%];
+}
+
+.specButton span {
+  @apply relative z-10 flex items-center justify-center gap-2
+         transition-transform duration-300 group-hover:scale-105;
+}
+
+.specButton svg {
+  @apply w-5 h-5 transition-all duration-300
+         group-hover:translate-x-1;
+}
+
+.specDialog {
+  @apply bg-white rounded-2xl p-6 max-w-2xl w-full mx-auto;
+}
+
+.specTitle {
+  @apply text-2xl font-bold text-gray-900 mb-6 pb-4 border-b;
+}
+
+.specGrid {
+  @apply grid md:grid-cols-2 gap-6;
+}
+
+.specSection {
+  @apply space-y-4;
+}
+
+.specSectionTitle {
+  @apply text-lg font-semibold text-green-600 mb-2;
+}
+
+.specList {
+  @apply space-y-2;
+}
+
+.specItem {
+  @apply flex items-start gap-2 text-gray-700;
+}
