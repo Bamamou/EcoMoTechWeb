@@ -1,0 +1,181 @@
+.detailsContainer {
+  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+}
+
+/* Hero Section */
+.heroSection {
+  @apply bg-gradient-to-r from-green-600 to-green-700 
+         text-white py-16 mb-12 rounded-b-3xl shadow-lg;
+}
+
+.heroContent {
+  @apply max-w-4xl mx-auto text-center px-4;
+}
+
+.heroTitle {
+  @apply text-4xl md:text-5xl font-bold mb-4;
+}
+
+.heroDescription {
+  @apply text-lg md:text-xl text-green-50 max-w-2xl mx-auto;
+}
+
+.heroSection {
+  @apply text-center mb-12;
+}
+
+.productWrapper {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-12;
+}
+
+/* Gallery Section */
+.imageGallery {
+  @apply sticky top-24 space-y-8; /* Added space-y-8 for spacing between elements */
+}
+
+.mainImage {
+  @apply w-full h-[500px] rounded-2xl shadow-lg mb-4 object-cover bg-white;
+}
+
+.thumbnailGrid {
+  @apply grid grid-cols-4 gap-4;
+}
+
+.thumbnailImage {
+  @apply w-24 h-24 rounded-lg cursor-pointer object-cover
+         border-2 border-transparent hover:border-green-500 transition-all
+         opacity-70 hover:opacity-100;
+}
+
+.thumbnailImage.active {
+  @apply border-green-500 opacity-100;
+}
+
+/* Product Info Section */
+.productInfo {
+  @apply space-y-8;
+}
+
+.productTitle {
+  @apply text-4xl font-bold text-gray-900;
+}
+
+.productDescription {
+  @apply text-xl text-gray-600 mt-4;
+}
+
+.descriptionDetails {
+  @apply mt-6 space-y-4;
+}
+
+.descriptionParagraph {
+  @apply text-gray-600 leading-relaxed;
+}
+
+/* Specifications Section */
+.specificationsGrid {
+  @apply mt-12 grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.specSection {
+  @apply bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow;
+}
+
+.sectionTitle {
+  @apply text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2;
+}
+
+.featuresList {
+  @apply space-y-4;
+}
+
+.featureItem {
+  @apply flex items-start gap-3;
+}
+
+.featureIcon {
+  @apply w-5 h-5 text-green-500 mt-1 flex-shrink-0;
+}
+
+.featureText {
+  @apply text-gray-700;
+}
+
+/* Specifications Table */
+.specificationsList {
+  @apply divide-y divide-gray-100;
+}
+
+.specItem {
+  @apply py-4 grid grid-cols-2 hover:bg-gray-50 rounded-lg transition-colors;
+}
+
+.specLabel {
+  @apply text-gray-600 font-medium;
+}
+
+.specValue {
+  @apply text-gray-900 font-semibold;
+}
+
+/* Call to Action */
+.ctaSection {
+  @apply mt-8 bg-gradient-to-r from-green-500 to-green-600 
+         rounded-2xl p-8 text-white text-center;
+}
+
+.ctaTitle {
+  @apply text-2xl font-bold mb-4;
+}
+
+.ctaDescription {
+  @apply text-green-50 mb-6 max-w-2xl mx-auto;
+}
+
+.ctaButton {
+  @apply inline-flex items-center justify-center px-8 py-3
+         bg-white text-green-600 font-semibold rounded-lg
+         hover:bg-green-50 transition-colors
+         shadow-md hover:shadow-lg;
+}
+
+/* Animations */
+.fadeInAnimation {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .imageGallery {
+    @apply relative top-0;
+  }
+
+  .mainImage {
+    @apply h-[400px];
+  }
+}
+
+@media (max-width: 640px) {
+  .thumbnailGrid {
+    @apply grid-cols-3;
+  }
+
+  .mainImage {
+    @apply h-[300px];
+  }
+
+  .specificationsList {
+    @apply grid-cols-1;
+  }
+}

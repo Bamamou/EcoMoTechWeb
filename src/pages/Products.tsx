@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
-import SolarProducts from "@/components/products/SolarProducts";
+import SolarPanels from "@/components/products/SolarPanels";
+import SolarInverters from "@/components/products/SolarInverters";
+import ElectricMobility from "@/components/products/ElectricMotorcycles";
+import EVCharger from "@/components/products/EVChargers";
+import HomeSystem from "@/components/products/HomeSystems";
+import StreetLights from "@/components/products/StreetLights";
+import EnergyStorage from "@/components/products/EnergyStorage";
 
 const ProductsPage = () => {
   return (
@@ -11,7 +17,7 @@ const ProductsPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Our Products</h1>
-            <p className="text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <p className="text-xl opacity-90 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Explore our comprehensive range of renewable energy and electric mobility solutions.
             </p>
           </div>
@@ -30,8 +36,8 @@ const ProductsPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/products/solar-panels" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
                 alt="Solar Panels"
                 className="w-full h-60 object-cover"
               />
@@ -42,8 +48,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/solar-inverters" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src= "/EcoMoTechWeb/images/Inverters/Growatt poducts inv.png"
+              <img
+                src="/EcoMoTechWeb/images/Inverters/Growatt poducts inv.png"
                 alt="Solar Inverters"
                 className="w-full h-60 object-cover"
               />
@@ -54,8 +60,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/home-systems" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="/EcoMoTechWeb/images/HomeSystem/6kW.jpg" 
+              <img
+                src="/EcoMoTechWeb/images/HomeSystem/6kW.jpg"
                 alt="Home Systems"
                 className="w-full h-60 object-cover"
               />
@@ -66,25 +72,40 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/street-lights" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="/EcoMoTechWeb/images/streetlights/road.jpg" 
+              <img
+                src="/EcoMoTechWeb/images/streetlights/road.jpg"
                 alt="Street Lights"
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">Street Lights</h3>
-                <p className="text-gray-600">Advanced solar-powered lighting solutions for urban and rural applications, featuring smart controls and high efficiency.</p>
+                <p className="text-gray-600">
+                  Advanced solar-powered lighting solutions for urban and rural applications, featuring smart controls and high efficiency.
+                </p>
               </div>
             </Link>
+
             <Link to="/products/energy-storage" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="/EcoMoTechWeb/images/BESS/battery system.webp" 
+              <img
+                src="/EcoMoTechWeb/images/BESS/battery system.webp"
                 alt="Battery energy storage systems"
                 className="w-full h-60 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">Battery energy storage systems</h3>
                 <p className="text-gray-600">Advanced lithium battery storage systems for residential and commercial applications.</p>
+              </div>
+            </Link>
+
+            <Link to="/products/solar-pumbs" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="/EcoMoTechWeb/images/Solar pumbs/SolarPumbs.jpeg"
+                alt="Solar Water Pumps"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Solar Water Pumps</h3>
+                <p className="text-gray-600">Efficient solar-powered pumping solutions for agricultural and irrigation needs.</p>
               </div>
             </Link>
           </div>
@@ -102,45 +123,29 @@ const ProductsPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <Link to="/products/electric-motorcycles" className="block">
-                <img 
-                  src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
-                  alt="Electric Motorcycles"
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Electric Motorcycles</h3>
-                  <p className="text-gray-600">High-performance electric motorcycles for urban mobility.</p>
-                </div>
-              </Link>
-            </div>
-            <div className="bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <Link to="/products/electric-tricycles" className="block">
-                <img 
-                  src="https://images.unsplash.com/photo-1597358371607-5786aaa84ca3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1176&q=80" 
-                  alt="Electric Tricycles"
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Electric Tricycles</h3>
-                  <p className="text-gray-600">Versatile electric tricycles for commercial and personal use.</p>
-                </div>
-              </Link>
-            </div>
-            <div className="bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <Link to="/products/ev-chargers" className="block">
-                <img 
-                  src="https://images.unsplash.com/photo-1647227611975-c906679f39f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
-                  alt="EV Chargers"
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">EV Chargers</h3>
-                  <p className="text-gray-600">Advanced charging solutions for home and commercial applications.</p>
-                </div>
-              </Link>
-            </div>
+            <Link to="/products/electric-motorcycles" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                alt="Electric Motorcycles"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Electric Motorcycles</h3>
+                <p className="text-gray-600">High-performance electric motorcycles for urban mobility.</p>
+              </div>
+            </Link>
+
+            <Link to="/products/ev-chargers" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="https://images.unsplash.com/photo-1647227611975-c906679f39f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                alt="EV Chargers"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">EV Chargers</h3>
+                <p className="text-gray-600">Advanced charging solutions for home and commercial applications.</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -153,14 +158,14 @@ const ProductsPage = () => {
               Contact our team of experts to find the perfect renewable energy solution for your needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white hover:bg-gray-100 text-ecomotech-green font-medium px-8 py-3 rounded-md transition-colors"
               >
                 Contact Us
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className="bg-transparent border-2 border-white hover:bg-white hover:text-ecomotech-green text-white font-medium px-8 py-3 rounded-md transition-colors"
               >
                 Learn About Ecomotech

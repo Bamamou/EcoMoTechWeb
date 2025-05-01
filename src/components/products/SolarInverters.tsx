@@ -128,7 +128,7 @@ const SolarInverters = () => {
     {
       name: "Goodwe GW10K-DT",
       power: "10kW",
-      image: "https://images.unsplash.com/photo-1591964006776-90b32e88f5ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Goodwe GW10K-DT.webp",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPPT design",
@@ -142,7 +142,7 @@ const SolarInverters = () => {
     {
       name: "Ecoverter5",
       power: "5kW",
-      image: "https://images.unsplash.com/photo-1525598912003-663126343e1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Ecoverter5.webp",
       features: [
         "Maximum efficiency of 98.5%",
         "Dual MPPT channels",
@@ -156,7 +156,7 @@ const SolarInverters = () => {
     {
       name: "Ecoverter8",
       power: "8kW",
-      image: "https://images.unsplash.com/photo-1559297434-fae8a1916a79?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Ecoverter8.webp",
       features: [
         "Maximum efficiency of 98.7%",
         "Triple MPPT system",
@@ -170,7 +170,7 @@ const SolarInverters = () => {
     {
       name: "Ecoverter10",
       power: "10kW",
-      image: "https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+      image: "/EcoMoTechWeb/images/Inverters/Ecoverter10.avif",
       features: [
         "Maximum efficiency of 98.9%",
         "Quad MPPT technology",

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -38,6 +37,13 @@ const products = [
     description: "Battery solutions to store excess energy for use when needed.",
     image: "/EcoMoTechWeb/images/BESS/battery system.webp",
     link: "/products/energy-storage"
+  },
+  {
+    id: "solar-pumbs",
+    title: "Solar Water Pumps",
+    description: "Efficient solar-powered pumps for agricultural and irrigation needs.",
+    image: "/EcoMoTechWeb/images/Solar pumbs/SolarPumbs.jpeg",
+    link: "/products/solar-pumbs"
   },
 ];
 

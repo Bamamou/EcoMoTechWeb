@@ -95,6 +95,11 @@ const Footer = () => {
                   Energy Storage Systems
                 </Link>
               </li>
+              <li>
+                <Link to="/products/solar-pumbs" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                  Solar Pumbs
+                </Link>
+              </li>
 
               {/* Electric Mobility Products */}
               <li>

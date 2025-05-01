@@ -2,13 +2,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 import Index from "./pages/Index";
+import ProductsPage from "./pages/Products";
+import SolarPanels from "./components/products/SolarPanels";
+import ElectricMotorcycles from "./components/products/ElectricMotorcycles";
+import MotorcycleDetails from './components/products/Product details/MotorcycleDetails';
+import SolarPumbs from './components/products/SolarPumbs';
 
 // Lazy load all routes
 const About = React.lazy(() => import("./pages/About"));
-const Products = React.lazy(() => import("./pages/Products"));
 const News = React.lazy(() => import("./pages/News"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
@@ -16,12 +20,10 @@ const Services = React.lazy(() => import("./pages/Services"));
 const JoinUs = React.lazy(() => import("./pages/JoinUs"));
 
 // Lazy load product components
-const SolarProducts = React.lazy(() => import("./components/products/SolarProducts"));
 const SolarInverters = React.lazy(() => import("./components/products/SolarInverters"));
 const HomeSystems = React.lazy(() => import("./components/products/HomeSystems"));
 const StreetLights = React.lazy(() => import("./components/products/StreetLights"));
 const EnergyStorage = React.lazy(() => import("./components/products/EnergyStorage"));
-const ElectricMotorcycles = React.lazy(() => import("./components/products/ElectricMotorcycles"));
 const ElectricTricycles = React.lazy(() => import("./components/products/ElectricTricycles"));
 const EVChargers = React.lazy(() => import("./components/products/EVChargers"));
 
@@ -42,23 +44,25 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/EcoMoTechWeb">
+      <Router basename="/EcoMoTechWeb">
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<ProductsPage />} />
             <Route path="/services" element={<Services />} />
             
             {/* Product Routes */}
-            <Route path="/products/solar-panels" element={<SolarProducts />} />
+            <Route path="/products/solar-panels" element={<SolarPanels />} />
+            <Route path="/products/electric-motorcycles" element={<ElectricMotorcycles />} />
+            <Route path="/products/electric-motorcycles/:id" element={<MotorcycleDetails />} />
             <Route path="/products/solar-inverters" element={<SolarInverters />} />
             <Route path="/products/home-systems" element={<HomeSystems />} />
             <Route path="/products/street-lights" element={<StreetLights />} />
             <Route path="/products/energy-storage" element={<EnergyStorage />} />
-            <Route path="/products/electric-motorcycles" element={<ElectricMotorcycles />} />
             <Route path="/products/electric-tricycles" element={<ElectricTricycles />} />
             <Route path="/products/ev-chargers" element={<EVChargers />} />
+            <Route path="/products/solar-pumbs" element={<SolarPumbs />} />
             
             {/* News Routes */}
             <Route path="/news" element={<News />} />
@@ -76,7 +80,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );

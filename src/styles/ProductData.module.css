@@ -1,0 +1,185 @@
+.productGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6;
+}
+
+.productCard {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300
+         border border-gray-100 overflow-hidden hover:-translate-y-1;
+}
+
+.imageContainer {
+ 
+  height: 300px; /* Fixed height for consistent product display */
+  width: 400px;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.productImage {
+  @apply w-full h-full transition-all duration-500;
+  object-fit: contain; /* Better for product images */
+  object-position: center;
+  padding: 0.5rem;
+  transform-origin: center;
+}
+
+.productImage:hover {
+  @apply scale-110;
+}
+
+/* Optional image container modifiers */
+.imageContainer--square {
+  height: 400px;
+  width: 400px;
+}
+
+.imageContainer--wide {
+  height: 100px;
+}
+
+.imageContainer--tall {
+  height: 400px;
+}
+
+/* Loading state for images */
+.imageLoading {
+  @apply animate-pulse bg-gray-200;
+}
+
+/* High-quality image display */
+.productImage--hq {
+  /* Modern Edge and Chrome */
+  image-rendering: -webkit-optimize-contrast;
+  /* Standard syntax */
+  image-rendering: pixelated;
+  /* Fallback */
+  image-rendering: auto;
+  /* Legacy IE/Edge */
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.contentContainer {
+  @apply p-6 space-y-4;
+}
+
+.productHeader {
+  @apply border-b border-gray-100 pb-4;
+}
+
+.productName {
+  @apply text-xl font-semibold text-gray-900 mb-2;
+}
+
+.productDescription {
+  @apply text-gray-600 text-sm leading-relaxed;
+}
+
+.featuresList {
+  @apply mt-4 space-y-2;
+}
+
+.featureItem {
+  @apply flex items-start gap-2 text-gray-700;
+}
+
+.featureIcon {
+  @apply w-5 h-5 text-green-500 flex-shrink-0;
+}
+
+.specificationsList {
+  @apply mt-6 grid grid-cols-2 gap-4 text-sm;
+}
+
+.specItem {
+  @apply flex flex-col;
+}
+
+.specLabel {
+  @apply text-gray-500 font-medium;
+}
+
+.specValue {
+  @apply text-gray-900;
+}
+
+.viewButton {
+  @apply w-full mt-4 relative overflow-hidden
+         text-white font-medium py-3 px-6 rounded-xl
+         bg-gradient-to-r from-green-500 to-green-600
+         hover:from-green-600 hover:to-green-700
+         transition-all duration-300
+         hover:shadow-[0_10px_20px_-10px_rgba(34,197,94,0.5)]
+         active:scale-[0.98];
+}
+
+.viewButton::before {
+  content: '';
+  @apply absolute top-0 left-[-100%] w-full h-full
+         bg-gradient-to-r from-transparent via-white/20 to-transparent
+         skew-x-[-25deg] transition-all duration-700 ease-out;
+}
+
+.viewButton:hover::before {
+  @apply left-[100%];
+}
+
+.viewButton span {
+  @apply relative z-10 flex items-center justify-center gap-2;
+}
+
+.viewDetailsButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.viewDetailsText {
+  font-weight: 500;
+}
+
+.viewDetailsIcon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.viewDetailsButton:hover {
+  color: #22c55e;
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+.viewDetailsButton:hover .viewDetailsIcon {
+  transform: translateX(2px);
+}
+
+.categoryTitle {
+  @apply text-3xl font-bold text-center mb-8 text-gray-900;
+}
+
+.categoryDescription {
+  @apply text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInAnimation {
+  animation: fadeIn 0.5s ease-out forwards;
+}
