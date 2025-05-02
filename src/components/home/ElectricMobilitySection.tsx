@@ -14,7 +14,7 @@ const mobilityProducts = [
     id: "electric-tricycles",
     title: "Electric Tricycles",
     description: "Versatile electric tricycles for commercial and personal use.",
-    image: "https://images.unsplash.com/photo-1597358371607-5786aaa84ca3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1176&q=80",
+    image: "/EcoMoTechWeb/images/Electric motorcycles/higo_profile.webp",
     link: "/products/electric-tricycles"
   },
   {

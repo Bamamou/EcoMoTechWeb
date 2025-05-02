@@ -2,33 +2,20 @@
   animation-delay: 0.2s;
 }
 
-.imageContainer {
-    position: relative;
-    width: 100%;
-    padding-top: 1%; /* Creates a 3:2 aspect ratio for better product display */
-    overflow: hidden;
-    background-color: #f5f5f5;
+/* Product Grid Layout */
+.systemsGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
 }
-  
-
-.productImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 0.5s ease;
-}
-
-.productImage:hover {
-  transform: scale(1.1);
-}
-
 .productCard {
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
+  @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 
+         border border-gray-100 overflow-hidden hover:-translate-y-1;
+}
+
+/* Product Card Container */
+.productCard {
+  
+  max-width: 380px; /* Match SolarInverters width */
+  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 
@@ -36,34 +23,57 @@
   transform: translateY(-4px);
 }
 
-.contentSection {
-  padding: 1.5rem;
+/* Image Section */
+.imageContainer {
+  @apply relative;
+  height: 300px;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0rem;
+  padding-top: 0%; /* Creates a 3:2 aspect ratio for better product display */
+  transition: transform 0.3s ease;
+}
+
+.productImage:hover {
+  transform: scale(1.05);
+}
+
+/* Content Section */
+.contentContainer {
+  @apply p-6;
 }
 
 .productTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 0.5rem;
+  @apply text-xl font-semibold text-gray-900 mb-2;
 }
 
-.powerText {
-  color: var(--ecomotech-green);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+.powerRating {
+  @apply text-ecomotech-green font-medium mb-2;
+}
+.productImage {
+  @apply w-full h-full object-cover transition-transform duration-500 
+         hover:scale-110 object-center;
 }
 
 .description {
-  color: #4b5563;
-  margin-bottom: 1rem;
+  @apply text-gray-600 mb-4 text-sm;
 }
 
-.price {
-  color: var(--ecomotech-blue);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
+/* Specifications Section */
 .specificationSection {
   display: grid;
   grid-template-columns: 1fr;
@@ -81,4 +91,49 @@
 
 .specificationContent {
   padding-left: 2rem;
+}
+
+.viewDetailsButton {
+  @apply flex items-center justify-center gap-2 w-full;
+  @apply bg-ecomotech-green text-white;
+  @apply px-6 py-3 rounded-lg;
+  @apply font-semibold text-sm;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:bg-ecomotech-dark-green;
+  @apply relative overflow-hidden;
+  /* Unique additions for HomeSystems */
+  @apply shadow-[0_4px_12px_rgba(0,200,83,0.15)];
+  @apply hover:shadow-[0_6px_20px_rgba(0,200,83,0.25)];
+}
+
+/* Shine effect on hover */
+.viewDetailsButton::after {
+  @apply content-[''] absolute;
+  @apply h-full w-8;
+  @apply bg-white/20 -skew-x-12;
+  @apply -left-12 top-0;
+  @apply transition-transform duration-700;
+}
+
+.viewDetailsButton:hover::after {
+  @apply translate-x-[400px];
+}
+
+.buttonIcon {
+  @apply w-5 h-5;
+  @apply transition-transform duration-300;
+}
+
+.viewDetailsButton:hover .buttonIcon {
+  @apply translate-x-1;
+}
+
+/* Add a subtle glow effect in dark mode */
+@media (prefers-color-scheme: dark) {
+  .viewDetailsButton {
+    @apply bg-ecomotech-green/90;
+    @apply hover:bg-ecomotech-green;
+    @apply shadow-[0_4px_12px_rgba(0,200,83,0.1)];
+    @apply hover:shadow-[0_6px_20px_rgba(0,200,83,0.2)];
+  }
 }

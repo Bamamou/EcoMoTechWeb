@@ -3,25 +3,76 @@
 }
 
 .imageContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* Creates a 3:2 aspect ratio for better product display */
-  overflow: hidden;
+  @apply relative w-full ;
+  height: 280px; /* Increased height */
   background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent image overflow */
+  border-radius: 8px 8px 0 0;
+  padding: 0.1rem;
 }
 
 .productImage {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  @apply relative w-full ;
+  width: 100%;
   object-fit: contain;
   object-position: center;
-  padding: 0.1rem; /* Reduced padding from 1rem to 0.25rem */
+  padding-top: 0%; /* Creates a 3:2 aspect ratio for better product display */
   transition: transform 0.3s ease;
 }
 
 .productImage:hover {
   transform: scale(1.05);
+}
+
+.lightsGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+.productImage {
+  @apply w-full h-full object-cover transition-transform duration-500 
+         hover:scale-110 object-center;
+}
+
+.lightCard {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200;
+  max-width: 380px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.lightCard:hover {
+  transform: translateY(-4px);
+}
+
+.contentContainer {
+  @apply p-6;
+}
+
+.productTitle {
+  @apply text-xl font-semibold text-gray-900 mb-2;
+}
+
+.powerRating {
+  @apply text-ecomotech-green font-medium mb-2;
+}
+
+.description {
+  @apply text-gray-600 mb-4 text-sm;
+}
+
+.viewDetailsButton {
+  @apply flex items-center justify-center gap-2 w-full;
+  @apply bg-ecomotech-green text-white;
+  @apply px-6 py-3 rounded-lg;
+  @apply font-semibold text-sm;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:bg-ecomotech-dark-green;
+  @apply shadow-[0_4px_12px_rgba(0,200,83,0.15)];
+  @apply hover:shadow-[0_6px_20px_rgba(0,200,83,0.25)];
 }

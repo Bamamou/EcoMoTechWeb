@@ -38,7 +38,7 @@ const AboutPage = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-ecomotech-green rounded-lg opacity-10 transform rotate-3"></div>
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" 
+                src="/EcoMoTechWeb/images/News/team.jpg" 
                 alt="Ecomotech team" 
                 className="rounded-lg shadow-lg relative z-10"
               />

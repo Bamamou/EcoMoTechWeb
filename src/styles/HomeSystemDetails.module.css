@@ -1,0 +1,152 @@
+.detailsContainer {
+  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.productWrapper {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-12;
+}
+
+/* Gallery Section */
+.imageGallery {
+  @apply sticky top-24 space-y-8;
+}
+
+.mainImage {
+  @apply w-full h-[500px] rounded-2xl shadow-lg mb-4 object-cover bg-white;
+}
+
+.thumbnailGrid {
+  @apply grid grid-cols-4 gap-4;
+}
+
+.thumbnailImage {
+  @apply w-24 h-24 rounded-lg cursor-pointer object-cover
+         border-2 border-transparent hover:border-green-500 transition-all
+         opacity-70 hover:opacity-100;
+}
+
+.thumbnailImage.active {
+  @apply border-green-500 opacity-100;
+}
+
+/* Product Info Section */
+.productInfo {
+  @apply space-y-8;
+}
+
+.productTitle {
+  @apply text-4xl font-bold text-gray-900;
+}
+
+.powerText {
+  @apply text-2xl font-semibold text-green-600;
+}
+
+.price {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.productDescription {
+  @apply text-xl text-gray-600 mt-4;
+}
+
+/* Specifications Section */
+.specificationsGrid {
+  @apply mt-8 grid gap-6;
+}
+
+.specRow {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.specSection {
+  @apply bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow;
+}
+
+.inverterSection {
+  @apply col-span-1 md:col-span-2 mt-6;
+}
+
+.specificationsList {
+  @apply divide-y divide-gray-100;
+}
+
+/* Make the spec items more compact */
+.specItem {
+  @apply py-2 grid grid-cols-2 hover:bg-gray-50 rounded-lg transition-colors;
+}
+
+.specLabel {
+  @apply text-sm text-gray-600 font-medium capitalize;
+}
+
+.specValue {
+  @apply text-sm text-gray-900 font-semibold;
+}
+
+/* Features List */
+.featuresList {
+  @apply mt-6;
+}
+
+.featuresTitle {
+  @apply text-lg font-semibold text-gray-900 mb-4;
+}
+
+.featureItems {
+  @apply space-y-3;
+}
+
+.featureItem {
+  @apply flex items-center gap-2 text-gray-700;
+}
+
+.featureIcon {
+  @apply w-5 h-5 text-green-500;
+}
+
+/* CTA Section */
+.ctaSection {
+  @apply mt-8 bg-gradient-to-r from-green-500 to-green-600 
+         rounded-2xl p-8 text-white text-center;
+}
+
+.ctaTitle {
+  @apply text-2xl font-bold mb-4;
+}
+
+.ctaDescription {
+  @apply text-green-50 mb-6;
+}
+
+.ctaButton {
+  @apply inline-flex items-center justify-center px-8 py-3
+         bg-white text-green-600 font-semibold rounded-lg
+         hover:bg-green-50 transition-colors
+         shadow-md hover:shadow-lg;
+}
+
+/* Components Section */
+.componentsGrid {
+  @apply grid gap-4;
+}
+
+.componentGroup {
+  @apply bg-gray-50 rounded-lg p-4;
+}
+
+.componentTitle {
+  @apply flex items-center gap-2 text-lg font-semibold mb-3 text-gray-800;
+}
+
+.componentDetail {
+  @apply text-sm text-gray-600 mb-2;
+}
+
+.componentsList {
+  @apply space-y-2 text-sm text-gray-700;
+}
+
+.componentsList li {
+  @apply flex items-center gap-2;
+}

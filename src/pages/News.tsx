@@ -14,7 +14,7 @@ export const newsItems = [
     date: "April 15, 2024",
     author: "David Chen",
     category: "Product News",
-    image: "https://images.unsplash.com/photo-1497440001736-76dde04f31b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/Ecomotech Launches New High-Efficiency Solar Panel Series.jpg",
     link: "/news/new-solar-panel-series"
   },
   {
@@ -25,7 +25,7 @@ export const newsItems = [
     date: "March 22, 2023",
     author: "Michael Johnson",
     category: "Company News",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/warehouse.jpg",
     link: "/news/distribution-center"
   },
   {
@@ -36,7 +36,7 @@ export const newsItems = [
     date: "February 15, 2023",
     author: "Emma Nelson",
     category: "Projects",
-    image: "https://images.unsplash.com/photo-1534949522533-7c851c1bc891?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg",
     link: "/news/remote-communities"
   },
   {
@@ -69,7 +69,7 @@ export const newsItems = [
     date: "November 5, 2022",
     author: "Robert Kim",
     category: "Case Studies",
-    image: "https://images.unsplash.com/photo-1611365892117-00ac5ef44f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80",
+    image: "/EcoMoTechWeb/images/News/Ecomotech Solar Street Lighting Transforms Urban Safety.jpg",
     link: "/news/street-lighting"
   },
   {
@@ -91,7 +91,7 @@ export const newsItems = [
     date: "September 28, 2022",
     author: "Sarah Okonjo",
     category: "Infrastructure",
-    image: "https://images.unsplash.com/photo-1615228939096-9530e0016767?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/Charging station.jpg",
     link: "/news/ev-charging-africa"
   }
 ];

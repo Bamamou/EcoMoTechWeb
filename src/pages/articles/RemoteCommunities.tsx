@@ -21,7 +21,7 @@ const RemoteCommunities = () => {
             </div>
             
             <img
-              src="https://images.unsplash.com/photo-1534949522533-7c851c1bc891?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+              src="/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg"
               alt="Remote Village Solar Installation"
               className="w-full h-[400px] object-cover rounded-lg mb-8"
             />
