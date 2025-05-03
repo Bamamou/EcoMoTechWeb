@@ -9,7 +9,7 @@ const newsItems = [
     title: "Ecomotech Launches New High-Efficiency Solar Panel Series",
     excerpt: "Our latest solar panel technology achieves record-breaking efficiency rates, making solar energy more accessible and affordable.",
     date: "April 10, 2023",
-    image: "https://images.unsplash.com/photo-1497440001736-76dde04f31b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/Ecomotech Launches New High-Efficiency Solar Panel Series.jpg",
     link: "/news/1"
   },
   {
@@ -17,7 +17,7 @@ const newsItems = [
     title: "Expanding Our Reach: New Distribution Center Opens",
     excerpt: "Ecomotech expands operations with a new distribution center to better serve customers across the region with faster delivery times.",
     date: "March 22, 2023",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/warehouse.jpg",
     link: "/news/2"
   },
   {
@@ -25,7 +25,7 @@ const newsItems = [
     title: "Sustainable Energy Solutions for Remote Communities",
     excerpt: "Our team has successfully implemented off-grid solar solutions for remote villages, bringing reliable electricity to communities for the first time.",
     date: "February 15, 2023",
-    image: "https://images.unsplash.com/photo-1534949522533-7c851c1bc891?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image:  "/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg",
     link: "/news/3"
   }
 ];
