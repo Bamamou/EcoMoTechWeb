@@ -1,7 +1,7 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
+import styles from '@/styles/AboutUs.module.css';
 
 const AboutPage = () => {
   return (
@@ -38,7 +38,7 @@ const AboutPage = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-ecomotech-green rounded-lg opacity-10 transform rotate-3"></div>
               <img 
-                src="/EcoMoTechWeb/images/News/team.jpg" 
+                src="/EcoMoTechWeb/images/AboutUs/BJTU.jpg" 
                 alt="Ecomotech team" 
                 className="rounded-lg shadow-lg relative z-10"
               />
@@ -164,55 +164,64 @@ const AboutPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md group">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://randomuser.me/api/portraits/men/92.jpg" 
-                  alt="David Chen - CEO" 
-                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                />
+            <div className={styles.teamMember}>
+              <div className={styles.teamImageWrapper}>
+                <div className={styles.imageContainer}>
+                  <img 
+                    src="/EcoMoTechWeb/images/AboutUs/ID photo.jpg" 
+                    alt="Nicolas Bamamou - CEO" 
+                    className={styles.memberImage}
+                  />
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">David Chen</h3>
-                <p className="text-ecomotech-blue mb-4">Chief Executive Officer</p>
-                <p className="text-gray-600">
-                  With over 20 years of experience in renewable energy, David leads Ecomotech's strategic vision and global operations.
+              <div className={styles.memberInfo}>
+                <h3 className={styles.memberName}>Nicolas Bamamou</h3>
+                <p className={styles.memberRole}>Chief Executive Officer</p>
+                <div className={styles.divider}></div>
+                <p className={styles.memberBio}>
+                  With over 10 years of experience in renewable energy, David leads Ecomotech's strategic vision and global operations.
                 </p>
               </div>
             </div>
 
             {/* Team Member 2 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md group">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://randomuser.me/api/portraits/women/42.jpg" 
-                  alt="Sarah Rodriguez - CTO" 
-                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                />
+            <div className={styles.teamMember}>
+              <div className={styles.teamImageWrapper}>
+                <div className={styles.imageContainer}>
+                  <img 
+                    src="/EcoMoTechWeb/images/AboutUs/Kagoma.jpg"  
+                    alt="Kagoma Jaros - CTO" 
+                    className={styles.memberImage}
+                  />
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">Sarah Rodriguez</h3>
-                <p className="text-ecomotech-blue mb-4">Chief Technology Officer</p>
-                <p className="text-gray-600">
-                  Sarah drives Ecomotech's technology development, focusing on innovation and enhancing our product performance.
+              <div className={styles.memberInfo}>
+                <h3 className={styles.memberName}>Kagoma Jaros</h3>
+                <p className={styles.memberRole}>Chief Technology Officer</p>
+                <div className={styles.divider}></div>
+                <p className={styles.memberBio}>
+                  Kagoma from Tanzania drives Ecomotech's technology development, focusing on innovation and enhancing our product performance.
                 </p>
               </div>
             </div>
 
             {/* Team Member 3 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md group">
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://randomuser.me/api/portraits/men/32.jpg" 
-                  alt="Michael Johnson - COO" 
-                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                />
+            <div className={styles.teamMember}>
+              <div className={styles.teamImageWrapper}>
+                <div className={styles.imageContainer}>
+                  <img 
+                    src="/EcoMoTechWeb/images/AboutUs/Njie.jpg" 
+                    alt="Sulayman Njie - COO" 
+                    className={styles.memberImage}
+                  />
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">Michael Johnson</h3>
-                <p className="text-ecomotech-blue mb-4">Chief Operations Officer</p>
-                <p className="text-gray-600">
-                  Michael oversees Ecomotech's operations, ensuring efficient production and delivery of our solar solutions.
+              <div className={styles.memberInfo}>
+                <h3 className={styles.memberName}>Sulayman Njie</h3>
+                <p className={styles.memberRole}>Chief Operations Officer</p>
+                <div className={styles.divider}></div>
+                <p className={styles.memberBio}>
+                  Njie also known as Brainysoul oversees Ecomotech's operations, ensuring efficient production and delivery of our solar solutions.
                 </p>
               </div>
             </div>

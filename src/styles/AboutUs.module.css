@@ -1,0 +1,76 @@
+.teamMember {
+  @apply bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300;
+}
+
+.teamImageWrapper {
+  @apply relative mx-auto mb-6;
+  width: 200px;
+  height: 200px;
+}
+
+.imageContainer {
+  @apply relative overflow-hidden rounded-full;
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer::before {
+  content: '';
+  @apply absolute inset-0;
+  background: linear-gradient(45deg, rgba(0, 200, 83, 0.2), rgba(30, 136, 229, 0.2));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.memberImage {
+  @apply w-full h-full object-cover rounded-full border-4 border-white shadow-xl;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .memberImage {
+  transform: scale(1.08);
+}
+
+.memberInfo {
+  @apply p-6 text-center space-y-3;
+}
+
+.memberName {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.memberRole {
+  @apply text-lg font-semibold text-ecomotech-blue;
+}
+
+.divider {
+  @apply w-16 h-1 bg-ecomotech-green mx-auto;
+}
+
+.memberBio {
+  @apply text-gray-600 leading-relaxed;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .teamMember {
+    @apply bg-gray-800;
+  }
+
+  .memberName {
+    @apply text-white;
+  }
+
+  .memberRole {
+    @apply text-blue-400;
+  }
+
+  .memberBio {
+    @apply text-gray-300;
+  }
+
+  .imageContainer::before {
+    background: linear-gradient(45deg, rgba(0, 200, 83, 0.3), rgba(30, 136, 229, 0.3));
+  }
+}
