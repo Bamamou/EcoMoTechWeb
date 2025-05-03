@@ -13,6 +13,12 @@ import SolarPumbs from './components/products/SolarPumbs';
 import StreetLightDetails from './components/products/Product details/StreetLightDetails';
 import HomeSystemDetails from './components/products/Product details/HomeSystemDetails';
 import EnergyStorageDetails from "./components/products/Product details/EnergyStorageDetails";
+import SolarInstallation from "@/pages/services/SolarInstallation";
+import SolarMaintenance from "@/pages/services/SolarMaintenance";
+import EVChargerInstallation from "@/pages/services/EVChargerInstallation";
+import EVRepair from "@/pages/services/EVRepair";
+import SolarConsultancy from "@/pages/services/SolarConsultancy";
+import EnergyAssessment from "@/pages/services/EnergyAssessment";
 
 // Lazy load all routes
 const About = React.lazy(() => import("./pages/About"));
@@ -81,6 +87,15 @@ const App = () => (
             <Route path="/news/electric-mobility-africa" element={<ElectricMobilityAfrica />} />
             <Route path="/news/ev-charging-africa" element={<EVChargingAfrica />} />
             
+            {/* Service Routes */}
+            <Route path="/services/solar-installation" element={<SolarInstallation />} />
+            <Route path="/services/solar-maintenance" element={<SolarMaintenance />} />
+            <Route path="/services/ev-charger-installation" element={<EVChargerInstallation />} />
+            <Route path="/services/ev-repair" element={<EVRepair />} />
+            <Route path="/services/solar-consultancy" element={<SolarConsultancy />} />
+            <Route path="/services/energy-assessment" element={<EnergyAssessment />} />
+            <Route path="/services" element={<Services />} />
+
             <Route path="/join-us" element={<JoinUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

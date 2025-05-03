@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const serviceLinks = [
+  { name: "Solar PV Installation", href: "/services/solar-installation" },
+  { name: "Solar PV Farm Maintenance", href: "/services/solar-maintenance" },
+  { name: "EV Charger Installation", href: "/services/ev-charger-installation" },
+  { name: "Electric Vehicle Repair", href: "/services/ev-repair" },
+  { name: "Solar PV Consultancy", href: "/services/solar-consultancy" },
+  { name: "Energy Efficiency Assessment", href: "/services/energy-assessment" },
+];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,12 +58,12 @@ const Navbar = () => {
       path: "/services",
       dropdown: true,
       items: [
-        { name: "Solar PV Installation", path: "/services#solar-installation" },
-        { name: "Solar Farm Maintenance", path: "/services#farm-maintenance" },
-        { name: "EV Charger Installation", path: "/services#ev-installation" },
-        { name: "Electric Vehicle Repair", path: "/services#ev-repair" },
-        { name: "Solar PV Consultancy", path: "/services#consultancy" },
-        { name: "Energy Efficiency Assessment", path: "/services#assessment" },
+        { name: "Solar PV Installation", path: "/services/solar-installation" },
+        { name: "Solar Farm Maintenance", path: "/services/solar-maintenance" },
+        { name: "EV Charger Installation", path: "/services/ev-charger-installation" },
+        { name: "Electric Vehicle Repair", path: "/services/ev-repair" },
+        { name: "Solar PV Consultancy", path: "/services/solar-consultancy" },
+        { name: "Energy Efficiency Assessment", path: "/services/energy-assessment" },
       ]
     },
     { name: "About Us", path: "/about" },

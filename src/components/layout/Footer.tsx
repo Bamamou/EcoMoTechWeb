@@ -53,6 +53,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/services" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/news" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                   News
                 </Link>
@@ -125,28 +130,33 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services#solar-installation" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                <Link to="/services/solar-installation" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                   Solar PV Installation
                 </Link>
               </li>
               <li>
-                <Link to="/services#farm-maintenance" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                <Link to="/services/solar-maintenance" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                   Solar Farm Maintenance
                 </Link>
               </li>
               <li>
-                <Link to="/services#ev-installation" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                <Link to="/services/ev-charger-installation" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                   EV Charger Installation
                 </Link>
               </li>
               <li>
-                <Link to="/services#ev-repair" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                <Link to="/services/ev-repair" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                   EV Repair Services
                 </Link>
               </li>
               <li>
-                <Link to="/services#consultancy" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                <Link to="/services/solar-consultancy" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                   Solar PV Consultancy
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/energy-assessment" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+                  Energy Efficiency Assessment
                 </Link>
               </li>
             </ul>
