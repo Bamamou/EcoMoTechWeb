@@ -21,7 +21,7 @@ const mobilityProducts = [
     id: "ev-chargers",
     title: "EV Chargers",
     description: "Advanced charging solutions for home and commercial applications.",
-    image: "https://images.unsplash.com/photo-1647227611975-c906679f39f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/chargers/charger design.png",
     link: "/products/ev-chargers"
   }
 ];
