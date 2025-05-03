@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 const departments = [...new Set(jobPostings.map(job => job.department))];
 
@@ -103,18 +104,24 @@ const JoinUs = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full"
+                  aria-label="Search job positions"
                 />
               </div>
-              <select
-                value={selectedDepartment}
-                onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="px-4 py-2 border rounded-md bg-white"
-              >
-                <option value="all">All Departments</option>
-                {departments.map(dept => (
-                  <option key={dept} value={dept}>{dept}</option>
-                ))}
-              </select>
+              <div className="flex flex-col">
+                <Label htmlFor="department-select">Department</Label>
+                <select
+                  id="department-select"
+                  value={selectedDepartment}
+                  onChange={(e) => setSelectedDepartment(e.target.value)}
+                  className="px-4 py-2 border rounded-md bg-white"
+                  aria-label="Filter by department"
+                >
+                  <option value="all">All Departments</option>
+                  {departments.map(dept => (
+                    <option key={dept} value={dept}>{dept}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
 
@@ -131,6 +138,8 @@ const JoinUs = () => {
 };
 
 const JobCard = ({ job }: { job: JobPosting }) => {
+  const navigate = useNavigate();
+
   return (
     <Card className="hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
@@ -201,7 +210,10 @@ const JobCard = ({ job }: { job: JobPosting }) => {
                   ))}
                 </ul>
               </div>
-              <Button className="w-full" onClick={() => window.location.href = '/contact'}>
+              <Button 
+                className="w-full" 
+                onClick={() => navigate('/contact')}
+              >
                 Apply Now
               </Button>
             </div>
