@@ -1,9 +1,8 @@
-
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 
 const Contact = () => {
@@ -72,6 +71,121 @@ const Contact = () => {
                 Saturday: 10AM - 4PM
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Representations Section */}
+      <section className="py-16 bg-ecomotech-light-gray">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Global Presence</h2>
+            <div className="w-24 h-1 bg-ecomotech-green mx-auto mb-6"></div>
+            <p className="max-w-2xl mx-auto text-lg text-gray-600">
+              Connect with our regional offices and partners across Africa
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Tanzania */}
+            <a 
+              //href="https://ecomotech-tz.com"  to be updated in the future
+              href="https://afrimes.com/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <img 
+                  src="/EcoMoTechWeb/images/flags/tanzania.webp" 
+                  alt="Tanzania Flag" 
+                  className="w-16 h-16 rounded-full mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">EcoMoTech Tanzania</h3>
+                <p className="text-gray-600 mb-4">Dar es Salaam, Tanzania</p>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center transition-colors">
+                  Visit Website <ArrowUpRight className="ml-1 h-4 w-4" />
+                </span>
+              </div>
+            </a>
+
+            {/* The Gambia */}
+            <a 
+              //href="https://ecomotech-gambia.com"  to be updated 
+              href="https://afrimes.com/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <img 
+                  src="/EcoMoTechWeb/images/flags/the gambia.webp" 
+                  alt="Gambia Flag" 
+                  className="w-16 h-16 rounded-full mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">EcoMoTech The Gambia</h3>
+                <p className="text-gray-600 mb-4">Banjul, The Gambia</p>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center transition-colors">
+                  Visit Website <ArrowUpRight className="ml-1 h-4 w-4" />
+                </span>
+              </div>
+            </a>
+
+            {/* Guinea */}
+            <a 
+             // href="https://ecomotech-guinea.com" to be updated
+              href="https://afrimes.com/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <img 
+                  src="/EcoMoTechWeb/images/flags/guinea.png" 
+                  alt="Guinea Flag" 
+                  className="w-16 h-16 rounded-full mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">EcoMoTech Guinea</h3>
+                <p className="text-gray-600 mb-4">Conakry, Guinea</p>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center transition-colors">
+                  Visit Website <ArrowUpRight className="ml-1 h-4 w-4" />
+                </span>
+              </div>
+            </a>
+
+            {/* DR Congo */}
+            <a 
+              //href="https://ecomotech-drc.com"  to be updated 
+              href="https://afrimes.com/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <img 
+                  src="/EcoMoTechWeb/images/flags/drc.webp" 
+                  alt="DR Congo Flag" 
+                  className="w-16 h-16 rounded-full mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">EcoMoTech DR Congo</h3>
+                <p className="text-gray-600 mb-4">Kinshasa, DR Congo</p>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center transition-colors">
+                  Visit Website <ArrowUpRight className="ml-1 h-4 w-4" />
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>

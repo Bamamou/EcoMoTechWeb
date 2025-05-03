@@ -1,27 +1,233 @@
+/* Custom Properties for consistent theming */
+:root {
+  --card-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+  --hover-transform: scale(1.03) translateY(-8px);
+  --transition-speed: 300ms;
+  --card-shadow: 0 8px 32px rgba(0, 200, 83, 0.15);
+  --border-radius: 16px;
+}
+
 .fadeInDelay {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.fadeInDelay > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fadeInDelay > *:nth-child(1) {
   animation-delay: 0.2s;
 }
 
+.fadeInDelay > *:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.fadeInDelay > *:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productCard {
+  @apply bg-white rounded-2xl overflow-hidden;
+  background: var(--card-gradient);
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+}
+
+.productCard:hover {
+  transform: var(--hover-transform);
+  box-shadow: 0 12px 48px rgba(0, 200, 83, 0.25);
+}
+
 .imageContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 66.67%;
-  overflow: hidden;
-  background-color: #f5f5f5;
+  @apply relative w-full overflow-hidden;
+  height: 240px;
+  background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .productImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  @apply absolute inset-0 w-full h-full;
+  object-fit: cover;
+  padding: 0.1rem;
   object-position: center;
-  padding: 0.25rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed) ease;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
 }
 
-.productImage:hover {
-  transform: scale(1.05);
+.productCard:hover .productImage {
+  transform: scale(1.08);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+}
+
+.imageGallery {
+  @apply grid grid-cols-4 gap-2 mt-4;
+}
+
+.galleryImage {
+  @apply relative w-full cursor-pointer rounded-lg overflow-hidden;
+  padding-top: 75%; /* 4:3 aspect ratio */
+}
+
+.galleryImage img {
+  @apply absolute inset-0 w-full h-full object-cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+.galleryImage:hover img {
+  transform: scale(1.1);
+}
+
+.selectedImage {
+  @apply border-2 border-ecomotech-green;
+}
+
+.contentContainer {
+  @apply p-6 space-y-4;
+}
+
+.productTitle {
+  @apply text-xl font-bold text-gray-900;
+  @apply mb-2;
+  background: linear-gradient(90deg, #1a1a1a, #4a4a4a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: linear-gradient(90deg, #1a1a1a, #4a4a4a);
+}
+
+.capacity {
+  @apply text-lg font-semibold text-ecomotech-green;
+  @apply flex items-center gap-2;
+}
+
+.description {
+  @apply text-gray-600 text-sm leading-relaxed;
+  @apply line-clamp-2;
+}
+
+.price {
+  @apply text-ecomotech-blue font-bold mt-2;
+  font-size: 1.125rem;
+}
+
+.viewDetailsButton {
+  @apply mt-4 w-full py-3 px-6 rounded-xl;
+  @apply bg-gradient-to-r from-ecomotech-green to-ecomotech-dark-green;
+  @apply text-white font-semibold;
+  @apply flex items-center justify-center gap-2;
+  @apply transition-all duration-300;
+  @apply shadow-lg shadow-ecomotech-green/20;
+  position: relative;
+  overflow: hidden;
+}
+
+.viewDetailsButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.viewDetailsButton:hover::after {
+  transform: translateX(100%);
+}
+
+.viewDetailsButton:hover {
+  @apply shadow-xl shadow-ecomotech-green/30;
+  transform: translateY(-2px);
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .productCard {
+    @apply bg-gray-800;
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.9) 0%, rgba(17, 24, 39, 0.8) 100%);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .imageContainer {
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .galleryImage {
+    @apply bg-gray-800;
+  }
+
+  .selectedImage {
+    @apply border-ecomotech-green/80;
+  }
+
+  .productTitle {
+    /* Remove gradient text effect in dark mode for better visibility */
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+   
+    /* Add text shadow for better contrast */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    /* Optional: Add a subtle gradient overlay */
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+
+  .productTitle::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+    z-index: -1;
+  }
+
+  .description {
+    @apply text-gray-300;
+  }
+
+  .price {
+    @apply text-blue-400;
+  }
+}
+
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Add this if you want the hero image to glow */
+.hero-image-glow {
+  filter: drop-shadow(0 0 20px rgba(0, 200, 83, 0.3));
 }

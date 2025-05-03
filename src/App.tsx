@@ -12,6 +12,7 @@ import MotorcycleDetails from './components/products/Product details/MotorcycleD
 import SolarPumbs from './components/products/SolarPumbs';
 import StreetLightDetails from './components/products/Product details/StreetLightDetails';
 import HomeSystemDetails from './components/products/Product details/HomeSystemDetails';
+import EnergyStorageDetails from "./components/products/Product details/EnergyStorageDetails";
 
 // Lazy load all routes
 const About = React.lazy(() => import("./pages/About"));
@@ -64,6 +65,7 @@ const App = () => (
             <Route path="/products/street-lights" element={<StreetLights />} />
             <Route path="/products/street-lights/:id" element={<StreetLightDetails />} />
             <Route path="/products/energy-storage" element={<EnergyStorage />} />
+            <Route path="/products/energy-storage/:id" element={<EnergyStorageDetails />} />
             <Route path="/products/electric-tricycles" element={<ElectricTricycles />} />
             <Route path="/products/ev-chargers" element={<EVChargers />} />
             <Route path="/products/solar-pumbs" element={<SolarPumbs />} />
