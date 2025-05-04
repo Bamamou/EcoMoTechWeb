@@ -36,7 +36,7 @@ export const newsItems = [
     date: "February 15, 2023",
     author: "Emma Nelson",
     category: "Projects",
-    image: "/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg",
+    image: "/EcoMoTechWeb/images/News/new-solar-panel-series.jpg",
     link: "/news/remote-communities"
   },
   {

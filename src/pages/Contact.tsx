@@ -1,15 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    alert("Form submitted! This is a demo - no actual submission occurs.");
+    setIsSubmitting(true);
+
+    try {
+      const result = await emailjs.send(
+        'ecomotech', // Replace with your EmailJS service ID
+        'ECOMOTECH', // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Ecomotech Team',
+        },
+        'L2DkGjfmnyn-pOmed' // Replace with your EmailJS public key
+      );
+
+      if (result.status === 200) {
+        toast({
+          title: "Success!",
+          description: "Your message has been sent. We'll get back to you soon.",
+          variant: "default",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -210,6 +267,8 @@ const Contact = () => {
                     <Input 
                       id="name" 
                       name="name" 
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Your name" 
                       required 
                       className="w-full"
@@ -222,7 +281,9 @@ const Contact = () => {
                     <Input 
                       id="email" 
                       name="email" 
-                      type="email" 
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Your email" 
                       required 
                       className="w-full"
@@ -236,7 +297,9 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="subject" 
-                    name="subject" 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="Subject of your message" 
                     required 
                     className="w-full"
@@ -249,30 +312,47 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     id="message" 
-                    name="message" 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Your message" 
                     required 
                     className="w-full min-h-[150px]"
                   />
                 </div>
 
-                <Button type="submit" className="bg-ecomotech-green hover:bg-ecomotech-dark-green text-white px-8 py-6">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="bg-ecomotech-green hover:bg-ecomotech-dark-green text-white px-8 py-6"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </div>
 
             <div>
               <div className="h-full min-h-[400px] md:min-h-0 bg-gray-300 rounded-lg overflow-hidden shadow-md">
-                {/* Replace with actual Google Map integration or a map image */}
-                <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://maps.googleapis.com/maps/api/staticmap?center=40.7128,-74.0060&zoom=13&size=600x600&markers=color:green%7C40.7128,-74.0060&key=YOUR_API_KEY')" }}>
-                  <div className="w-full h-full flex items-center justify-center bg-ecomotech-dark-blue bg-opacity-50">
-                    <p className="text-white text-center px-4">
-                      Map visualization placeholder.<br/>
-                      In a real implementation, this would be an interactive Google Map.
-                    </p>
-                  </div>
-                </div>
+                {/* Using Coyah, Guinea Conakry coordinates: approximately 9.7086, -13.3847 */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31443.77965768875!2d-13.399422847167969!3d9.708599999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd9f1f02a2fff%3A0x6d87f7c0835c8c9b!2sCoyah%2C%20Guinea!5e0!3m2!1sen!2s!4v1625097200000!5m2!1sen!2s"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg shadow-md"
+                  title="Ecomotech Office Location in Coyah, Guinea"
+                ></iframe>
+              </div>
+              
+              <div className="mt-6 p-6 bg-white rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-3">Our Main Office</h3>
+                <p className="text-gray-600">
+                  <MapPin className="inline-block mr-2 h-5 w-5 text-ecomotech-green" />
+                  Coyah, Guinea Conakry
+                </p>
               </div>
             </div>
           </div>
