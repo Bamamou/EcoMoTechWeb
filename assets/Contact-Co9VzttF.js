@@ -1,4 +1,4 @@
-import{c as M,r as f,j as e,e as F,u as L,L as R,P as C,M as H,f as j,g as O,B as _}from"./index-8RFCx6bh.js";import{I as b}from"./input-ClCSyRDU.js";/**
+import{c as M,r as f,j as e,e as F,u as L,L as R,P as C,M as H,f as j,g as O,B as _}from"./index-CMTAnqk_.js";import{I as b}from"./input-DcE7W0vB.js";/**
  * @license lucide-react v0.462.0 - ISC
  *
  * This source code is licensed under the ISC license.
@@ -9,7 +9,7 @@ import{c as M,r as f,j as e,e as F,u as L,L as R,P as C,M as H,f as j,g as O,B a
                                flex items-center transition-colors`,children:["Visit Website ",e.jsx(u,{className:"ml-1 h-4 w-4"})]})]})}),e.jsx("a",{href:"https://afrimes.com/",target:"_blank",rel:"noopener noreferrer",className:"group",children:e.jsxs("div",{className:`flex flex-col items-center text-center p-6 bg-white rounded-lg 
                             shadow-sm hover:shadow-lg transition-all duration-300
                             transform hover:-translate-y-1`,children:[e.jsx("img",{src:"/EcoMoTechWeb/images/flags/the gambia.webp",alt:"Gambia Flag",className:"w-16 h-16 rounded-full mb-4 object-cover"}),e.jsx("h3",{className:"text-xl font-semibold mb-2 text-gray-800",children:"EcoMoTech The Gambia"}),e.jsx("p",{className:"text-gray-600 mb-4",children:"Banjul, The Gambia"}),e.jsxs("span",{className:`text-ecomotech-green group-hover:text-ecomotech-dark-green 
-                               flex items-center transition-colors`,children:["Visit Website ",e.jsx(u,{className:"ml-1 h-4 w-4"})]})]})}),e.jsx("a",{href:"https://afrimes.com/",target:"_blank",rel:"noopener noreferrer",className:"group",children:e.jsxs("div",{className:`flex flex-col items-center text-center p-6 bg-white rounded-lg 
+                               flex items-center transition-colors`,children:["Visit Website ",e.jsx(u,{className:"ml-1 h-4 w-4"})]})]})}),e.jsx("a",{href:"https://ecomotech.github.io/eco-tech-avenir-web/",target:"_blank",rel:"noopener noreferrer",className:"group",children:e.jsxs("div",{className:`flex flex-col items-center text-center p-6 bg-white rounded-lg 
                             shadow-sm hover:shadow-lg transition-all duration-300
                             transform hover:-translate-y-1`,children:[e.jsx("img",{src:"/EcoMoTechWeb/images/flags/guinea.png",alt:"Guinea Flag",className:"w-16 h-16 rounded-full mb-4 object-cover"}),e.jsx("h3",{className:"text-xl font-semibold mb-2 text-gray-800",children:"EcoMoTech Guinea"}),e.jsx("p",{className:"text-gray-600 mb-4",children:"Conakry, Guinea"}),e.jsxs("span",{className:`text-ecomotech-green group-hover:text-ecomotech-dark-green 
                                flex items-center transition-colors`,children:["Visit Website ",e.jsx(u,{className:"ml-1 h-4 w-4"})]})]})}),e.jsx("a",{href:"https://afrimes.com/",target:"_blank",rel:"noopener noreferrer",className:"group",children:e.jsxs("div",{className:`flex flex-col items-center text-center p-6 bg-white rounded-lg 
