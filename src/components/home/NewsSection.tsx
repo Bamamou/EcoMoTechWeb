@@ -60,7 +60,7 @@ const NewsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = "/EcoMoTechWeb/images/placeholder.jpg"; // Fallback image
+                    target.src = "/EcoMoTechWeb/images/news/solar-panel-series.jpg"; // Fallback image
                     target.onerror = null; // Prevent infinite loop
                   }}
                 />

@@ -197,7 +197,7 @@ const Contact = () => {
             {/* Guinea */}
             <a 
              // href="https://ecomotech-guinea.com" to be updated
-              href="https://afrimes.com/"
+              href="https://ecomotech.github.io/eco-tech-avenir-web/"
               target="_blank" 
               rel="noopener noreferrer"
               className="group"
