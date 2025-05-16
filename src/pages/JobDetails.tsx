@@ -251,7 +251,7 @@ const JobDetails = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="experience" className="text-gray-700">Years of Experience</Label>
+                    <Label htmlFor="experience" className="text-gray-700">Work Experience</Label>
                     <Select
                       value={formData.experience}
                       onValueChange={(value) => setFormData({...formData, experience: value})}
