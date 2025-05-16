@@ -160,65 +160,12 @@ const JobCard = ({ job }: { job: JobPosting }) => {
       </CardHeader>
       <CardContent>
         <p className="text-gray-600 mb-4">{job.description}</p>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant="default">View Details</Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-            <DialogHeader>
-              <DialogTitle>{job.title}</DialogTitle>
-              <DialogDescription>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ecomotech-blue text-white">
-                    {job.department}
-                  </span>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                    {job.location}
-                  </span>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                    {job.type}
-                  </span>
-                </div>
-              </DialogDescription>
-            </DialogHeader>
-            <div className="mt-6 space-y-6">
-              <div>
-                <h4 className="font-semibold mb-2">Description</h4>
-                <p className="text-gray-600">{job.description}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Responsibilities</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-600">
-                  {job.responsibilities.map((resp, index) => (
-                    <li key={index}>{resp}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Requirements</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-600">
-                  {job.requirements.map((req, index) => (
-                    <li key={index}>{req}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Benefits</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-600">
-                  {job.benefits.map((benefit, index) => (
-                    <li key={index}>{benefit}</li>
-                  ))}
-                </ul>
-              </div>
-              <Button 
-                className="w-full" 
-                onClick={() => navigate('/contact')}
-              >
-                Apply Now
-              </Button>
-            </div>
-          </DialogContent>
-        </Dialog>
+        <Button 
+          variant="default"
+          onClick={() => navigate(`/jobs/${job.id}`)}
+        >
+          View Details
+        </Button>
       </CardContent>
     </Card>
   );

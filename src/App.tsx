@@ -19,6 +19,7 @@ import EVChargerInstallation from "@/pages/services/EVChargerInstallation";
 import EVRepair from "@/pages/services/EVRepair";
 import SolarConsultancy from "@/pages/services/SolarConsultancy";
 import EnergyAssessment from "@/pages/services/EnergyAssessment";
+import JobDetails from "./pages/JobDetails";
 
 // Lazy load all routes
 const About = React.lazy(() => import("./pages/About"));
@@ -98,6 +99,7 @@ const App = () => (
 
             <Route path="/join-us" element={<JoinUs />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/jobs/:id" element={<JobDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

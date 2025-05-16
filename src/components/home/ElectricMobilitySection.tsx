@@ -7,14 +7,14 @@ const mobilityProducts = [
     id: "electric-motorcycles",
     title: "Electric Motorcycles",
     description: "High-performance electric motorcycles for urban mobility.",
-    image: "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/Electric motorcycles/DM green.jpg",
     link: "/products/electric-motorcycles"
   },
   {
     id: "electric-tricycles",
     title: "Electric Tricycles",
     description: "Versatile electric tricycles for commercial and personal use.",
-    image: "/EcoMoTechWeb/images/Electric motorcycles/higo_profile.webp",
+    image: "/EcoMoTechWeb/images/Electric motorcycles/Higo white.webp",
     link: "/products/electric-tricycles"
   },
   {
