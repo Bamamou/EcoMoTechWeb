@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { Icon } from '@iconify/react';
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -87,40 +88,58 @@ const Contact = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
-                <Phone className="h-6 w-6 text-ecomotech-green" />
+            {/* WhatsApp */}
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center mb-4">
+                <Icon 
+                  icon="logos:whatsapp-icon" 
+                  className="h-8 w-8" 
+                  style={{ filter: 'brightness(0) invert(1)' }} 
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Phone</h3>
-              <a href="tel:18810799128" className="text-gray-600 hover:text-ecomotech-green transition-colors">
-                18810799128
+              <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
+              <a 
+                href="https://wa.me/8618810799128" 
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="text-gray-600 hover:text-[#25D366] transition-colors flex items-center gap-2"
+              >
+                <span>+86 188 1079 9128</span>
+                <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
 
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
-                <Mail className="h-6 w-6 text-ecomotech-green" />
+            {/* Email */}
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4">
+                <Mail className="h-7 w-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <a href="mailto:ecomotech@outlook.com" className="text-gray-600 hover:text-ecomotech-green transition-colors">
-                ecomotech@outlook.com
+              <a 
+                href="mailto:ecomotech@outlook.com" 
+                className="text-gray-600 hover:text-blue-500 transition-colors flex items-center gap-2"
+              >
+                <span>ecomotech@outlook.com</span>
+                <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
 
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
-                <MapPin className="h-6 w-6 text-ecomotech-green" />
+            {/* Address */}
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mb-4">
+                <MapPin className="h-7 w-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Address</h3>
-              <p className="text-gray-600">
-                123 Green Energy Street<br />
-                Renewable City, 10001
+              <p className="text-gray-600 group-hover:text-purple-500 transition-colors">
+                28 Yizhuang Economic Development Zone<br />
+                Daxing District, Beijing, 16801
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-ecomotech-green bg-opacity-10 flex items-center justify-center mb-4">
-                <Clock className="h-6 w-6 text-ecomotech-green" />
+            {/* Business Hours */}
+            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mb-4">
+                <Clock className="h-7 w-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Business Hours</h3>
               <p className="text-gray-600">
@@ -335,7 +354,7 @@ const Contact = () => {
               <div className="h-full min-h-[400px] md:min-h-0 bg-gray-300 rounded-lg overflow-hidden shadow-md">
                 {/* Using Coyah, Guinea Conakry coordinates: approximately 9.7086, -13.3847 */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31443.77965768875!2d-13.399422847167969!3d9.708599999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd9f1f02a2fff%3A0x6d87f7c0835c8c9b!2sCoyah%2C%20Guinea!5e0!3m2!1sen!2s!4v1625097200000!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.1234567890123!2d116.49664!3d39.795866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f1a7e5d6b8b8b9%3A0x1d13f6b5b9b9b9b9!2sYizhuang%20Economic%20Development%20Zone!5e0!3m2!1sen!2scn!4v1625097200000!5m2!1sen!2scn"
                   width="100%"
                   height="450"
                   style={{ border: 0 }}
@@ -343,7 +362,7 @@ const Contact = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg shadow-md"
-                  title="Ecomotech Office Location in Coyah, Guinea"
+                  title="Ecomotech Office Location in Yizhuang, Beijing"
                 ></iframe>
               </div>
               
@@ -351,7 +370,7 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold mb-3">Our Main Office</h3>
                 <p className="text-gray-600">
                   <MapPin className="inline-block mr-2 h-5 w-5 text-ecomotech-green" />
-                  Coyah, Guinea Conakry
+                  28 Yizhuang Economic Development Zone, Daxing District, Beijing, China
                 </p>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowUpRight } from "lucide-react";
+import { Icon } from '@iconify/react';
 
 const Footer = () => {
   return (
@@ -18,10 +19,10 @@ const Footer = () => {
               We're committed to creating a sustainable future through innovative green technology.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+              <a href="https://www.facebook.com/people/Ecomotech/61574949172407/" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+              <a href="https://x.com/ecomotech" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                 <Twitter size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-ecomotech-green transition-colors">
@@ -163,28 +164,46 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div>
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin size={20} className="text-ecomotech-green mr-2 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">
-                  123 Green Energy Street, Renewable City, 10001
+            <div className="space-y-3">
+              <div className="text-gray-400 mb-4 flex items-start">
+                <MapPin className="h-5 w-5 text-ecomotech-green mt-1 mr-2" />
+                <span>
+                  28 Yizhuang Economic Development Zone,<br />
+                  Daxing District, Beijing, 16801
                 </span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={20} className="text-ecomotech-green mr-2 flex-shrink-0" />
-                <a href="tel:18810799128" className="text-gray-400 hover:text-ecomotech-green transition-colors">
-                  18810799128
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Mail size={20} className="text-ecomotech-green mr-2 flex-shrink-0" />
-                <a href="mailto:ecomotech@outlook.com" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+              </div>
+              
+              <div className="flex items-center">
+                <div className="flex items-center">
+                  <Icon 
+                    icon="logos:whatsapp-icon" 
+                    className="h-5 w-5 mr-2" 
+                  />
+                  <a 
+                    href="https://wa.me/8618810799128" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-ecomotech-green transition-colors flex items-center"
+                  >
+                    +86 188 1079 9128
+                    <ArrowUpRight className="h-4 w-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 text-ecomotech-green mr-2" />
+                <a 
+                  href="mailto:ecomotech@outlook.com"
+                  className="text-gray-400 hover:text-ecomotech-green transition-colors flex items-center"
+                >
                   ecomotech@outlook.com
+                  <ArrowUpRight className="h-4 w-4 ml-1" />
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
 
