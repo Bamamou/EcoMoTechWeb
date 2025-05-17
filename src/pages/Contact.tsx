@@ -356,7 +356,7 @@ const Contact = () => {
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.1234567890123!2d116.49664!3d39.795866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f1a7e5d6b8b8b9%3A0x1d13f6b5b9b9b9b9!2sYizhuang%20Economic%20Development%20Zone!5e0!3m2!1sen!2scn!4v1625097200000!5m2!1sen!2scn"
                   width="100%"
-                  height="450"
+                  height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
@@ -380,7 +380,7 @@ const Contact = () => {
 
       {/* FAQ Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
             <div className="w-24 h-1 bg-ecomotech-blue mx-auto mb-6"></div>
