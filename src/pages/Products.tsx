@@ -125,7 +125,7 @@ const ProductsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/products/electric-motorcycles" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img
-                src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                src="/EcoMoTechWeb/images/Electric motorcycles/DM green.jpg"
                 alt="Electric Motorcycles"
                 className="w-full h-60 object-cover"
               />
@@ -137,7 +137,7 @@ const ProductsPage = () => {
 
             <Link to="/products/ev-chargers" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <img
-                src="https://images.unsplash.com/photo-1647227611975-c906679f39f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                src="/EcoMoTechWeb/images/chargers/charger design.png"
                 alt="EV Chargers"
                 className="w-full h-60 object-cover"
               />

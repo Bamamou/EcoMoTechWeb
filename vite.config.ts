@@ -4,16 +4,25 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    host: true,
-    port: 8080,
-    open: true, // Automatically open the app in the browser
-  },
+  // server: {
+  //   host: true,
+  //   port: 8080,
+  //   open: true, // Automatically open the app in the browser
+  // },
   preview: {
     port: 8080,
   },
   plugins: [react()],
   base: '/EcoMoTechWeb/',  // Must match your GitHub repository name
+  server: {
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      }
+    }
+  },
   resolve: {  
     alias: {
       "@": path.resolve(__dirname, "./src"),
