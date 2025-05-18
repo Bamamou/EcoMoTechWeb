@@ -4,17 +4,18 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Switching to Ecomotech's solar panels has drastically reduced our energy bills and carbon footprint. The installation team was professional and efficient, and the system has been running flawlessly for over a year now.",
-    author: "John Davis",
-    position: "Homeowner",
-    image: "/EcoMoTechWeb/images/AboutUs/customer.webp"
-  },
-  {
     text: "As a business owner, I was looking for sustainable energy solutions that would also make financial sense. Ecomotech delivered on both fronts. Their commercial solar installation has exceeded our expectations in terms of performance and ROI.",
     author: "Sarah Johnson",
     position: "Business Owner",
     image: "/EcoMoTechWeb/images/AboutUs/businesowner.jpg"
   },
+  {
+    text: "Switching to Ecomotech's solar panels has drastically reduced our energy bills and carbon footprint. The installation team was professional and efficient, and the system has been running flawlessly for over a year now.",
+    author: "John Davis",
+    position: "Homeowner",
+    image: "/EcoMoTechWeb/images/AboutUs/customer.webp"
+  },
+
   {
     text: "The energy storage system from Ecomotech has been a game-changer for our remote facility. We now have reliable power 24/7, regardless of grid conditions. The customer support has been exceptional throughout the entire process.",
     author: "Michael Chen",
