@@ -191,7 +191,7 @@ const Contact = () => {
             {/* The Gambia */}
             <a 
               //href="https://ecomotech-gambia.com"  to be updated 
-              href="https://afrimes.com/"
+              href="https://cecedekp.github.io/ecomotech-future-power-web/"
               target="_blank" 
               rel="noopener noreferrer"
               className="group"
