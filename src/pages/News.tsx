@@ -93,6 +93,16 @@ export const newsItems = [
     category: "Infrastructure",
     image: "/EcoMoTechWeb/images/News/Charging station.jpg",
     link: "/news/ev-charging-africa"
+  },
+  {
+  id: "9",
+  title: "The Growth of EV Charging Infrastructure in Africa",
+  description: "Exploring the development and future of electric vehicle charging infrastructure across Africa.",
+  date: "2025-06-20",
+  category: "Infrastructure",
+  tags: ["Electric Vehicles", "Infrastructure", "Sustainable Energy"],
+  image: "/EcoMoTechWeb/images/News/Charging station in Africa.png",
+  link: "/news/ev-charging-infrastructure-africa"
   }
 ];
 

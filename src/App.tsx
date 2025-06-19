@@ -21,6 +21,7 @@ import SolarConsultancy from "@/pages/services/SolarConsultancy";
 import EnergyAssessment from "@/pages/services/EnergyAssessment";
 import JobDetails from "./pages/JobDetails";
 
+
 // Lazy load all routes
 const About = React.lazy(() => import("./pages/About"));
 const News = React.lazy(() => import("./pages/News"));
@@ -46,6 +47,7 @@ const SustainabilityReport = React.lazy(() => import("./pages/articles/Sustainab
 const StreetLighting = React.lazy(() => import("./pages/articles/StreetLighting"));
 const ElectricMobilityAfrica = React.lazy(() => import("./pages/articles/ElectricMobilityAfrica"));
 const EVChargingAfrica = React.lazy(() => import("./pages/articles/EVChargingAfrica"));
+const EVChargingInfrastructureInAfrica = React.lazy(() => import("./pages/articles/EVChargingInfrastructureInAfrica"));
 
 const queryClient = new QueryClient();
 
@@ -87,6 +89,7 @@ const App = () => (
             <Route path="/news/street-lighting" element={<StreetLighting />} />
             <Route path="/news/electric-mobility-africa" element={<ElectricMobilityAfrica />} />
             <Route path="/news/ev-charging-africa" element={<EVChargingAfrica />} />
+            <Route path="/news/ev-charging-infrastructure-africa" element={<EVChargingInfrastructureInAfrica />} />
             
             {/* Service Routes */}
             <Route path="/services/solar-installation" element={<SolarInstallation />} />

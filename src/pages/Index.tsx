@@ -16,7 +16,7 @@ const latestNews = [
     category: "Product News",
     excerpt: "Our latest solar panel technology achieves record-breaking efficiency rates...",
     link: "/news/new-solar-panel-series",
-    image: "https://images.unsplash.com/photo-1497440001736-76dde04f31b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+    image:  "/EcoMoTechWeb/images/News/Ecomotech Launches New High-Efficiency Solar Panel Series.jpg",
   },
   {
     title: "Expanding Our Reach: New Distribution Center Opens",
@@ -24,7 +24,7 @@ const latestNews = [
     category: "Company News",
     excerpt: "Ecomotech expands operations with a new distribution center...",
     link: "/news/distribution-center",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+    image:  "/EcoMoTechWeb/images/News/warehouse.jpg",
   },
   {
     title: "Sustainable Energy Solutions for Remote Communities",
@@ -32,7 +32,7 @@ const latestNews = [
     category: "Projects",
     excerpt: "Bringing reliable electricity to communities for the first time...",
     link: "/news/remote-communities",
-    image: "https://images.unsplash.com/photo-1534949522533-7c851c1bc891?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+    image:"/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg"
   }
 ];
 
