@@ -21,7 +21,7 @@ const LanguageSwitcher = () => {
           </a>
         </DropdownMenuItem>
         <DropdownMenuItem className="cursor-pointer">
-          <a href="https://your-chinese-site-url.com" className="w-full">
+          <a href="https://bamamou.github.io/EcoMoTechWeb_cn/" className="w-full">
             中文
           </a>
         </DropdownMenuItem>
