@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 import Layout from "@/components/layout/Layout";
 import { jobPostings } from "@/utils/careersData";
 import { Button } from "@/components/ui/button";
@@ -83,26 +84,59 @@ const JobDetails: React.FC = () => {
 
     setIsSubmitting(true);
 
-    const formDataToSend = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      if (value) {
-        formDataToSend.append(key, value);
-      }
-    });
-    formDataToSend.append("jobId", id);
-    formDataToSend.append("jobTitle", job.title);
-
     try {
-      const response = await fetch("/api/apply", {
-        method: "POST",
-        body: formDataToSend,
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to submit application");
+      // Convert resume file to base64 for EmailJS
+      let resumeBase64 = '';
+      let resumeFileName = '';
+      
+      if (formData.resume) {
+        resumeFileName = formData.resume.name;
+        const reader = new FileReader();
+        resumeBase64 = await new Promise((resolve) => {
+          reader.onload = () => resolve(reader.result as string);
+          reader.readAsDataURL(formData.resume!);
+        });
       }
 
-      setShowSuccessDialog(true);
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'ecomotech',
+        import.meta.env.VITE_EMAILJS_JOB_TEMPLATE_ID || 'job_application_template',
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          job_title: job.title,
+          job_id: id,
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          linkedin: formData.linkedin,
+          academic_level: formData.academicLevel,
+          experience: formData.experience,
+          cover_letter: formData.coverLetter,
+          resume_filename: resumeFileName,
+          resume_content: resumeBase64,
+          to_name: 'Ecomotech HR Team',
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'L2DkGjfmnyn-pOmed'
+      );
+
+      if (result.status === 200) {
+        setShowSuccessDialog(true);
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          linkedin: '',
+          academicLevel: '',
+          experience: '',
+          coverLetter: '',
+          resume: null,
+        });
+      }
     } catch (error) {
       console.error("Error submitting application:", error);
       alert("Failed to submit application. Please try again.");

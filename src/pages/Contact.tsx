@@ -32,8 +32,8 @@ const Contact = () => {
 
     try {
       const result = await emailjs.send(
-        'ecomotech', // Replace with your EmailJS service ID
-        'ECOMOTECH', // Replace with your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'ecomotech',
+        import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID || 'ECOMOTECH',
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -41,7 +41,7 @@ const Contact = () => {
           message: formData.message,
           to_name: 'Ecomotech Team',
         },
-        'L2DkGjfmnyn-pOmed' // Replace with your EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'L2DkGjfmnyn-pOmed'
       );
 
       if (result.status === 200) {
