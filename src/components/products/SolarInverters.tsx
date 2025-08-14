@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
 import styles from '@/styles/SolarInverters.module.css';
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 import {
   Dialog,
   DialogContent,
@@ -16,7 +17,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MIN 5000TL-X",
       power: "5kW",
-      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 10KTL3-X.jpg",
+      image: "images/Inverters/Growatt MAX 10KTL3-X.jpg",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPP trackers",
@@ -30,7 +31,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MAX 10KTL3-X",
       power: "10kW",
-      image: "/EcoMoTechWeb/images/Inverters/Growatt MIN 5000TL-X.webp",
+      image: "images/Inverters/Growatt MIN 5000TL-X.webp",
       features: [
         "Maximum efficiency of 98.6%",
         "Multiple MPP trackers",
@@ -44,7 +45,7 @@ const SolarInverters = () => {
     {
       name: "Growatt MAX 15KTL3-X",
       power: "15kW",
-      image: "/EcoMoTechWeb/images/Inverters/Growatt MAX 15KTL3-X in.avif",
+      image: "images/Inverters/Growatt MAX 15KTL3-X in.avif",
       features: [
         "Maximum efficiency of 98.8%",
         "Triple MPP trackers",
@@ -58,7 +59,7 @@ const SolarInverters = () => {
     {
       name: "Sungrow SG8.0RT",
       power: "8kW",
-      image: "/EcoMoTechWeb/images/Inverters/Sungrow SG8.0RT.png",
+      image: "images/Inverters/Sungrow SG8.0RT.png",
       features: [
         "Maximum efficiency of 98.3%",
         "Three MPPT channels",
@@ -72,7 +73,7 @@ const SolarInverters = () => {
     {
       name: "Sungrow SG10RT",
       power: "10kW",
-      image: "/EcoMoTechWeb/images/Inverters/Sungrow SG10RT.webp",
+      image: "images/Inverters/Sungrow SG10RT.webp",
       features: [
         "Maximum efficiency of 98.5%",
         "Four MPPT tracking",
@@ -86,7 +87,7 @@ const SolarInverters = () => {
     {
       name: "Sungrow SG12RT",
       power: "12kW",
-      image: "/EcoMoTechWeb/images/Inverters/Sungrow SG12RT.webp",
+      image: "images/Inverters/Sungrow SG12RT.webp",
       features: [
         "Maximum efficiency of 98.7%",
         "Five MPPT channels",
@@ -100,7 +101,7 @@ const SolarInverters = () => {
     {
       name: "Goodwe GW3000-NS",
       power: "3kW",
-      image: "/EcoMoTechWeb/images/Inverters/Goodwe GW3000-NS.jpg",
+      image: "images/Inverters/Goodwe GW3000-NS.jpg",
       features: [
         "Maximum efficiency of 97.8%",
         "Single MPPT tracker",
@@ -114,7 +115,7 @@ const SolarInverters = () => {
     {
       name: "Goodwe GW6000-DT",
       power: "6kW",
-      image: "/EcoMoTechWeb/images/Inverters/Goodwe GW6000-DT.jpg",
+      image: "images/Inverters/Goodwe GW6000-DT.jpg",
       features: [
         "Maximum efficiency of 98.2%",
         "Dual MPPT trackers",
@@ -128,7 +129,7 @@ const SolarInverters = () => {
     {
       name: "Goodwe GW10K-DT",
       power: "10kW",
-      image: "/EcoMoTechWeb/images/Inverters/Goodwe GW10K-DT.webp",
+      image: "images/Inverters/Goodwe GW10K-DT.webp",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPPT design",
@@ -142,7 +143,7 @@ const SolarInverters = () => {
     {
       name: "Ecoverter5",
       power: "5kW",
-      image: "/EcoMoTechWeb/images/Inverters/Ecoverter5.webp",
+      image: "images/Inverters/Ecoverter5.webp",
       features: [
         "Maximum efficiency of 98.5%",
         "Dual MPPT channels",
@@ -156,7 +157,7 @@ const SolarInverters = () => {
     {
       name: "Ecoverter8",
       power: "8kW",
-      image: "/EcoMoTechWeb/images/Inverters/Ecoverter8.webp",
+      image: "images/Inverters/Ecoverter8.webp",
       features: [
         "Maximum efficiency of 98.7%",
         "Triple MPPT system",
@@ -170,7 +171,7 @@ const SolarInverters = () => {
     {
       name: "Ecoverter10",
       power: "10kW",
-      image: "/EcoMoTechWeb/images/Inverters/Ecoverter10.avif",
+      image: "images/Inverters/Ecoverter10.avif",
       features: [
         "Maximum efficiency of 98.9%",
         "Quad MPPT technology",
@@ -202,7 +203,7 @@ const SolarInverters = () => {
             {inverters.map((inverter, index) => (
               <div key={index} className={styles.inverterCard}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src={inverter.image} 
                     alt={inverter.name}
                     className={styles.inverterImage}

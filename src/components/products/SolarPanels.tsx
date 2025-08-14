@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@/components/layout/Layout";
 import styles from '@/styles/SolarPanels.module.css';
 import { ExternalLink } from "lucide-react";
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 import {
   Dialog,
   DialogContent,
@@ -38,7 +39,7 @@ export const solarPanelProducts: Product[] = [
       "Weight": "23.5kg",
       "Operating Temperature": "-40°C to +85°C"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/450W mono.avif"
+    image: "images/Solar panels/450W mono.avif"
   },
   {
     id: "poly-420w",
@@ -57,7 +58,7 @@ export const solarPanelProducts: Product[] = [
       "Weight": "22kg",
       "Operating Temperature": "-40°C to +85°C"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/420W.png"
+    image: "images/Solar panels/420W.png"
   },
   {
     id: "thin-film-550w",
@@ -78,7 +79,7 @@ export const solarPanelProducts: Product[] = [
       "Flexibility": "Up to 30-degree bend",
       "Operating Temperature": "-40°C to +85°C"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/550W.png"
+    image: "images/Solar panels/550W.png"
   },
   {
     id: "bifacial-500w",
@@ -99,7 +100,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Bifaciality Factor": "70%"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/500W bifacial.webp"
+    image: "images/Solar panels/500W bifacial.webp"
   },
   {
     id: "half-cut-400w",
@@ -120,7 +121,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Module Efficiency": "20.4%"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/HalfCut Pro 400W Solar Panel.jpg"
+    image: "images/Solar panels/HalfCut Pro 400W Solar Panel.jpg"
   },
   {
     id: "smart-365w",
@@ -141,7 +142,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Communication": "Built-in wireless monitoring"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/350W.jpg"
+    image: "images/Solar panels/350W.jpg"
   },
   {
     id: "ultra-high-power-600w",
@@ -162,7 +163,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Module Efficiency": "21.7%"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/600W.png"
+    image: "images/Solar panels/600W.png"
   },
   {
     id: "residential-premium-375w",
@@ -183,7 +184,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Module Efficiency": "21.2%"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/375W.jpg"
+    image: "images/Solar panels/375W.jpg"
   },
   {
     id: "lightweight-320w",
@@ -204,7 +205,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Wind Load Capacity": "2400 Pa"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/320W.webp"
+    image: "images/Solar panels/320W.webp"
   },
   {
     id: "bifacial-glass-480w",
@@ -225,7 +226,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Bifaciality Factor": "75%"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/480W.jpg"
+    image: "images/Solar panels/480W.jpg"
   },
   {
     id: "agri-solar-395w",
@@ -246,7 +247,7 @@ export const solarPanelProducts: Product[] = [
       "Operating Temperature": "-40°C to +85°C",
       "Light Transmission": "30%"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/395W.jpg"
+    image: "images/Solar panels/395W.jpg"
   },
   {
     id: "Eco-solar-580w",
@@ -268,7 +269,7 @@ export const solarPanelProducts: Product[] = [
       "Weight": "20.9kg",
       "Warranty": "25 years"
     },
-    image: "/EcoMoTechWeb/images/Solar panels/580W.jpg"
+    image: "images/Solar panels/580W.jpg"
   }
 ];
 
@@ -276,7 +277,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className={styles.productCard}>
       <div className={styles.imageContainer}>
-        <img
+        <ResponsiveImage
           src={product.image}
           alt={product.name}
           className={styles.productImage}

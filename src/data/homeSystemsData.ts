@@ -107,7 +107,7 @@ export const homeSystems: HomeSystem[] = [
     id: "eco-pv-1.5", // Updated ID format
     name: "EcoPVsyst1.5",
     power: "1.5kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/1.5.jpg",
+    image: "images/HomeSystem/1.5.jpg",
     description: "Perfect starter solar system for small homes and basic power needs",
     price: "Starting from $650",
     details: {
@@ -161,7 +161,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst2", // Updated ID format
     name: "EcoPVsyst2",
     power: "2kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/Solar-Kits-On-Grid.png",
+    image: "images/HomeSystem/Solar-Kits-On-Grid.png",
     description: "Mid-sized system ideal for average family homes",
     price: "Starting from $700",
     details: {
@@ -214,7 +214,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst3", // Updated ID format
     name: "EcoPVsyst3",
     power: "3kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/3kW.webp",
+    image: "images/HomeSystem/3kW.webp",
     description: "Advanced system for larger homes with higher power consumption",
     price: "Starting from $800",
     details: {
@@ -268,7 +268,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst3.5", // Updated ID format
     name: "EcoPVsyst3.5",
     power: "3kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/3.5kW.png",
+    image: "images/HomeSystem/3.5kW.png",
     description: "Advanced system for larger homes with higher power consumption",
     price: "Starting from $850",
     details: {
@@ -321,7 +321,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst5", // Updated ID format
     name: "EcoPVsyst5",
     power: "5kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/5kW.webp",
+    image: "images/HomeSystem/5kW.webp",
     description: "Premium system for complete energy independence",
     price: "Starting from $1000",
     details: {
@@ -375,7 +375,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst6", // Updated ID format
     name: "EcoPVsyst6",
     power: "6kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/5KW-Growatt.jpg",
+    image: "images/HomeSystem/5KW-Growatt.jpg",
     description: "Advanced system for large homes with significant power demands",
     price: "Starting from $1200",
     details: {
@@ -429,7 +429,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst8",
     name: "EcoPVsyst8",
     power: "8kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/8kW.avif",
+    image: "images/HomeSystem/8kW.avif",
     description: "High-capacity system for energy-intensive residential applications",
     price: "Starting from $1500",
     details: {
@@ -483,7 +483,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst10",
     name: "EcoPVsyst10",
     power: "10kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/10KW-solar-power-system.webp",
+    image: "images/HomeSystem/10KW-solar-power-system.webp",
     description: "Commercial-grade system for businesses and large properties",
     price: "Starting from $2000",
     details: {
@@ -537,7 +537,7 @@ export const homeSystems: HomeSystem[] = [
     id: "EcoPVsyst15", // Updated ID format
     name: "EcoPVsyst15",
     power: "15kWh",
-    image: "/EcoMoTechWeb/images/HomeSystem/15kW.jpg",
+    image: "images/HomeSystem/15kW.jpg",
     description: "Industrial-scale system for maximum energy independence",
     price: "Starting from $2500",
     details: {

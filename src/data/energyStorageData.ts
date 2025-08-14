@@ -96,14 +96,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 300",
         name: "EcoStore AIO 300",
         capacity: "300W",
-        image: "/EcoMoTechWeb/images/BESS/300.jpg",
+        image: "images/BESS/300.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/EcoStore AIO 301.webp",
+            main: "images/BESS/EcoStore AIO 301.webp",
             gallery: [
-                "/EcoMoTechWeb/images/BESS/EcoStore AIO 301.webp",
-              "/EcoMoTechWeb/images/BESS/EcoStore AIO 303.webp",
-             "/EcoMoTechWeb/images/BESS/EcoStore AIO 304.webp",
-              "/EcoMoTechWeb/images/BESS/EcoStore AIO 300 back.jpg",
+                "images/BESS/EcoStore AIO 301.webp",
+              "images/BESS/EcoStore AIO 303.webp",
+             "images/BESS/EcoStore AIO 304.webp",
+              "images/BESS/EcoStore AIO 300 back.jpg",
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
@@ -157,14 +157,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 300W",
         name: "EcoStore AIS 300",
         capacity: "300W",
-        image: "/EcoMoTechWeb/images/BESS/300W2.jpg",
+        image: "images/BESS/300W2.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/EcoStore AIO 301.webp",
+            main: "images/BESS/EcoStore AIO 301.webp",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/300W.jpg",
-              "/EcoMoTechWeb/images/BESS/300W3.jpg",
-              "/EcoMoTechWeb/images/BESS/300W4.jpg",
-              "/EcoMoTechWeb/images/BESS/300W2.jpg",
+              "images/BESS/300W.jpg",
+              "images/BESS/300W3.jpg",
+              "images/BESS/300W4.jpg",
+              "images/BESS/300W2.jpg",
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
@@ -218,14 +218,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 350",
         name: "EcoStore AIS 350",
         capacity: "350W",
-        image: "/EcoMoTechWeb/images/BESS/350W3.jpg",
+        image: "images/BESS/350W3.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/EcoStore AIO 301.webp",
+            main: "images/BESS/EcoStore AIO 301.webp",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/350W1.jpg",
-              "/EcoMoTechWeb/images/BESS/350W3.jpg",
-              "/EcoMoTechWeb/images/BESS/350W1.jpg",
-              "/EcoMoTechWeb/images/BESS/350W.jpg",
+              "images/BESS/350W1.jpg",
+              "images/BESS/350W3.jpg",
+              "images/BESS/350W1.jpg",
+              "images/BESS/350W.jpg",
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
@@ -281,14 +281,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 500",
         name: "EcoStore AIO 500",
         capacity: "500W",
-        image: "/EcoMoTechWeb/images/BESS/aio500.webp",
+        image: "images/BESS/aio500.webp",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio500-front.webp",
-              "/EcoMoTechWeb/images/BESS/aio500-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio500-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio500-display.jpg"
+              "images/BESS/aio500-front.webp",
+              "images/BESS/aio500-side.jpg",
+              "images/BESS/aio500-back.jpg",
+              "images/BESS/aio500-display.jpg"
             ]
           },
         description: "Versatile all-in-one solution for home backup power",
@@ -341,14 +341,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 600",
         name: "EcoStore AIO 600",
         capacity: "600W",
-        image: "/EcoMoTechWeb/images/BESS/600W.png",
+        image: "images/BESS/600W.png",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/600W.png",
-              "/EcoMoTechWeb/images/BESS/600W.png",
-              "/EcoMoTechWeb/images/BESS/600W.png",
-              "/EcoMoTechWeb/images/BESS/600W.png",
+              "images/BESS/600W.png",
+              "images/BESS/600W.png",
+              "images/BESS/600W.png",
+              "images/BESS/600W.png",
             ]
           },
         description: "Professional all-in-one ESS for small offices and homes",
@@ -396,14 +396,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 650",
         name: "EcoStore AIO 650",
         capacity: "600W",
-        image: "/EcoMoTechWeb/images/BESS/650W.jpg",
+        image: "images/BESS/650W.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/650W1.jpg",
-              "/EcoMoTechWeb/images/BESS/650W.jpg",
-              "/EcoMoTechWeb/images/BESS/650W.jpg",
-              "/EcoMoTechWeb/images/BESS/650W.jpg",
+              "images/BESS/650W1.jpg",
+              "images/BESS/650W.jpg",
+              "images/BESS/650W.jpg",
+              "images/BESS/650W.jpg",
             ]
           },
         description: "Professional all-in-one ESS for small offices and homes",
@@ -451,14 +451,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 700",
         name: "EcoStore AIO 700",
         capacity: "600W",
-        image: "/EcoMoTechWeb/images/BESS/700W1.jpg",
+        image: "images/BESS/700W1.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/700W.jpg",
-              "/EcoMoTechWeb/images/BESS/700W2.jpg",
-              "/EcoMoTechWeb/images/BESS/700W1.jpg",
-              "/EcoMoTechWeb/images/BESS/700W3.jpg",
+              "images/BESS/700W.jpg",
+              "images/BESS/700W2.jpg",
+              "images/BESS/700W1.jpg",
+              "images/BESS/700W3.jpg",
             ]
           },
         description: "Professional all-in-one ESS for small offices and homes",
@@ -506,14 +506,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 800",
         name: "EcoStore AIO 800",
         capacity: "800W",
-        image: "/EcoMoTechWeb/images/BESS/800Wt.jpg",
+        image: "images/BESS/800Wt.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/800W.jpg",
-              "/EcoMoTechWeb/images/BESS/800Wt2.jpg",
-              "/EcoMoTechWeb/images/BESS/800W1.jpg",
-              "/EcoMoTechWeb/images/BESS/800Wt.jpg"
+              "images/BESS/800W.jpg",
+              "images/BESS/800Wt2.jpg",
+              "images/BESS/800W1.jpg",
+              "images/BESS/800Wt.jpg"
             ]
           },
         description: "High-performance all-in-one ESS for demanding applications",
@@ -563,14 +563,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 1000",
         name: "EcoStore AIO 1000",
         capacity: "1kW",
-        image: "/EcoMoTechWeb/images/BESS/1kW.jpg",
+        image: "images/BESS/1kW.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/1kW.jpg",
-              "/EcoMoTechWeb/images/BESS/1kW.jpg",
-              "/EcoMoTechWeb/images/BESS/1kW.jpg",
-              "/EcoMoTechWeb/images/BESS/1kW.jpg"
+              "images/BESS/1kW.jpg",
+              "images/BESS/1kW.jpg",
+              "images/BESS/1kW.jpg",
+              "images/BESS/1kW.jpg"
             ]
           },
         description: "Professional-grade all-in-one ESS for medium-sized applications",
@@ -618,14 +618,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 1500",
         name: "EcoStore AIO 1500",
         capacity: "1.5kW",
-        image: "/EcoMoTechWeb/images/BESS/1500W.jpg",
+        image: "images/BESS/1500W.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-                "/EcoMoTechWeb/images/BESS/1501W.jpg",
-                "/EcoMoTechWeb/images/BESS/1502W.jpg",
-                "/EcoMoTechWeb/images/BESS/1505.jpg",
-                "/EcoMoTechWeb/images/BESS/1500W.jpg"
+                "images/BESS/1501W.jpg",
+                "images/BESS/1502W.jpg",
+                "images/BESS/1505.jpg",
+                "images/BESS/1500W.jpg"
             ]
           },
         description: "Advanced all-in-one ESS for large homes and small businesses",
@@ -674,14 +674,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 2000",
         name: "EcoStore AIO 2000",
         capacity: "2kW",
-        image: "/EcoMoTechWeb/images/BESS/aio2000.jpg",
+        image: "images/BESS/aio2000.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio300-front.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-display.jpg"
+              "images/BESS/aio300-front.jpg",
+              "images/BESS/aio300-side.jpg",
+              "images/BESS/aio300-back.jpg",
+              "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Commercial all-in-one ESS with advanced features",
@@ -731,14 +731,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 3000",
         name: "EcoStore AIO 3000",
         capacity: "3kW",
-        image: "/EcoMoTechWeb/images/BESS/aio3000.jpg",
+        image: "images/BESS/aio3000.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio300-front.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-display.jpg"
+              "images/BESS/aio300-front.jpg",
+              "images/BESS/aio300-side.jpg",
+              "images/BESS/aio300-back.jpg",
+              "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Industrial all-in-one ESS for demanding commercial applications",
@@ -791,14 +791,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore Home 5",
         name: "EcoStore Home 5",
         capacity: "5kWh",
-        image: "/EcoMoTechWeb/images/BESS/home5.jpg",
+        image: "images/BESS/home5.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio300-front.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-display.jpg"
+              "images/BESS/aio300-front.jpg",
+              "images/BESS/aio300-side.jpg",
+              "images/BESS/aio300-back.jpg",
+              "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Perfect entry-level battery storage for residential solar systems",
@@ -845,14 +845,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore Pro 10",
         name: "EcoStore Pro 10",
         capacity: "10kWh",
-        image: "/EcoMoTechWeb/images/BESS/pro10.jpg",
+        image: "images/BESS/pro10.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio300-front.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-display.jpg"
+              "images/BESS/aio300-front.jpg",
+              "images/BESS/aio300-side.jpg",
+              "images/BESS/aio300-back.jpg",
+              "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Advanced energy storage solution for medium-sized homes",
@@ -900,14 +900,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore Max 15",
         name: "EcoStore Max 15",
         capacity: "15kWh",
-        image: "/EcoMoTechWeb/images/BESS/max15.jpg",
+        image: "images/BESS/max15.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio300-front.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-display.jpg"
+              "images/BESS/aio300-front.jpg",
+              "images/BESS/aio300-side.jpg",
+              "images/BESS/aio300-back.jpg",
+              "images/BESS/aio300-display.jpg"
             ]
           },
         description: "High-capacity storage for large residential and small commercial applications",
@@ -956,14 +956,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore Commercial 20",
         name: "EcoStore Commercial 20",
         capacity: "20kWh",
-        image: "/EcoMoTechWeb/images/BESS/commercial20.jpg",
+        image: "images/BESS/commercial20.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/aio300.jpg",
+            main: "images/BESS/aio300.jpg",
             gallery: [
-              "/EcoMoTechWeb/images/BESS/aio300-front.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-side.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-back.jpg",
-              "/EcoMoTechWeb/images/BESS/aio300-display.jpg"
+              "images/BESS/aio300-front.jpg",
+              "images/BESS/aio300-side.jpg",
+              "images/BESS/aio300-back.jpg",
+              "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Industrial-grade energy storage for commercial and industrial use",

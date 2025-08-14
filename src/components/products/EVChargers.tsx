@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "@/components/layout/Layout";
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 import {
   Dialog,
   DialogContent,
@@ -36,7 +37,7 @@ const chargingStations: ChargingStation[] = [
     name: "EcoCharge 7 AC",
     power: "7kW",
     type: "AC Type 2",
-    image: "/EcoMoTechWeb/images/chargers/7kW.jpg",
+    image: "images/chargers/7kW.jpg",
     description: "Compact home charging solution with smart features",
     price: "Starting from $699",
     specs: {
@@ -66,7 +67,7 @@ const chargingStations: ChargingStation[] = [
     name: "EcoCharge 11 AC",
     power: "11kW",
     type: "AC Type 2",
-    image: "/EcoMoTechWeb/images/chargers/11kW.jpg",
+    image: "images/chargers/11kW.jpg",
     description: "Three-phase charging station for faster home charging",
     price: "Starting from $899",
     specs: {
@@ -96,7 +97,7 @@ const chargingStations: ChargingStation[] = [
     name: "EcoCharge 22 AC",
     power: "22kW",
     type: "AC Type 2",
-    image: "/EcoMoTechWeb/images/chargers/22kW.jpg",
+    image: "images/chargers/22kW.jpg",
     description: "High-power commercial charging solution",
     price: "Starting from $1,299",
     specs: {
@@ -142,7 +143,7 @@ const EVChargers = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {chargingStations.map((station) => (
               <div key={station.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={station.image}
                   alt={station.name}
                   className="w-full h-48 object-cover"

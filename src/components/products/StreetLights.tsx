@@ -4,6 +4,7 @@ import styles from '@/styles/StreetLights.module.css';
 import { useNavigate } from "react-router-dom";
 import { streetLights } from '@/data/streetLightsData';
 import { Sun, Battery, Zap, Settings } from "lucide-react";
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const StreetLights = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const StreetLights = () => {
             {streetLights.map((light) => (
               <div key={light.id} className={styles.lightCard}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src={light.image}
                     alt={light.name}
                     className={styles.productImage}

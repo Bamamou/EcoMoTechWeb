@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import styles from '@/styles/ElectricMotorcyles.module.css';
 import { ExternalLink } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 export interface Product {
   id: string;
@@ -48,11 +49,11 @@ export const electricMotorcycleProducts: Product[] = [
       "Dimensions": "2100 x 800 x 1200 mm",
       "controller": "72V 800A",
     },
-    image: "/EcoMoTechWeb/images/Electric motorcycles/V9 Bleu.png",
+    image: "images/Electric motorcycles/V9 Bleu.png",
     additionalImages: [
-      "/EcoMoTechWeb/images/Electric motorcycles/V9 Black.png",
-      "/EcoMoTechWeb/images/Electric motorcycles/V9 yellow Black.jpg",
-      "/EcoMoTechWeb/images/Electric motorcycles/V9 white.png"
+      "images/Electric motorcycles/V9 Black.png",
+      "images/Electric motorcycles/V9 yellow Black.jpg",
+      "images/Electric motorcycles/V9 white.png"
     ]
   },
   {
@@ -90,11 +91,11 @@ export const electricMotorcycleProducts: Product[] = [
       "Brakes": "Front and rear hydraulic disc brakes",
 
     },
-    image: "/EcoMoTechWeb/images/Electric motorcycles/small open black.webp",
+    image: "images/Electric motorcycles/small open black.webp",
     additionalImages: [
-      "/EcoMoTechWeb/images/Electric motorcycles/small open red.avif",
-      "/EcoMoTechWeb/images/Electric motorcycles/small open blueblack.webp",
-      "/EcoMoTechWeb/images/Electric motorcycles/small open.avif",
+      "images/Electric motorcycles/small open red.avif",
+      "images/Electric motorcycles/small open blueblack.webp",
+      "images/Electric motorcycles/small open.avif",
     ]
   },
   {
@@ -133,11 +134,11 @@ export const electricMotorcycleProducts: Product[] = [
       "controller": "72V 800A",
       "Brakes": "Front and rear hydraulic disc brakes",
     },
-    image: "/EcoMoTechWeb/images/Electric motorcycles/KingChe blue.png",
+    image: "images/Electric motorcycles/KingChe blue.png",
     additionalImages: [
-      "/EcoMoTechWeb/images/Electric motorcycles/KingChe red.jpg",
-      "/EcoMoTechWeb/images/Electric motorcycles/KingChe red front.jpg",
-      "/EcoMoTechWeb/images/Electric motorcycles/KingChe black.webp",
+      "images/Electric motorcycles/KingChe red.jpg",
+      "images/Electric motorcycles/KingChe red front.jpg",
+      "images/Electric motorcycles/KingChe black.webp",
     ]
   },
 
@@ -177,11 +178,11 @@ export const electricMotorcycleProducts: Product[] = [
       "controller": "72V 800A",
       "Brakes": "Front and rear hydraulic disc brakes",
     },
-    image: "/EcoMoTechWeb/images/Electric motorcycles/alrendo dmg.png",
+    image: "images/Electric motorcycles/alrendo dmg.png",
     additionalImages: [
-      "/EcoMoTechWeb/images/Electric motorcycles/DMG blue.jpg",
-      "/EcoMoTechWeb/images/Electric motorcycles/DMG charging.jpg",
-      "/EcoMoTechWeb/images/Electric motorcycles/DMG parking.avif",
+      "images/Electric motorcycles/DMG blue.jpg",
+      "images/Electric motorcycles/DMG charging.jpg",
+      "images/Electric motorcycles/DMG parking.avif",
     ]
   }
 ];
@@ -192,7 +193,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className={styles.productCard}>
       <div className={styles.imageContainer}>
-        <img
+        <ResponsiveImage
           src={product.image}
           alt={product.name}
           className={styles.productImage}

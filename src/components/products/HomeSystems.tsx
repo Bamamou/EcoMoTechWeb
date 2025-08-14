@@ -4,6 +4,7 @@ import styles from '@/styles/HomeSystems.module.css';
 import { useNavigate } from "react-router-dom";
 import { homeSystems } from '@/data/homeSystemsData';
 import { ArrowRight } from "lucide-react";
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const HomeSystems = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const HomeSystems = () => {
             {homeSystems.map((system) => (
               <div key={system.id} className={styles.productCard}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src={system.image}
                     alt={system.name}
                     className={styles.productImage}
