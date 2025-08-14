@@ -51,12 +51,22 @@ const EVChargingInfrastructureInAfrica = React.lazy(() => import("./pages/articl
 
 const queryClient = new QueryClient();
 
+// Get the basename from environment variable, default to GitHub Pages path
+const getBasename = () => {
+  // For Netlify, use root path
+  if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify') {
+    return '/';
+  }
+  // For GitHub Pages or default, use repository path
+  return import.meta.env.VITE_APP_BASENAME || '/EcoMoTechWeb';
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Router basename="/EcoMoTechWeb">
+      <Router basename={getBasename()}>
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Index />} />

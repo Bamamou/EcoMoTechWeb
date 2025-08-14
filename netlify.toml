@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  VITE_DEPLOYMENT_TARGET = "netlify"
+  VITE_APP_BASENAME = "/"
 
 [[redirects]]
   from = "/api/*"

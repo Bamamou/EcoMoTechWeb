@@ -1,18 +1,43 @@
 # Deployment Guide
 
-This project supports dual deployment to both GitHub Pages and Netlify.
+This project supports dual deployment to both GitHub Pages and Netlify with environment-specific configurations.
 
 ## Deployment Options
 
-### 1. GitHub Pages (Current)
+### 1. GitHub Pages (Existing)
 - **URL**: https://bamamou.github.io/EcoMoTechWeb/
 - **Config**: Uses `vite.config.ts` with base path `/EcoMoTechWeb/`
 - **Deploy**: `npm run deploy`
+- **Basename**: `/EcoMoTechWeb` (subfolder deployment)
 
 ### 2. Netlify (New)
-- **URL**: Will be provided by Netlify
+- **URL**: Will be provided by Netlify (e.g., `https://yoursite.netlify.app/`)
 - **Config**: Uses `vite.config.netlify.ts` with base path `/`
 - **Deploy**: Automatic on git push or manual via Netlify CLI
+- **Basename**: `/` (root deployment)
+
+## Environment Configuration
+
+### Development (.env)
+```env
+VITE_DEPLOYMENT_TARGET=github
+VITE_APP_BASENAME=/EcoMoTechWeb
+```
+
+### GitHub Pages
+- Uses default `.env` settings
+- Router basename: `/EcoMoTechWeb`
+- Build command: `npm run build:github`
+
+### Netlify
+- Environment variables set in `netlify.toml`:
+  ```toml
+  [build.environment]
+  VITE_DEPLOYMENT_TARGET = "netlify"
+  VITE_APP_BASENAME = "/"
+  ```
+- Router basename: `/`
+- Build command: `npm run build:netlify`
 
 ## Quick Deployment
 
