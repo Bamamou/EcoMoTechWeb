@@ -192,7 +192,7 @@ const Contact = () => {
             {/* The Gambia */}
             <a 
               //href="https://ecomotech-gambia.com"  to be updated 
-              href="https://cecedekp.github.io/ecomotech-future-power-web/"
+              href="https://ecomotech-thegambia.netlify.app/"
               target="_blank" 
               rel="noopener noreferrer"
               className="group"
