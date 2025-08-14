@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 
 const newsItems = [
   {
@@ -8,7 +9,7 @@ const newsItems = [
     title: "Ecomotech Launches New High-Efficiency Solar Panel Series",
     excerpt: "Our latest solar panel technology achieves record-breaking efficiency rates, making solar energy more accessible and affordable.",
     date: "April 10, 2023",
-    image: "/EcoMoTechWeb/images/news/solar-panel-series.jpg",
+    image: "images/news/solar-panel-series.jpg",
     link: "/news/new-solar-panel-series"
   },
   {
@@ -16,7 +17,7 @@ const newsItems = [
     title: "Expanding Our Reach: New Distribution Center Opens",
     excerpt: "Ecomotech expands operations with a new distribution center to better serve customers across the region with faster delivery times.",
     date: "March 22, 2023",
-    image: "/EcoMoTechWeb/images/news/distribution-center.jpg",
+    image: "images/news/distribution-center.jpg",
     link: "/news/distribution-center"
   },
   {
@@ -24,7 +25,7 @@ const newsItems = [
     title: "Sustainable Energy Solutions for Remote Communities",
     excerpt: "Our team has successfully implemented off-grid solar solutions for remote villages, bringing reliable electricity to communities for the first time.",
     date: "February 15, 2023",
-    image: "/EcoMoTechWeb/images/news/remote-communities.jpg",
+    image: "images/news/remote-communities.jpg",
     link: "/news/remote-communities"
   }
 ];
@@ -54,15 +55,11 @@ const NewsSection = () => {
               className="bg-ecomotech-light-gray rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group"
             >
               <div className="h-48 overflow-hidden">
-                <img 
+                <ResponsiveImage 
                   src={item.image} 
                   alt={item.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "/EcoMoTechWeb/images/news/solar-panel-series.jpg"; // Fallback image
-                    target.onerror = null; // Prevent infinite loop
-                  }}
+                  fallback="images/news/solar-panel-series.jpg"
                 />
               </div>
               <div className="p-6">

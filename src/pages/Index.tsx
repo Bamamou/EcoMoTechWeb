@@ -9,7 +9,7 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
 import { getImagePath } from "@/utils/imagePaths";
-import { img } from "@/components/ui/responsive-image";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 
 const latestNews = [
   {
@@ -62,7 +62,7 @@ const Index = () => {
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="relative h-48">
-                  <img
+                  <ResponsiveImage
                     src={news.image}
                     alt={news.title}
                     className="w-full h-full object-cover"

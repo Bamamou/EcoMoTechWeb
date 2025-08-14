@@ -1,27 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Bike, BatteryCharging } from "lucide-react";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 
 const mobilityProducts = [
   {
     id: "electric-motorcycles",
     title: "Electric Motorcycles",
     description: "High-performance electric motorcycles for urban mobility.",
-    image: "/EcoMoTechWeb/images/Electric motorcycles/DM green.jpg",
+    image: "images/Electric motorcycles/DM green.jpg",
     link: "/products/electric-motorcycles"
   },
   {
     id: "electric-tricycles",
     title: "Electric Tricycles",
     description: "Versatile electric tricycles for commercial and personal use.",
-    image: "/EcoMoTechWeb/images/Electric motorcycles/Higo white.webp",
+    image: "images/Electric motorcycles/Higo white.webp",
     link: "/products/electric-tricycles"
   },
   {
     id: "ev-chargers",
     title: "EV Chargers",
     description: "Advanced charging solutions for home and commercial applications.",
-    image: "/EcoMoTechWeb/images/chargers/charger design.png",
+    image: "images/chargers/charger design.png",
     link: "/products/ev-chargers"
   }
 ];
@@ -45,7 +46,7 @@ const ElectricMobilitySection = () => {
               className="bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group"
             >
               <div className="h-60 overflow-hidden">
-                <img 
+                <ResponsiveImage 
                   src={product.image} 
                   alt={product.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
