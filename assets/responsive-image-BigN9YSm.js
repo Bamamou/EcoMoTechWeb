@@ -1,1 +1,0 @@
-import{R as t,J as a,j as u}from"./index-D9bKotMf.js";const E=({src:s,alt:c,fallback:r,...o})=>{const[g,n]=t.useState(a(s)),[m,e]=t.useState(!1);t.useEffect(()=>{n(a(s)),e(!1)},[s]);const i=()=>{!m&&r&&n(a(r)),e(!0)},l=()=>{e(!1)};return u.jsx("img",{...o,src:g,alt:c,onError:i,onLoad:l,style:{...o.style,display:m?"none":"block"}})};export{E as R};
