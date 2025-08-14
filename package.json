@@ -7,10 +7,13 @@
   "scripts": {
     "dev": "concurrently \"node server.js\" \"vite\"",
     "build": "vite build",
+    "build:netlify": "vite build --config vite.config.netlify.ts",
+    "build:github": "vite build",
     "start": "NODE_ENV=production node server.js",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --branch gh-pages"
+    "predeploy": "npm run build:github",
+    "deploy": "gh-pages -d dist --branch gh-pages",
+    "deploy:netlify": "npm run build:netlify"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -59,6 +62,7 @@
     "lucide-react": "^0.462.0",
     "memfs": "^4.17.0",
     "multer": "^2.0.2",
+    "multiparty": "^4.2.3",
     "next-themes": "^0.3.0",
     "nodemailer": "^7.0.3",
     "path-browserify": "^1.0.1",
