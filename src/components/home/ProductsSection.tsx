@@ -8,7 +8,7 @@ const products = [
     id: "solar-panels",
     title: "Solar Panels",
     description: "High-efficiency photovoltaic modules designed for maximum energy capture.",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1332&q=80",
+    image: "images/Solar panels/PV.avif",
     link: "/products/solar-panels"
   },
   {
