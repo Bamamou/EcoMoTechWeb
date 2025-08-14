@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 
 const products = [
   {
@@ -14,35 +15,35 @@ const products = [
     id: "solar-inverters",
     title: "Solar Inverters",
     description: "Advanced inverter technology to convert DC electricity to usable AC power.",
-    image: "/EcoMoTechWeb/images/Inverters/Growatt poducts inv.png",
+    image: "images/Inverters/Growatt poducts inv.png",
     link: "/products/solar-inverters"
   },
   {
     id: "home-systems",
     title: "Solar Home Systems",
     description: "Complete residential solutions for energy independence and savings.",
-    image: "/EcoMoTechWeb/images/HomeSystem/6kW.jpg",
+    image: "images/HomeSystem/6kW.jpg",
     link: "/products/home-systems"
   },
   {
     id: "street-lights",
     title: "Solar Street Lights",
     description: "Autonomous lighting solutions for roadways, pathways, and public spaces.",
-    image:"/EcoMoTechWeb/images/streetlights/road.jpg",
+    image:"images/streetlights/road.jpg",
     link: "/products/street-lights"
   },
   {
     id: "energy-storage",
     title: "Energy Storage Systems",
     description: "Battery solutions to store excess energy for use when needed.",
-    image: "/EcoMoTechWeb/images/BESS/battery system.webp",
+    image: "images/BESS/battery system.webp",
     link: "/products/energy-storage"
   },
   {
     id: "solar-pumbs",
     title: "Solar Water Pumps",
     description: "Efficient solar-powered pumps for agricultural and irrigation needs.",
-    image: "/EcoMoTechWeb/images/Solar pumbs/SolarPumbs.jpeg",
+    image: "images/Solar pumbs/SolarPumbs.jpeg",
     link: "/products/solar-pumbs"
   },
 ];
@@ -66,7 +67,7 @@ const ProductsSection = () => {
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group"
             >
               <div className="h-60 overflow-hidden">
-                <img 
+                <ResponsiveImage 
                   src={product.image} 
                   alt={product.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

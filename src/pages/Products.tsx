@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 import SolarPanels from "@/components/products/SolarPanels";
 import SolarInverters from "@/components/products/SolarInverters";
 import ElectricMobility from "@/components/products/ElectricMotorcycles";
@@ -36,7 +37,7 @@ const ProductsPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/products/solar-panels" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
+              <ResponsiveImage
                 src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
                 alt="Solar Panels"
                 className="w-full h-60 object-cover"
@@ -48,8 +49,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/solar-inverters" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/Inverters/Growatt poducts inv.png"
+              <ResponsiveImage
+                src="images/Inverters/Growatt poducts inv.png"
                 alt="Solar Inverters"
                 className="w-full h-60 object-cover"
               />
@@ -60,8 +61,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/home-systems" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/HomeSystem/6kW.jpg"
+              <ResponsiveImage
+                src="images/HomeSystem/6kW.jpg"
                 alt="Home Systems"
                 className="w-full h-60 object-cover"
               />
@@ -72,8 +73,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/street-lights" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/streetlights/road.jpg"
+              <ResponsiveImage
+                src="images/streetlights/road.jpg"
                 alt="Street Lights"
                 className="w-full h-60 object-cover"
               />
@@ -86,8 +87,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/energy-storage" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/BESS/battery system.webp"
+              <ResponsiveImage
+                src="images/BESS/battery system.webp"
                 alt="Battery energy storage systems"
                 className="w-full h-60 object-cover"
               />
@@ -98,8 +99,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/solar-pumbs" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/Solar pumbs/SolarPumbs.jpeg"
+              <ResponsiveImage
+                src="images/Solar pumbs/SolarPumbs.jpeg"
                 alt="Solar Water Pumps"
                 className="w-full h-60 object-cover"
               />
@@ -124,8 +125,8 @@ const ProductsPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/products/electric-motorcycles" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/Electric motorcycles/DM green.jpg"
+              <ResponsiveImage
+                src="images/Electric motorcycles/DM green.jpg"
                 alt="Electric Motorcycles"
                 className="w-full h-60 object-cover"
               />
@@ -136,8 +137,8 @@ const ProductsPage = () => {
             </Link>
 
             <Link to="/products/ev-chargers" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/EcoMoTechWeb/images/chargers/charger design.png"
+              <ResponsiveImage
+                src="images/chargers/charger design.png"
                 alt="EV Chargers"
                 className="w-full h-60 object-cover"
               />
