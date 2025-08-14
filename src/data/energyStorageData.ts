@@ -36,14 +36,14 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 200",
         name: "EcoStore AIO 200",
         capacity: "300W",
-        image: "/EcoMoTechWeb/images/BESS/200W2.jpg",
+        image: "images/BESS/200W2.jpg",
         images: {
-            main: "/EcoMoTechWeb/images/BESS/200W2.jpg",
+            main: "images/BESS/200W2.jpg",
             gallery: [
-                "/EcoMoTechWeb/images/BESS/200W.jpg",
-              "/EcoMoTechWeb/images/BESS/200Wback.jpg",
-             "/EcoMoTechWeb/images/BESS/200W1.jpg",
-              "/EcoMoTechWeb/images/BESS/200W2.jpg",
+                "images/BESS/200W.jpg",
+              "images/BESS/200Wback.jpg",
+             "images/BESS/200W1.jpg",
+              "images/BESS/200W2.jpg",
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",

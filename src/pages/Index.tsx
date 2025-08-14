@@ -8,6 +8,8 @@ import StatsSection from "@/components/home/StatsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
+import { getImagePath } from "@/utils/imagePaths";
+import { img } from "@/components/ui/responsive-image";
 
 const latestNews = [
   {
@@ -16,7 +18,7 @@ const latestNews = [
     category: "Product News",
     excerpt: "Our latest solar panel technology achieves record-breaking efficiency rates...",
     link: "/news/new-solar-panel-series",
-    image:  "/EcoMoTechWeb/images/News/Ecomotech Launches New High-Efficiency Solar Panel Series.jpg",
+    image: getImagePath("images/News/Ecomotech Launches New High-Efficiency Solar Panel Series.jpg"),
   },
   {
     title: "Expanding Our Reach: New Distribution Center Opens",
@@ -24,7 +26,7 @@ const latestNews = [
     category: "Company News",
     excerpt: "Ecomotech expands operations with a new distribution center...",
     link: "/news/distribution-center",
-    image:  "/EcoMoTechWeb/images/News/warehouse.jpg",
+    image: getImagePath("images/News/warehouse.jpg"),
   },
   {
     title: "Sustainable Energy Solutions for Remote Communities",
@@ -32,7 +34,7 @@ const latestNews = [
     category: "Projects",
     excerpt: "Bringing reliable electricity to communities for the first time...",
     link: "/news/remote-communities",
-    image:"/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg"
+    image: getImagePath("images/News/Sustainable Energy Solutions for Remote Communities.jpg")
   }
 ];
 

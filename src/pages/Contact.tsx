@@ -7,6 +7,7 @@ import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { Icon } from '@iconify/react';
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/components/ui/use-toast";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -174,8 +175,8 @@ const Contact = () => {
               <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
                             shadow-sm hover:shadow-lg transition-all duration-300
                             transform hover:-translate-y-1">
-                <img 
-                  src="/EcoMoTechWeb/images/flags/tanzania.webp" 
+                <ResponsiveImage 
+                  src="images/flags/tanzania.webp" 
                   alt="Tanzania Flag" 
                   className="w-16 h-16 rounded-full mb-4 object-cover"
                 />
@@ -199,8 +200,8 @@ const Contact = () => {
               <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
                             shadow-sm hover:shadow-lg transition-all duration-300
                             transform hover:-translate-y-1">
-                <img 
-                  src="/EcoMoTechWeb/images/flags/the gambia.webp" 
+                <ResponsiveImage 
+                  src="images/flags/the gambia.webp" 
                   alt="Gambia Flag" 
                   className="w-16 h-16 rounded-full mb-4 object-cover"
                 />
@@ -224,8 +225,8 @@ const Contact = () => {
               <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
                             shadow-sm hover:shadow-lg transition-all duration-300
                             transform hover:-translate-y-1">
-                <img 
-                  src="/EcoMoTechWeb/images/flags/guinea.png" 
+                <ResponsiveImage 
+                  src="images/flags/guinea.png" 
                   alt="Guinea Flag" 
                   className="w-16 h-16 rounded-full mb-4 object-cover"
                 />
@@ -249,8 +250,8 @@ const Contact = () => {
               <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg 
                             shadow-sm hover:shadow-lg transition-all duration-300
                             transform hover:-translate-y-1">
-                <img 
-                  src="/EcoMoTechWeb/images/flags/drc.webp" 
+                <ResponsiveImage 
+                  src="images/flags/drc.webp" 
                   alt="DR Congo Flag" 
                   className="w-16 h-16 rounded-full mb-4 object-cover"
                 />

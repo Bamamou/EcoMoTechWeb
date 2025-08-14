@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
 import styles from '@/styles/AboutUs.module.css';
+import { ResponsiveImage, img } from "@/components/ui/responsive-image";
 
 const AboutPage = () => {
   return (
@@ -37,7 +38,7 @@ const AboutPage = () => {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-ecomotech-green rounded-lg opacity-10 transform rotate-3"></div>
-              <img 
+              <ResponsiveImage 
                 src="/EcoMoTechWeb/images/AboutUs/BJTU.jpg" 
                 alt="Ecomotech team" 
                 className="rounded-lg shadow-lg relative z-10"
@@ -167,7 +168,7 @@ const AboutPage = () => {
             <div className={styles.teamMember}>
               <div className={styles.teamImageWrapper}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src="/EcoMoTechWeb/images/AboutUs/ID photo.jpg" 
                     alt="Nicolas Bamamou - CEO" 
                     className={styles.memberImage}
@@ -188,7 +189,7 @@ const AboutPage = () => {
             <div className={styles.teamMember}>
               <div className={styles.teamImageWrapper}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src="/EcoMoTechWeb/images/AboutUs/Kagoma.jpg"  
                     alt="Kagoma Jaros - CTO" 
                     className={styles.memberImage}
@@ -209,7 +210,7 @@ const AboutPage = () => {
             <div className={styles.teamMember}>
               <div className={styles.teamImageWrapper}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src="/EcoMoTechWeb/images/AboutUs/Njie.jpg" 
                     alt="Sulayman Njie - COO" 
                     className={styles.memberImage}

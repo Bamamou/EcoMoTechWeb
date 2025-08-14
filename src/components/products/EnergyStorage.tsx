@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { batteryProducts } from '@/data/energyStorageData';
 import { Battery, Zap, Settings, Shield } from "lucide-react";
 import styles from '@/styles/EnergyStorage.module.css';
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const EnergyStorage = () => {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ const EnergyStorage = () => {
             {batteryProducts.map((product) => (
               <div key={product.id} className={styles.productCard}>
                 <div className={styles.imageContainer}>
-                  <img 
+                  <ResponsiveImage 
                     src={product.image}
                     alt={product.name}
                     className={styles.productImage}
