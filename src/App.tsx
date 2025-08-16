@@ -10,6 +10,7 @@ import SolarPanels from "./components/products/SolarPanels";
 import ElectricMotorcycles from "./components/products/ElectricMotorcycles";
 import MotorcycleDetails from './components/products/Product details/MotorcycleDetails';
 import SolarPumbs from './components/products/SolarPumbs';
+import SolarPumpDetails from './components/products/SolarPumpDetails';
 import StreetLightDetails from './components/products/Product details/StreetLightDetails';
 import HomeSystemDetails from './components/products/Product details/HomeSystemDetails';
 import EnergyStorageDetails from "./components/products/Product details/EnergyStorageDetails";
@@ -88,6 +89,7 @@ const App = () => (
             <Route path="/products/electric-tricycles" element={<ElectricTricycles />} />
             <Route path="/products/ev-chargers" element={<EVChargers />} />
             <Route path="/products/solar-pumbs" element={<SolarPumbs />} />
+            <Route path="/products/solar-pumbs/:id" element={<SolarPumpDetails />} />
             
             {/* News Routes */}
             <Route path="/news" element={<News />} />
