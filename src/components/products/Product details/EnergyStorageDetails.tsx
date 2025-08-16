@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { batteryProducts } from '@/data/energyStorageData';
 import { Battery, Settings, Zap, Shield, Box, CheckCircle } from "lucide-react";
 import styles from '@/styles/EnergyStorageDetails.module.css';
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const EnergyStorageDetails = () => {
   const { id } = useParams();
@@ -36,7 +37,7 @@ const EnergyStorageDetails = () => {
         <div className={styles.productWrapper}>
           <div className={styles.imageSection}>
             <div className={styles.mainImageContainer}>
-              <img
+              <ResponsiveImage
                 src={system.images.gallery[selectedImage]}
                 alt={system.name}
                 className={styles.mainImage}
@@ -51,7 +52,7 @@ const EnergyStorageDetails = () => {
                   }`}
                   onClick={() => setSelectedImage(index)}
                 >
-                  <img
+                  <ResponsiveImage
                     src={image}
                     alt={`${system.name} view ${index + 1}`}
                     className={styles.thumbnailImage}

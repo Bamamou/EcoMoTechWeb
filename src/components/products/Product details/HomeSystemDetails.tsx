@@ -4,6 +4,7 @@ import styles from '@/styles/HomeSystemDetails.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { homeSystems } from '@/data/homeSystemsData';
 import { Sun, Battery, Zap, Box, Cable, Ruler } from "lucide-react";
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const HomeSystemDetails = () => {
   const { id } = useParams();
@@ -51,14 +52,14 @@ const HomeSystemDetails = () => {
         <div className={styles.productWrapper}>
           {/* Gallery Section */}
           <div className={styles.imageGallery}>
-            <img 
+            <ResponsiveImage 
               src={allImages[selectedImage]} 
               alt={system.name}
               className={styles.mainImage} 
             />
             <div className={styles.thumbnailGrid}>
               {allImages.map((image, index) => (
-                <img 
+                <ResponsiveImage 
                   key={index}
                   src={image}
                   alt={`${system.name} view ${index + 1}`}

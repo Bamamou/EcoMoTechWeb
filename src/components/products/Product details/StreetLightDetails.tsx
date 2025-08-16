@@ -4,6 +4,7 @@ import styles from '@/styles/StreetLightDetails.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { streetLights } from '@/data/streetLightsData';
 import { Sun, Battery, Moon, Timer } from "lucide-react";
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const StreetLightDetails = () => {
   const { id } = useParams();
@@ -36,14 +37,14 @@ const StreetLightDetails = () => {
         <div className={styles.productWrapper}>
           {/* Gallery Section */}
           <div className={styles.imageGallery}>
-            <img 
+            <ResponsiveImage 
               src={allImages[selectedImage]} 
               alt={streetLight.name}
               className={styles.mainImage} 
             />
             <div className={styles.thumbnailGrid}>
               {allImages.map((image, index) => (
-                <img 
+                <ResponsiveImage 
                   key={index}
                   src={image}
                   alt={`${streetLight.name} view ${index + 1}`}

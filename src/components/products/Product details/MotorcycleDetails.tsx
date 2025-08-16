@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import styles from '@/styles/MotorcycleDetails.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { electricMotorcycleProducts } from '../ElectricMotorcycles';
+import { ResponsiveImage } from '@/components/ui/responsive-image';
 
 const MotorcycleDetails = () => {
   const { id } = useParams();
@@ -35,14 +36,14 @@ const MotorcycleDetails = () => {
         <div className={styles.productWrapper}>
           {/* Gallery Section */}
           <div className={styles.imageGallery}>
-            <img 
+            <ResponsiveImage 
               src={allImages[selectedImage]} 
               alt={motorcycle.name}
               className={styles.mainImage} 
             />
             <div className={styles.thumbnailGrid}>
               {allImages.map((image, index) => (
-                <img 
+                <ResponsiveImage 
                   key={index}
                   src={image}
                   alt={`${motorcycle.name} view ${index + 1}`}
