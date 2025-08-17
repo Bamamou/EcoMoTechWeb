@@ -335,7 +335,7 @@ const SolarPumpDetails = () => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Material:</span>
-                        <span className="font-medium">{pump.specifications.pumpMaterial}</span>
+                        <span className="font-medium">{pump.specifications.materialBody}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Warranty:</span>
@@ -343,7 +343,7 @@ const SolarPumpDetails = () => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Certifications:</span>
-                        <span className="font-medium">{pump.specifications.certifications}</span>
+                        <span className="font-medium">{pump.certifications.join(', ')}</span>
                       </div>
                     </div>
                   </div>
