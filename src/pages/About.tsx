@@ -180,7 +180,7 @@ const AboutPage = () => {
                 <p className={styles.memberRole}>Chief Executive Officer</p>
                 <div className={styles.divider}></div>
                 <p className={styles.memberBio}>
-                  With over 10 years of experience in renewable energy, David leads Ecomotech's strategic vision and global operations.
+                  With over 10 years of experience in renewable energy, Nicolas leads Ecomotech's strategic vision and global operations.
                 </p>
               </div>
             </div>
