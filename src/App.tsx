@@ -15,6 +15,7 @@ import StreetLightDetails from './components/products/Product details/StreetLigh
 import HomeSystemDetails from './components/products/Product details/HomeSystemDetails';
 import EnergyStorageDetails from "./components/products/Product details/EnergyStorageDetails";
 import TricycleDetails from "./components/products/TricycleDetails";
+import EVChargerDetails from "./components/products/Product details/EVChargerDetails";
 import SolarInstallation from "@/pages/services/SolarInstallation";
 import SolarMaintenance from "@/pages/services/SolarMaintenance";
 import EVChargerInstallation from "@/pages/services/EVChargerInstallation";
@@ -90,6 +91,7 @@ const App = () => (
             <Route path="/products/electric-tricycles" element={<ElectricTricycles />} />
             <Route path="/products/electric-tricycles/:id" element={<TricycleDetails />} />
             <Route path="/products/ev-chargers" element={<EVChargers />} />
+            <Route path="/products/ev-chargers/:id" element={<EVChargerDetails />} />
             <Route path="/products/solar-pumbs" element={<SolarPumbs />} />
             <Route path="/products/solar-pumbs/:id" element={<SolarPumpDetails />} />
             
