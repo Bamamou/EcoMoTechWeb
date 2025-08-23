@@ -1,8 +1,15 @@
-name: Deploy EcoMoTech to Namecheap
-
-on:
-  push:
-    branches: [ "main" ]
+name: Deploy EcoMoTech to Namecheap      - name: 🚀 Deploy to Namecheap via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_DIR }}/
+          timeout: 60000
+          log-level: verbose branches: [ "main" ]
   workflow_dispatch:  # Allow manual deployment
 
 jobs:
