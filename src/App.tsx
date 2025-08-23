@@ -11,6 +11,7 @@ import ElectricMotorcycles from "./components/products/ElectricMotorcycles";
 import MotorcycleDetails from './components/products/Product details/MotorcycleDetails';
 import SolarPumbs from './components/products/SolarPumbs';
 import SolarPumpDetails from './components/products/SolarPumpDetails';
+import SolarInverterDetails from './components/products/SolarInverterDetails';
 import StreetLightDetails from './components/products/Product details/StreetLightDetails';
 import HomeSystemDetails from './components/products/Product details/HomeSystemDetails';
 import EnergyStorageDetails from "./components/products/Product details/EnergyStorageDetails";
@@ -22,6 +23,7 @@ import EVChargerInstallation from "@/pages/services/EVChargerInstallation";
 import EVRepair from "@/pages/services/EVRepair";
 import SolarConsultancy from "@/pages/services/SolarConsultancy";
 import EnergyAssessment from "@/pages/services/EnergyAssessment";
+import SolarInverters from "./components/products/SolarInverters";
 import JobDetails from "./pages/JobDetails";
 
 
@@ -34,7 +36,6 @@ const Services = React.lazy(() => import("./pages/Services"));
 const JoinUs = React.lazy(() => import("./pages/JoinUs"));
 
 // Lazy load product components
-const SolarInverters = React.lazy(() => import("./components/products/SolarInverters"));
 const HomeSystems = React.lazy(() => import("./components/products/HomeSystems"));
 const StreetLights = React.lazy(() => import("./components/products/StreetLights"));
 const EnergyStorage = React.lazy(() => import("./components/products/EnergyStorage"));
@@ -54,15 +55,19 @@ const EVChargingInfrastructureInAfrica = React.lazy(() => import("./pages/articl
 
 const queryClient = new QueryClient();
 
-// Get the basename from environment variable, default to GitHub Pages path
+// Get the basename from environment variable, default to root path for development and subdomain deployment
 const getBasename = () => {
+  // For development, always use root path
+  if (import.meta.env.DEV) {
+    return '/';
+  }
   // For Netlify or subdomain deployment, use root path
   if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify' || 
       import.meta.env.VITE_DEPLOYMENT_TARGET === 'subdomain') {
     return '/';
   }
-  // For GitHub Pages or default, use repository path
-  return import.meta.env.VITE_APP_BASENAME || '/EcoMoTechWeb';
+  // Only for GitHub Pages, use repository path
+  return import.meta.env.VITE_APP_BASENAME || '/';
 };
 
 const App = () => (
@@ -83,6 +88,7 @@ const App = () => (
             <Route path="/products/electric-motorcycles" element={<ElectricMotorcycles />} />
             <Route path="/products/electric-motorcycles/:id" element={<MotorcycleDetails />} />
             <Route path="/products/solar-inverters" element={<SolarInverters />} />
+            <Route path="/products/solar-inverters/:id" element={<SolarInverterDetails />} />
             <Route path="/products/home-systems" element={<HomeSystems />} />
             <Route path="/products/home-systems/:id" element={<HomeSystemDetails />} />
             <Route path="/products/street-lights" element={<StreetLights />} />

@@ -1,23 +1,29 @@
 import React, { useState } from "react";
 import Layout from "@/components/layout/Layout";
-import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import styles from '@/styles/SolarInverters.module.css';
 import { ResponsiveImage } from '@/components/ui/responsive-image';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 
 const SolarInverters = () => {
+  const navigate = useNavigate();
+
+  const handleViewDetails = (inverterId: string) => {
+    navigate(`/products/solar-inverters/${inverterId}`);
+  };
+
+  const handleQuickQuote = (inverterId: string) => {
+    navigate('/contact', { state: { productId: inverterId, productType: 'Solar Inverter' } });
+  };
+
   const inverters = [
     {
+      id: "growatt-min-5000tl-x",
       name: "Growatt MIN 5000TL-X",
       power: "5kW",
-      image: "images/Inverters/Growatt MAX 10KTL3-X.jpg",
+      image: "images/Inverters/Growatt MIN 5000TL-X.webp",
+      price: "From $1,200",
+      category: "residential",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPP trackers",
@@ -29,9 +35,12 @@ const SolarInverters = () => {
       description: "Perfect for residential installations, the 5kW inverter offers excellent efficiency and smart features for optimal solar power conversion."
     },
     {
+      id: "growatt-max-10ktl3-x",
       name: "Growatt MAX 10KTL3-X",
       power: "10kW",
-      image: "images/Inverters/Growatt MIN 5000TL-X.webp",
+      image: "images/Inverters/Growatt MAX 10KTL3-X.jpg",
+      price: "From $2,200",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.6%",
         "Multiple MPP trackers",
@@ -43,9 +52,12 @@ const SolarInverters = () => {
       description: "Ideal for commercial applications, this 10kW inverter combines high performance with advanced monitoring capabilities."
     },
     {
+      id: "growatt-max-15ktl3-x",
       name: "Growatt MAX 15KTL3-X",
       power: "15kW",
       image: "images/Inverters/Growatt MAX 15KTL3-X in.avif",
+      price: "From $3,200",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.8%",
         "Triple MPP trackers",
@@ -57,9 +69,12 @@ const SolarInverters = () => {
       description: "Our premium 15kW inverter delivers exceptional performance for large commercial installations with advanced grid support features."
     },
     {
+      id: "sungrow-sg8-0rt",
       name: "Sungrow SG8.0RT",
       power: "8kW",
       image: "images/Inverters/Sungrow SG8.0RT.png",
+      price: "From $1,800",
+      category: "residential",
       features: [
         "Maximum efficiency of 98.3%",
         "Three MPPT channels",
@@ -71,9 +86,12 @@ const SolarInverters = () => {
       description: "Sungrow's versatile 8kW inverter designed for medium-sized residential and small commercial installations."
     },
     {
+      id: "sungrow-sg10rt",
       name: "Sungrow SG10RT",
       power: "10kW",
       image: "images/Inverters/Sungrow SG10RT.webp",
+      price: "From $2,100",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.5%",
         "Four MPPT tracking",
@@ -85,9 +103,12 @@ const SolarInverters = () => {
       description: "Advanced 10kW commercial inverter with cutting-edge monitoring and diagnostic capabilities."
     },
     {
+      id: "sungrow-sg12rt",
       name: "Sungrow SG12RT",
       power: "12kW",
       image: "images/Inverters/Sungrow SG12RT.webp",
+      price: "From $2,500",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.7%",
         "Five MPPT channels",
@@ -99,9 +120,12 @@ const SolarInverters = () => {
       description: "High-performance 12kW inverter perfect for large residential and commercial solar installations."
     },
     {
+      id: "goodwe-gw3000-ns",
       name: "Goodwe GW3000-NS",
       power: "3kW",
       image: "images/Inverters/Goodwe GW3000-NS.jpg",
+      price: "From $900",
+      category: "residential",
       features: [
         "Maximum efficiency of 97.8%",
         "Single MPPT tracker",
@@ -113,9 +137,12 @@ const SolarInverters = () => {
       description: "Compact and reliable 3kW inverter perfect for small residential solar installations with excellent monitoring capabilities."
     },
     {
+      id: "goodwe-gw6000-dt",
       name: "Goodwe GW6000-DT",
       power: "6kW",
       image: "images/Inverters/Goodwe GW6000-DT.jpg",
+      price: "From $1,400",
+      category: "residential",
       features: [
         "Maximum efficiency of 98.2%",
         "Dual MPPT trackers",
@@ -127,9 +154,12 @@ const SolarInverters = () => {
       description: "Versatile 6kW dual-MPPT inverter designed for medium-sized residential solar systems with advanced safety features."
     },
     {
+      id: "goodwe-gw10k-dt",
       name: "Goodwe GW10K-DT",
       power: "10kW",
       image: "images/Inverters/Goodwe GW10K-DT.webp",
+      price: "From $2,000",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.4%",
         "Dual MPPT design",
@@ -141,9 +171,12 @@ const SolarInverters = () => {
       description: "High-performance 10kW inverter suitable for larger residential and small commercial installations with comprehensive protection features."
     },
     {
+      id: "ecoverter5",
       name: "Ecoverter5",
       power: "5kW",
       image: "images/Inverters/Ecoverter5.webp",
+      price: "From $1,300",
+      category: "residential",
       features: [
         "Maximum efficiency of 98.5%",
         "Dual MPPT channels",
@@ -155,9 +188,12 @@ const SolarInverters = () => {
       description: "Our flagship 5kW inverter featuring smart home integration and industry-leading efficiency for residential installations."
     },
     {
+      id: "ecoverter8",
       name: "Ecoverter8",
       power: "8kW",
       image: "images/Inverters/Ecoverter8.webp",
+      price: "From $1,900",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.7%",
         "Triple MPPT system",
@@ -169,9 +205,12 @@ const SolarInverters = () => {
       description: "Advanced 8kW inverter with cloud-based monitoring and superior grid integration capabilities for larger homes."
     },
     {
+      id: "ecoverter10",
       name: "Ecoverter10",
       power: "10kW",
       image: "images/Inverters/Ecoverter10.avif",
+      price: "From $2,300",
+      category: "commercial",
       features: [
         "Maximum efficiency of 98.9%",
         "Quad MPPT technology",
@@ -201,7 +240,7 @@ const SolarInverters = () => {
         <div className="container mx-auto px-4">
           <div className={styles.invertersGrid}>
             {inverters.map((inverter, index) => (
-              <div key={index} className={styles.inverterCard}>
+              <div key={inverter.id} className={styles.inverterCard}>
                 <div className={styles.imageContainer}>
                   <ResponsiveImage 
                     src={inverter.image} 
@@ -214,63 +253,89 @@ const SolarInverters = () => {
                     <div>
                       <h3 className={styles.inverterName}>{inverter.name}</h3>
                       <p className={styles.powerRating}>{inverter.power}</p>
+                      <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold mt-2 ${
+                        inverter.category === 'residential' ? 'bg-green-100 text-green-800' :
+                        inverter.category === 'commercial' ? 'bg-blue-100 text-blue-800' : 'bg-purple-100 text-purple-800'
+                      }`}>
+                        {inverter.category.charAt(0).toUpperCase() + inverter.category.slice(1)}
+                      </div>
                     </div>
                   </div>
                   <p className={styles.description}>{inverter.description}</p>
                   
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button className={styles.specButton}>
-                        <span>View Specifications</span>
-                        <svg 
-                          className="w-5 h-5" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth={2} 
-                            d="M13 7l5 5m0 0l-5 5m5-5H6"
-                          />
-                        </svg>
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className={styles.specDialog}>
-                      <DialogHeader>
-                        <DialogTitle className={styles.specTitle}>
-                          {inverter.name} Specifications
-                        </DialogTitle>
-                      </DialogHeader>
-                      <div className={styles.specGrid}>
-                        <div className={styles.specSection}>
-                          <h4 className={styles.specSectionTitle}>Key Features</h4>
-                          <div className={styles.specList}>
-                            {inverter.features.map((feature, idx) => (
-                              <div key={idx} className={styles.specItem}>
-                                <Check className="w-5 h-5 text-green-500" />
-                                <span>{feature}</span>
-                              </div>
-                            ))}
-                          </div>
+                  {/* Key Features Preview */}
+                  <div className="mt-4">
+                    <h4 className="text-sm font-semibold text-gray-800 mb-2">Key Features:</h4>
+                    <div className="space-y-1">
+                      {inverter.features.slice(0, 3).map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                          <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span>{feature}</span>
                         </div>
-                        <div className={styles.specSection}>
-                          <h4 className={styles.specSectionTitle}>Details</h4>
-                          <div className={styles.specList}>
-                            <div className={styles.specItem}>
-                              <span className="font-medium">Power Rating:</span>
-                              <span>{inverter.power}</span>
-                            </div>
-                            {/* Add more specifications here */}
-                          </div>
-                        </div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+                      ))}
+                      {inverter.features.length > 3 && (
+                        <p className="text-xs text-blue-600 font-medium ml-6">+{inverter.features.length - 3} more features</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Price and Action Buttons */}
+                  <div className="mt-6 pt-4 border-t border-gray-100">
+                    <div className="text-lg font-bold text-blue-600 mb-4">{inverter.price}</div>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={() => handleViewDetails(inverter.id)}
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2"
+                      >
+                        View Details <ArrowRight size={16} />
+                      </button>
+                      <button
+                        onClick={() => handleQuickQuote(inverter.id)}
+                        className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 flex items-center gap-2"
+                      >
+                        Quote
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Show All Products CTA */}
+          <div className="mt-12 text-center">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Solar Inverter Collection</h3>
+              <p className="text-gray-600 mb-6">Showing first 4 premium solar inverters. More products coming soon with detailed specifications and advanced features.</p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Up to 98.8% efficiency</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Advanced MPPT technology</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Smart monitoring included</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Extended warranty options</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
