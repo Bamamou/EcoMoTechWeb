@@ -24,7 +24,7 @@
     @apply w-full h-full transition-all duration-500;
     object-fit: contain; /* Better for product images */
     object-position: center;
-    padding: 1rem; /* Consistent padding */
+    padding: 0.5rem; /* Reduced padding */
     transform-origin: center;
     display: block;
     margin: 0 auto; /* Ensure centering */
@@ -66,7 +66,7 @@
   }
   
   .contentContainer {
-    @apply p-6 space-y-4;
+    @apply p-4 space-y-3; /* Reduced padding from p-6 to p-4 */
   }
   
   .productHeader {
@@ -209,14 +209,14 @@
     }
     
     .productImage {
-      padding: 1.5rem;
+      padding: 0.75rem; /* Reduced mobile padding */
       max-width: 100%;
       height: auto;
       max-height: 100%;
     }
     
     .contentContainer {
-      @apply p-4;
+      @apply p-3; /* Reduced mobile content padding */
     }
   }
 
