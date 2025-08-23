@@ -23,7 +23,6 @@ Add these secrets in your GitHub repository:
 | `FTP_USERNAME` | Your hosting username | `afrixajs` |
 | `FTP_PASSWORD` | Your hosting password | `your_secure_password` |
 | `FTP_PORT` | FTP/FTPS port number | `990` (FTPS) or `21` (FTP) |
-| `FTP_DIR` | Target directory on server | `/home/afrixajs/ecomotech.online/` |
 
 ### 🚀 Deployment Process
 

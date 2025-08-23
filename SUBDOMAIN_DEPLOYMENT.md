@@ -21,7 +21,6 @@ Configure these secrets in your GitHub repository:
 | `FTP_USERNAME` | Your hosting username | `afrixajs` or your cPanel username |
 | `FTP_PASSWORD` | Your hosting password | `your_secure_password` |
 | `FTP_PORT` | FTP/FTPS port number | `21` (FTP) or `990` (FTPS) |
-| `FTP_DIR` | Target directory on server | `/home/afrixajs/ecomotech.online/` |
 
 ### Setting up GitHub Secrets:
 
