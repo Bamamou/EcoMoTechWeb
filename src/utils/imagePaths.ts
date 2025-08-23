@@ -5,6 +5,11 @@ export const getImagePath = (imagePath: string): string => {
   
   // Get the base path from environment
   const getBasePath = () => {
+    // For development, don't add any base path
+    if (import.meta.env.DEV) {
+      return '';
+    }
+    
     if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify' || 
         import.meta.env.VITE_DEPLOYMENT_TARGET === 'subdomain') {
       return '';
@@ -14,7 +19,7 @@ export const getImagePath = (imagePath: string): string => {
   
   const basePath = getBasePath();
   
-  // Return the full path
+  // Return the full path - always start with / for absolute paths
   return basePath ? `${basePath}/${cleanPath}` : `/${cleanPath}`;
 };
 
