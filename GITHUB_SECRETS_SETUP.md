@@ -25,7 +25,7 @@
 
 #### Secret 4: FTP_DIR
 - **Name**: `FTP_DIR`
-- **Value**: `/public_html`
+- **Value**: `/home/afrixajs/ecomotech.online`
 
 ### 3. Verify Secrets Are Added
 After adding all 4 secrets, you should see them listed in your repository secrets:
