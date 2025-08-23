@@ -135,38 +135,45 @@
   }
   
   .viewDetailsButton {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 0.5rem;
-    color: #374151;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    @apply relative inline-flex items-center justify-center gap-3 px-6 py-3 mt-6
+           bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800
+           text-white font-semibold rounded-xl shadow-lg hover:shadow-xl
+           transform hover:-translate-y-0.5 transition-all duration-300
+           border-0 overflow-hidden cursor-pointer;
+  }
+  
+  .viewDetailsButton::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0
+           transition-opacity duration-300;
+  }
+  
+  .viewDetailsButton:hover::before {
+    @apply opacity-100;
+  }
+  
+  .viewDetailsButton::after {
+    content: '';
+    @apply absolute top-0 w-full h-full
+           bg-gradient-to-r from-transparent via-white/20 to-transparent
+           transform skew-x-12 transition-all duration-700;
+    left: -100%;
+  }
+  
+  .viewDetailsButton:hover::after {
+    left: 100%;
   }
   
   .viewDetailsText {
-    font-weight: 500;
+    @apply relative z-10 font-semibold tracking-wide;
   }
   
   .viewDetailsIcon {
-    width: 1rem;
-    height: 1rem;
-    transition: transform 0.2s ease;
-  }
-  
-  .viewDetailsButton:hover {
-    color: #22c55e;
-    border-color: #22c55e;
-    background-color: #f0fdf4;
+    @apply relative z-10 w-5 h-5 transition-all duration-300;
   }
   
   .viewDetailsButton:hover .viewDetailsIcon {
-    transform: translateX(2px);
+    transform: translateX(4px) scale(1.1) rotate(12deg);
   }
   
   .categoryTitle {
