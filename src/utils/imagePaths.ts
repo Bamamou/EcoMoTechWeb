@@ -5,7 +5,8 @@ export const getImagePath = (imagePath: string): string => {
   
   // Get the base path from environment
   const getBasePath = () => {
-    if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify') {
+    if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify' || 
+        import.meta.env.VITE_DEPLOYMENT_TARGET === 'subdomain') {
       return '';
     }
     return import.meta.env.VITE_APP_BASENAME || '/EcoMoTechWeb';
@@ -31,6 +32,8 @@ export const getAssetPath = (assetPath: string): string => {
   
   // For paths that start with / but don't have EcoMoTechWeb
   // Add the appropriate base path
-  const basePath = import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify' ? '' : (import.meta.env.VITE_APP_BASENAME || '/EcoMoTechWeb');
+  const basePath = (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify' || 
+                   import.meta.env.VITE_DEPLOYMENT_TARGET === 'subdomain') ? 
+                   '' : (import.meta.env.VITE_APP_BASENAME || '/EcoMoTechWeb');
   return basePath ? `${basePath}${assetPath}` : assetPath;
 };

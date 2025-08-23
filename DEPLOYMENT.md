@@ -2,13 +2,13 @@
 
 ## Multiple Deployment Options
 
-This project supports deployment to GitHub Pages, Netlify, and **Namecheap hosting** with automated GitHub Actions.
+This project supports deployment to GitHub Pages, Netlify, and **custom subdomains** with automated GitHub Actions.
 
-## 🌐 Automated Deployment to Namecheap
+## 🌐 Automated Deployment to Custom Subdomain (ecomotech.online)
 
 ### 📋 Prerequisites
 
-1. **Namecheap Hosting Account** with cPanel access
+1. **Server Access** with directory `/home/afrixajs/ecomotech.online`
 2. **FTP/FTPS credentials** for your hosting
 3. **GitHub repository** with proper secrets configured
 
@@ -20,22 +20,24 @@ Add these secrets in your GitHub repository:
 | Secret Name | Description | Example Value |
 |-------------|-------------|---------------|
 | `FTP_SERVER` | Your FTP server address | `ftp.yourdomain.com` |
-| `FTP_USERNAME` | Your cPanel username | `your_cpanel_user` |
-| `FTP_PASSWORD` | Your cPanel password | `your_secure_password` |
+| `FTP_USERNAME` | Your hosting username | `afrixajs` |
+| `FTP_PASSWORD` | Your hosting password | `your_secure_password` |
 | `FTP_PORT` | FTP/FTPS port number | `990` (FTPS) or `21` (FTP) |
-| `FTP_DIR` | Target directory on server | `/public_html/ecomotech.online/` |
+| `FTP_DIR` | Target directory on server | `/home/afrixajs/ecomotech.online/` |
 
 ### 🚀 Deployment Process
 
 The GitHub Action automatically:
-1. **Builds** the React application
+1. **Builds** the React application for subdomain
 2. **Verifies** build output
-3. **Deploys** to your Namecheap server via FTPS
+3. **Deploys** to your server via FTPS
 4. **Notifies** of success/failure
 
 **Trigger Methods:**
 - **Automatic**: Push to `main` branch
-- **Manual**: Actions tab → "Deploy EcoMoTech to Namecheap" → Run workflow
+- **Manual**: Actions tab → "Deploy to ecomotech.online Subdomain" → Run workflow
+
+**See [SUBDOMAIN_DEPLOYMENT.md](./SUBDOMAIN_DEPLOYMENT.md) for detailed setup instructions.**
 
 ## Deployment Options
 
@@ -45,10 +47,16 @@ The GitHub Action automatically:
 - **Deploy**: `npm run deploy`
 - **Basename**: `/EcoMoTechWeb` (subfolder deployment)
 
-### 2. Netlify (New)
+### 2. Netlify
 - **URL**: Will be provided by Netlify (e.g., `https://yoursite.netlify.app/`)
 - **Config**: Uses `vite.config.netlify.ts` with base path `/`
 - **Deploy**: Automatic on git push or manual via Netlify CLI
+- **Basename**: `/` (root deployment)
+
+### 3. Custom Subdomain (ecomotech.online)
+- **URL**: https://ecomotech.online
+- **Config**: Uses `vite.config.subdomain.ts` with base path `/`
+- **Deploy**: Automatic via GitHub Actions on push to main
 - **Basename**: `/` (root deployment)
 
 ## Environment Configuration
@@ -87,7 +95,12 @@ npm run deploy
 npm run build:netlify
 ```
 
-### Deploy to both:
+### Build for Subdomain:
+```bash
+npm run build:subdomain
+```
+
+### Deploy to all platforms:
 ```bash
 # On Windows
 ./deploy.sh
@@ -95,6 +108,7 @@ npm run build:netlify
 # Or manually:
 npm run build:github && npm run deploy
 npm run build:netlify
+npm run build:subdomain
 ```
 
 ## Netlify Setup Instructions
@@ -122,13 +136,14 @@ npm run build:netlify
 
 ## Key Differences
 
-| Feature | GitHub Pages | Netlify |
-|---------|-------------|---------|
-| Base Path | `/EcoMoTechWeb/` | `/` |
-| API Routes | Not supported | Serverless functions |
-| Custom Domain | Limited | Full support |
-| HTTPS | Automatic | Automatic |
-| Build Time | Manual trigger | Auto on push |
+| Feature | GitHub Pages | Netlify | Custom Subdomain |
+|---------|-------------|---------|------------------|
+| Base Path | `/EcoMoTechWeb/` | `/` | `/` |
+| API Routes | Not supported | Serverless functions | Server-dependent |
+| Custom Domain | Limited | Full support | Full control |
+| HTTPS | Automatic | Automatic | Manual setup |
+| Build Time | Manual trigger | Auto on push | Auto on push |
+| Hosting Cost | Free | Free tier + paid | Your hosting cost |
 
 ## API Functionality
 

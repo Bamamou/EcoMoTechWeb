@@ -56,8 +56,9 @@ const queryClient = new QueryClient();
 
 // Get the basename from environment variable, default to GitHub Pages path
 const getBasename = () => {
-  // For Netlify, use root path
-  if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify') {
+  // For Netlify or subdomain deployment, use root path
+  if (import.meta.env.VITE_DEPLOYMENT_TARGET === 'netlify' || 
+      import.meta.env.VITE_DEPLOYMENT_TARGET === 'subdomain') {
     return '/';
   }
   // For GitHub Pages or default, use repository path

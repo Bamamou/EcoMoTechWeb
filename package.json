@@ -9,11 +9,13 @@
     "build": "vite build",
     "build:netlify": "vite build --config vite.config.netlify.ts",
     "build:github": "vite build",
+    "build:subdomain": "vite build --config vite.config.subdomain.ts",
     "start": "NODE_ENV=production node server.js",
     "preview": "vite preview",
     "predeploy": "npm run build:github",
     "deploy": "gh-pages -d dist --branch gh-pages",
-    "deploy:netlify": "npm run build:netlify"
+    "deploy:netlify": "npm run build:netlify",
+    "deploy:subdomain": "npm run build:subdomain"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
