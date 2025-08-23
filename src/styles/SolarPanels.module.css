@@ -5,21 +5,29 @@
   .productCard {
     @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300
            border border-gray-100 overflow-hidden hover:-translate-y-1;
+    max-width: 400px;
+    margin: 0 auto; /* Center the cards on mobile */
   }
   
   .imageContainer {
-   
     height: 300px; /* Fixed height for consistent product display */
-    width: 400px;
+    width: 100%; /* Responsive width instead of fixed 400px */
     border-radius: 0.75rem 0.75rem 0 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .productImage {
     @apply w-full h-full transition-all duration-500;
     object-fit: contain; /* Better for product images */
     object-position: center;
-    padding: 0.5rem;
+    padding: 1rem; /* Consistent padding */
     transform-origin: center;
+    display: block;
+    margin: 0 auto; /* Ensure centering */
   }
   
   .productImage:hover {
@@ -182,4 +190,43 @@
   
   .fadeInAnimation {
     animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  /* Mobile responsive improvements */
+  @media (max-width: 768px) {
+    .productGrid {
+      @apply grid-cols-1 gap-4 p-4;
+    }
+    
+    .productCard {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    .imageContainer {
+      height: 280px;
+      width: 100%;
+    }
+    
+    .productImage {
+      padding: 1.5rem;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+    
+    .contentContainer {
+      @apply p-4;
+    }
+  }
+
+  /* Tablet responsive improvements */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .productGrid {
+      @apply grid-cols-2 gap-6;
+    }
+    
+    .imageContainer {
+      height: 300px;
+    }
   }
