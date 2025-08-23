@@ -1,4 +1,4 @@
-name: Deploy to ecomotech.online Subdomain
+name: Deploy to ecomotech.online (SFTP Alternative)
 
 on:
   push:
@@ -41,14 +41,17 @@ jobs:
         fi
         echo "✅ Build successful - dist directory created with $(ls -la dist | wc -l) files"
         
-    - name: Deploy via FTP (Simple)
-      uses: sebastianpopp/ftp-action@releases/v2
+    - name: Deploy to ecomotech.online via SFTP
+      uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: 'dist'
-        remoteDir: '/home/afrixajs/ecomotech.online'
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: ${{ secrets.SSH_PORT || 22 }}
+        source: "dist/*"
+        target: "/home/afrixajs/ecomotech.online/"
+        strip_components: 1
+        overwrite: true
         
     - name: Deployment Success Notification
       if: success()
@@ -62,4 +65,3 @@ jobs:
       run: |
         echo "❌ Deployment to ecomotech.online failed!"
         echo "Please check the logs above for error details."
-        echo "💡 Try manual deployment: run deploy-manual.bat"
