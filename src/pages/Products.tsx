@@ -9,8 +9,66 @@ import EVCharger from "@/components/products/EVChargers";
 import HomeSystem from "@/components/products/HomeSystems";
 import StreetLights from "@/components/products/StreetLights";
 import EnergyStorage from "@/components/products/EnergyStorage";
+import { useSEO } from "@/hooks/useSEO";
+import { pageSEO } from "@/lib/seo";
 
 const ProductsPage = () => {
+  // SEO Optimization for products page
+  useSEO({
+    ...pageSEO.products,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Renewable Energy Products | EcoMoTech",
+      "description": "Explore our comprehensive range of renewable energy products: solar panels, electric vehicles, EV chargers, energy storage systems, and solar inverters.",
+      "url": "https://ecomotech.online/products",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "ProductGroup",
+              "name": "Solar Panels",
+              "description": "High-efficiency solar panels for residential and commercial use",
+              "url": "https://ecomotech.online/products/solar-panels"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "ProductGroup",
+              "name": "Electric Vehicles",
+              "description": "Sustainable electric motorcycles and mobility solutions",
+              "url": "https://ecomotech.online/products/electric-motorcycles"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "ProductGroup",
+              "name": "EV Chargers",
+              "description": "Advanced charging solutions for electric vehicles",
+              "url": "https://ecomotech.online/products/ev-chargers"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "ProductGroup",
+              "name": "Energy Storage",
+              "description": "Advanced battery storage systems for renewable energy",
+              "url": "https://ecomotech.online/products/energy-storage"
+            }
+          }
+        ]
+      }
+    }
+  });
   return (
     <Layout>
       {/* Hero Section */}

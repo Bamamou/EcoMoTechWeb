@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
 import { getImagePath } from "@/utils/imagePaths";
 import { ResponsiveImage } from "@/components/ui/responsive-image";
+import { useSEO } from "@/hooks/useSEO";
+import { pageSEO, organizationSchema } from "@/lib/seo";
 
 const latestNews = [
   {
@@ -39,6 +41,53 @@ const latestNews = [
 ];
 
 const Index = () => {
+  // SEO Optimization for homepage
+  useSEO({
+    ...pageSEO.home,
+    ogImage: getImagePath("images/og-home.jpg"),
+    schema: {
+      "@context": "https://schema.org",
+      "@graph": [
+        organizationSchema,
+        {
+          "@type": "WebSite",
+          "@id": "https://ecomotech.online/#website",
+          "url": "https://ecomotech.online",
+          "name": "EcoMoTech",
+          "description": "Leading provider of renewable energy and electric mobility solutions",
+          "publisher": {
+            "@id": "https://ecomotech.online/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://ecomotech.online/products?search={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ecomotech.online/#webpage",
+          "url": "https://ecomotech.online",
+          "name": "EcoMoTech - Renewable Energy & Electric Mobility Solutions",
+          "isPartOf": {
+            "@id": "https://ecomotech.online/#website"
+          },
+          "about": {
+            "@id": "https://ecomotech.online/#organization"
+          },
+          "description": "Discover cutting-edge renewable energy solutions including solar panels, electric vehicles, EV chargers, and energy storage systems.",
+          "breadcrumb": {
+            "@id": "https://ecomotech.online/#breadcrumb"
+          }
+        }
+      ]
+    }
+  });
   return (
     <Layout>
       <HeroSection />

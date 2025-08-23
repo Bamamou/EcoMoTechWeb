@@ -3,8 +3,13 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { serviceRoutes } from "@/config/serviceRoutes";
+import { useSEO } from "@/hooks/useSEO";
+import { getPageSEO } from "@/lib/seo";
 
 const ServicesPage = () => {
+  // SEO optimization
+  const servicesSEO = getPageSEO('services');
+  useSEO(servicesSEO);
   return (
     <Layout>
       {/* Hero Section */}

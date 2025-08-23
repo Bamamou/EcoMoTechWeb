@@ -4,6 +4,8 @@ import { Calendar, ArrowRight, Search, ChevronLeft, ChevronRight } from "lucide-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Layout from "@/components/layout/Layout";
+import { useSEO } from "@/hooks/useSEO";
+import { getPageSEO } from "@/lib/seo";
 
 export const newsItems = [
   {
@@ -107,6 +109,10 @@ export const newsItems = [
 ];
 
 const News = () => {
+  // SEO optimization
+  const newsSEO = getPageSEO('news');
+  useSEO(newsSEO);
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");

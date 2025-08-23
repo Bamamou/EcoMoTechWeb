@@ -3,8 +3,13 @@ import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
 import styles from '@/styles/AboutUs.module.css';
 import { ResponsiveImage, img } from "@/components/ui/responsive-image";
+import { useSEO } from "@/hooks/useSEO";
+import { getPageSEO } from "@/lib/seo";
 
 const AboutPage = () => {
+  // SEO optimization
+  const aboutSEO = getPageSEO('about');
+  useSEO(aboutSEO);
   return (
     <Layout>
       {/* Hero Section */}

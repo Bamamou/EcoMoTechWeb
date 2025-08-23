@@ -8,8 +8,14 @@ import { Icon } from '@iconify/react';
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/components/ui/use-toast";
 import { ResponsiveImage } from "@/components/ui/responsive-image";
+import { useSEO } from "@/hooks/useSEO";
+import { getPageSEO } from "@/lib/seo";
 
 const Contact = () => {
+  // SEO optimization
+  const contactSEO = getPageSEO('contact');
+  useSEO(contactSEO);
+  
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
