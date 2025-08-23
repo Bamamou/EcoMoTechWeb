@@ -3,176 +3,23 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import { ResponsiveImage } from '@/components/ui/responsive-image';
 import { ArrowLeft, AlertCircle, Truck, Star } from 'lucide-react';
+import { solarInverters } from '@/data/solarInvertersData';
 
 const SolarInverterDetails = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  // Simple inverter data matching the SolarInverters component
-  const invertersData = [
-    {
-      id: "growatt-min-5000tl-x",
-      name: "Growatt MIN 5000TL-X",
-      power: "5kW",
-      image: "images/Inverters/Growatt MIN 5000TL-X.webp",
-      price: "From $1,200",
-      category: "residential",
-      features: ["Maximum efficiency of 98.4%", "Dual MPP trackers", "Smart monitoring via app", "Integrated DC switch", "Wide voltage range", "Compact design"],
-      description: "Perfect for residential installations, the 5kW inverter offers excellent efficiency and smart features for optimal solar power conversion."
-    },
-    {
-      id: "growatt-max-10ktl3-x",
-      name: "Growatt MAX 10KTL3-X",
-      power: "10kW",
-      image: "images/Inverters/Growatt MAX 10KTL3-X.jpg",
-      price: "From $2,200",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.6%", "Multiple MPP trackers", "Advanced grid support", "IP65 protection rating", "Touch-key design", "Extended warranty"],
-      description: "Ideal for commercial applications, this 10kW inverter combines high performance with advanced monitoring capabilities."
-    },
-    {
-      id: "growatt-max-15ktl3-x",
-      name: "Growatt MAX 15KTL3-X",
-      power: "15kW",
-      image: "images/Inverters/Growatt MAX 15KTL3-X in.avif",
-      price: "From $3,200",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.8%", "Triple MPP trackers", "Enhanced safety features", "Remote monitoring", "Anti-PID technology", "Low voltage ride through"],
-      description: "Our premium 15kW inverter delivers exceptional performance for large commercial installations with advanced grid support features."
-    },
-    {
-      id: "sungrow-sg8-0rt",
-      name: "Sungrow SG8.0RT",
-      power: "8kW",
-      image: "images/Inverters/Sungrow SG8.0RT.png",
-      price: "From $1,800",
-      category: "residential",
-      features: ["Maximum efficiency of 98.3%", "Three MPPT channels", "Built-in WiFi monitoring", "Touch-free commissioning", "AI-powered yield optimization", "12-year warranty"],
-      description: "Sungrow's versatile 8kW inverter designed for medium-sized residential and small commercial installations."
-    },
-    {
-      id: "sungrow-sg10rt",
-      name: "Sungrow SG10RT",
-      power: "10kW",
-      image: "images/Inverters/Sungrow SG10RT.webp",
-      price: "From $2,100",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.4%", "Four MPPT channels", "Smart string monitoring", "Touch-free commissioning", "Built-in export control", "12-year warranty"],
-      description: "Advanced 10kW inverter with smart features for commercial applications."
-    },
-    {
-      id: "sungrow-sg12rt",
-      name: "Sungrow SG12RT",
-      power: "12kW",
-      image: "images/Inverters/Sungrow SG12RT.webp",
-      price: "From $2,500",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.7%", "Five MPPT channels", "Smart string monitoring", "Integrated AFCI protection", "DC Type II SPD protection", "Low voltage ride through"],
-      description: "High-performance 12kW inverter perfect for large residential and commercial solar installations."
-    },
-    {
-      id: "huawei-sun2000-5ktl-l1",
-      name: "Huawei SUN2000-5KTL-L1",
-      power: "5kW",
-      image: "images/Inverters/Huawei SUN2000-5KTL-L1.jpg",
-      price: "From $1,300",
-      category: "residential",
-      features: ["Maximum efficiency of 98.4%", "Smart IV curve diagnosis", "Built-in PID recovery", "Smart string monitoring", "APP remote control", "10-year warranty"],
-      description: "Huawei's reliable 5kW inverter with smart features for residential installations."
-    },
-    {
-      id: "huawei-sun2000-8ktl-m1",
-      name: "Huawei SUN2000-8KTL-M1",
-      power: "8kW",
-      image: "images/Inverters/Huawei SUN2000-8KTL-M1.avif",
-      price: "From $1,900",
-      category: "residential",
-      features: ["Maximum efficiency of 98.6%", "Smart optimizer compatible", "Arc fault circuit interrupter", "Smart string monitoring", "Remote shutdown", "10-year warranty"],
-      description: "Advanced 8kW inverter with smart optimization features."
-    },
-    {
-      id: "goodwe-gw3000-ns",
-      name: "Goodwe GW3000-NS",
-      power: "3kW",
-      image: "images/Inverters/Goodwe GW3000-NS.jpg",
-      price: "From $900",
-      category: "residential",
-      features: ["Maximum efficiency of 97.8%", "Single MPPT tracker", "Built-in WiFi/GPRS", "Compact and lightweight", "Modern OLED display", "10-year warranty"],
-      description: "Compact and reliable 3kW inverter perfect for small residential solar installations with excellent monitoring capabilities."
-    },
-    {
-      id: "goodwe-gw6000-dt",
-      name: "Goodwe GW6000-DT",
-      power: "6kW",
-      image: "images/Inverters/Goodwe GW6000-DT.jpg",
-      price: "From $1,400",
-      category: "residential",
-      features: ["Maximum efficiency of 98.2%", "Dual MPPT trackers", "Smart monitoring system", "Arc fault protection", "Zero export control", "IP66 protection rating"],
-      description: "Reliable 6kW inverter with dual MPPT technology and comprehensive protection features for medium-sized residential installations."
-    },
-    {
-      id: "goodwe-gw8000-dt",
-      name: "Goodwe GW8000-DT",
-      power: "8kW",
-      image: "images/Inverters/Goodwe GW10K-DT.jpg",
-      price: "From $1,800",
-      category: "residential",
-      features: ["Maximum efficiency of 98.5%", "Dual MPPT trackers", "Cloud monitoring platform", "Zero export control", "Advanced grid support", "IP66 protection"],
-      description: "Advanced 8kW inverter with cloud-based monitoring and superior grid integration capabilities for larger homes."
-    },
-    {
-      id: "goodwe-gw10k-dt",
-      name: "Goodwe GW10K-DT",
-      power: "10kW",
-      image: "images/Inverters/Goodwe GW10K-DT.webp",
-      price: "From $2,000",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.4%", "Dual MPPT design", "Remote firmware updates", "DC switch integrated", "Type II SPD protection", "Wide voltage range"],
-      description: "High-performance 10kW inverter suitable for larger residential and small commercial installations with comprehensive protection features."
-    },
-    {
-      id: "ecoverter5",
-      name: "Ecoverter5",
-      power: "5kW",
-      image: "images/Inverters/Ecoverter5.webp",
-      price: "From $1,300",
-      category: "residential",
-      features: ["Maximum efficiency of 98.5%", "Dual MPPT channels", "Smart home integration", "AI-powered monitoring", "Dual AC/DC protection", "15-year warranty"],
-      description: "Our flagship 5kW inverter featuring smart home integration and industry-leading efficiency for residential installations."
-    },
-    {
-      id: "ecoverter8",
-      name: "Ecoverter8",
-      power: "8kW",
-      image: "images/Inverters/Ecoverter8.webp",
-      price: "From $1,900",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.7%", "Triple MPPT system", "Cloud monitoring platform", "Zero export control", "Advanced grid support", "IP66 protection"],
-      description: "Advanced 8kW inverter with cloud-based monitoring and superior grid integration capabilities for larger homes."
-    },
-    {
-      id: "ecoverter10",
-      name: "Ecoverter10",
-      power: "10kW",
-      image: "images/Inverters/Ecoverter10.avif",
-      price: "From $2,300",
-      category: "commercial",
-      features: ["Maximum efficiency of 98.9%", "Quad MPPT technology", "Remote diagnostics", "Battery ready design", "Surge protection", "Smart grid ready"],
-      description: "Premium 10kW inverter with future-ready features including battery storage compatibility and smart grid integration."
-    }
-  ];
-
-  const inverter = invertersData.find(p => p.id === id);
+  const inverter = solarInverters.find(p => p.id === id);
 
   const getRecommendations = (currentProduct: any) => {
     if (!currentProduct) return [];
     
     // Get products from the same category first, then others
-    const sameCategory = invertersData.filter(p => 
+    const sameCategory = solarInverters.filter(p => 
       p.id !== currentProduct.id && p.category === currentProduct.category
     );
     
-    const otherCategory = invertersData.filter(p => 
+    const otherCategory = solarInverters.filter(p => 
       p.id !== currentProduct.id && p.category !== currentProduct.category
     );
     
