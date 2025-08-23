@@ -2,14 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
+// Subdomain-specific configuration for ecomotech.online
 export default defineConfig({
-
   preview: {
     port: 8080,
   },
   plugins: [react()],
-  base: '/',  // Changed from '/EcoMoTechWeb/' to '/' for subdomain deployment
+  base: '/',  // Root path for subdomain deployment
   server: {
     port: 3000,
     proxy: {
@@ -43,7 +42,14 @@ export default defineConfig({
         }
       }
     },
-    // Ensure .htaccess and other static files are copied
-    copyPublicDir: true
+    // Ensure all assets are properly copied
+    copyPublicDir: true,
+    // Add .htaccess for proper routing support
+    assetsDir: 'assets'
+  },
+  // Environment variables for subdomain deployment
+  define: {
+    'import.meta.env.VITE_DEPLOYMENT_TARGET': '"subdomain"',
+    'import.meta.env.VITE_APP_BASENAME': '"/"'
   }
 });

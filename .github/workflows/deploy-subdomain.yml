@@ -1,0 +1,72 @@
+name: Deploy to ecomotech.online Subdomain
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install Dependencies
+      run: npm ci
+      
+    - name: Build for Subdomain
+      run: npm run build:subdomain
+      env:
+        VITE_DEPLOYMENT_TARGET: 'subdomain'
+        VITE_APP_BASENAME: '/'
+        
+    - name: Verify Build Output
+      run: |
+        if [ ! -d "dist" ]; then
+          echo "❌ Build failed - dist directory not found"
+          exit 1
+        fi
+        if [ ! -f "dist/index.html" ]; then
+          echo "❌ Build failed - index.html not found"
+          exit 1
+        fi
+        echo "✅ Build successful - dist directory created with $(ls -la dist | wc -l) files"
+        
+    - name: Deploy to ecomotech.online via FTPS
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: ${{ secrets.FTP_PORT }}
+        protocol: ftps
+        local-dir: ./dist/
+        server-dir: ${{ secrets.FTP_DIR }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/.vscode/**
+          
+    - name: Deployment Success Notification
+      if: success()
+      run: |
+        echo "🚀 Deployment to ecomotech.online completed successfully!"
+        echo "📍 Site URL: https://ecomotech.online"
+        echo "📦 Build size: $(du -sh dist | cut -f1)"
+        
+    - name: Deployment Failure Notification
+      if: failure()
+      run: |
+        echo "❌ Deployment to ecomotech.online failed!"
+        echo "Please check the logs above for error details."
