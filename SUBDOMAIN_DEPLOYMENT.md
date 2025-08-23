@@ -111,6 +111,29 @@ Before deploying, ensure:
 
 ## 🛠️ Troubleshooting
 
+### Windows-Specific FTP Issues:
+
+**1. FTP Connection Failed (ENOTFOUND)**
+- **Test locally first**: Run `find-ftp-settings.bat` to check server reachability
+- **Use PowerShell test**: `./test-ftp-connection.ps1 -FtpServer "ecomotech.online" -Username "afrixajs" -Password "yourpassword"`
+- **Common server addresses to try**:
+  - `ecomotech.online`
+  - `ftp.ecomotech.online`
+  - `server.ecomotech.online`
+  - Your hosting provider's specific FTP server
+
+**2. Port Configuration**
+- **Standard FTP**: Port `21` (most common)
+- **FTPS**: Port `990` (secure)
+- **SFTP**: Port `22` (if supported)
+- **Custom ports**: Check with your hosting provider
+
+**3. Windows Hosting Provider Settings**
+- Contact your hosting provider for exact FTP settings
+- Check your hosting control panel for FTP information
+- Some providers require specific server addresses
+- Ensure FTP access is enabled in your hosting account
+
 ### Common Issues:
 
 **1. FTP Connection Failed**

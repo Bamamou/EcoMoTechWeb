@@ -41,22 +41,26 @@ jobs:
         fi
         echo "✅ Build successful - dist directory created with $(ls -la dist | wc -l) files"
         
-    - name: Deploy to ecomotech.online via FTPS
+    - name: Deploy to ecomotech.online via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        port: ${{ secrets.FTP_PORT }}
-        protocol: ftps
+        port: ${{ secrets.FTP_PORT || 21 }}
+        protocol: ftp
         local-dir: ./dist/
         server-dir: /home/afrixajs/ecomotech.online/
+        state-name: .ftp-deploy-sync-state.json
+        dry-run: false
+        dangerous-clean-slate: false
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
           **/.DS_Store
           **/.vscode/**
+          **/*.log
           
     - name: Deployment Success Notification
       if: success()
