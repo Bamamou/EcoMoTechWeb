@@ -7,6 +7,7 @@ import React, { Suspense } from "react";
 import Index from "./pages/Index";
 import ProductsPage from "./pages/Products";
 import SolarPanels from "./components/products/SolarPanels";
+import SolarPanelDetails from "./components/products/Product details/SolarPanelDetails";
 import ElectricMotorcycles from "./components/products/ElectricMotorcycles";
 import MotorcycleDetails from './components/products/Product details/MotorcycleDetails';
 import SolarPumbs from './components/products/SolarPumbs';
@@ -85,6 +86,7 @@ const App = () => (
             
             {/* Product Routes */}
             <Route path="/products/solar-panels" element={<SolarPanels />} />
+            <Route path="/products/solar-panels/:id" element={<SolarPanelDetails />} />
             <Route path="/products/electric-motorcycles" element={<ElectricMotorcycles />} />
             <Route path="/products/electric-motorcycles/:id" element={<MotorcycleDetails />} />
             <Route path="/products/solar-inverters" element={<SolarInverters />} />

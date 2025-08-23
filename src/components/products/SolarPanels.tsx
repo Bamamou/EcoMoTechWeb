@@ -3,13 +3,7 @@ import Layout from "@/components/layout/Layout";
 import styles from '@/styles/SolarPanels.module.css';
 import { ExternalLink } from "lucide-react";
 import { ResponsiveImage } from '@/components/ui/responsive-image';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 export interface Product {
   id: string;
@@ -274,6 +268,12 @@ export const solarPanelProducts: Product[] = [
 ];
 
 const ProductCard = ({ product }: { product: Product }) => {
+  const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+    navigate(`/products/solar-panels/${product.id}`);
+  };
+
   return (
     <div className={styles.productCard}>
       <div className={styles.imageContainer}>
@@ -307,58 +307,13 @@ const ProductCard = ({ product }: { product: Product }) => {
             </div>
           ))}
         </div>
-        <Dialog>
-          <DialogTrigger asChild>
-            <button className={styles.viewDetailsButton}>
-              <span className={styles.viewDetailsText}>View Specifications</span>
-              <ExternalLink className={styles.viewDetailsIcon} />
-            </button>
-          </DialogTrigger>
-          <DialogContent className="max-w-2xl">
-            <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-gray-900 mb-4">
-                {product.name} Specifications
-              </DialogTitle>
-            </DialogHeader>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-green-600 mb-3">Features</h3>
-                <ul className="space-y-2">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <svg
-                        className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {product.specifications && (
-                <div>
-                  <h3 className="text-lg font-semibold text-green-600 mb-3">Technical Specifications</h3>
-                  <dl className="space-y-2">
-                    {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="grid grid-cols-2 gap-4">
-                        <dt className="text-gray-600 font-medium">{key}:</dt>
-                        <dd className="text-gray-900">{value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-              )}
-            </div>
-          </DialogContent>
-        </Dialog>
+        <button 
+          onClick={handleViewDetails}
+          className={styles.viewDetailsButton}
+        >
+          <span className={styles.viewDetailsText}>View Specifications</span>
+          <ExternalLink className={styles.viewDetailsIcon} />
+        </button>
       </div>
     </div>
   );
