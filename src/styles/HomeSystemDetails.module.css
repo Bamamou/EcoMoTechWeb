@@ -1,26 +1,38 @@
 .detailsContainer {
-  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8;
+  @apply max-w-7xl mx-auto py-4 sm:py-8 px-4 sm:px-6 lg:px-8;
+  /* Ensure proper mobile layout */
+  overflow-x: hidden;
 }
 
 .productWrapper {
-  @apply grid grid-cols-1 lg:grid-cols-2 gap-12;
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12;
+  /* Ensure proper stacking on mobile */
+  min-height: fit-content;
 }
 
 /* Gallery Section */
 .imageGallery {
-  @apply sticky top-24 space-y-8;
+  @apply space-y-4 sm:space-y-8;
+  /* Only sticky on larger screens to prevent mobile overlap issues */
+}
+
+@media (min-width: 1024px) {
+  .imageGallery {
+    position: sticky;
+    top: 6rem; /* 24 in Tailwind = 6rem */
+  }
 }
 
 .mainImage {
-  @apply w-full h-[500px] rounded-2xl shadow-lg mb-4 object-cover bg-white;
+  @apply w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl shadow-lg mb-4 object-cover bg-white;
 }
 
 .thumbnailGrid {
-  @apply grid grid-cols-4 gap-4;
+  @apply grid grid-cols-4 gap-2 sm:gap-4;
 }
 
 .thumbnailImage {
-  @apply w-24 h-24 rounded-lg cursor-pointer object-cover
+  @apply w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg cursor-pointer object-cover
          border-2 border-transparent hover:border-green-500 transition-all
          opacity-70 hover:opacity-100;
 }
@@ -31,40 +43,40 @@
 
 /* Product Info Section */
 .productInfo {
-  @apply space-y-8;
+  @apply space-y-6 sm:space-y-8;
 }
 
 .productTitle {
-  @apply text-4xl font-bold text-gray-900;
+  @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900;
 }
 
 .powerText {
-  @apply text-2xl font-semibold text-green-600;
+  @apply text-xl sm:text-2xl font-semibold text-green-600;
 }
 
 .price {
-  @apply text-xl font-bold text-gray-900;
+  @apply text-lg sm:text-xl font-bold text-gray-900;
 }
 
 .productDescription {
-  @apply text-xl text-gray-600 mt-4;
+  @apply text-base sm:text-lg lg:text-xl text-gray-600 mt-4;
 }
 
 /* Specifications Section */
 .specificationsGrid {
-  @apply mt-8 grid gap-6;
+  @apply mt-6 sm:mt-8 grid gap-4 sm:gap-6;
 }
 
 .specRow {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
 }
 
 .specSection {
-  @apply bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow;
+  @apply bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow;
 }
 
 .inverterSection {
-  @apply col-span-1 md:col-span-2 mt-6;
+  @apply col-span-1 sm:col-span-2 mt-4 sm:mt-6;
 }
 
 .specificationsList {
@@ -108,17 +120,43 @@
 /* CTA Section */
 .ctaSection {
   @apply mt-8 bg-gradient-to-r from-green-500 to-green-600 
-         rounded-2xl p-8 text-white text-center;
+         rounded-2xl p-6 sm:p-8 text-white text-center;
+  /* Ensure it's part of normal document flow */
+  position: static;
+  z-index: auto;
 }
 
 .ctaTitle {
-  @apply text-2xl font-bold mb-4;
+  @apply text-xl sm:text-2xl font-bold mb-3 sm:mb-4;
 }
 
 .ctaDescription {
-  @apply text-green-50 mb-6;
+  @apply text-green-50 mb-4 sm:mb-6 text-sm sm:text-base px-2;
 }
 
+.ctaButtons {
+  @apply flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-4;
+}
+
+.ctaButtonPrimary {
+  @apply w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3
+         bg-white text-green-600 font-semibold rounded-lg
+         hover:bg-green-50 transition-colors
+         shadow-md hover:shadow-lg text-sm sm:text-base;
+}
+
+.ctaButtonSecondary {
+  @apply w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3
+         bg-transparent text-white font-semibold rounded-lg border-2 border-white
+         hover:bg-white hover:text-green-600 transition-colors
+         shadow-md hover:shadow-lg text-sm sm:text-base;
+}
+
+.ctaContact {
+  @apply text-xs sm:text-sm text-green-100 opacity-90;
+}
+
+/* Legacy button for backward compatibility */
 .ctaButton {
   @apply inline-flex items-center justify-center px-8 py-3
          bg-white text-green-600 font-semibold rounded-lg
