@@ -1,14 +1,54 @@
+# Robots.txt for EcoMoTech - Renewable Energy Solutions
+# https://ecomotech.online
+
+User-agent: *
+Allow: /
+
+# Prioritize important pages for crawling
+Allow: /products/
+Allow: /services/
+Allow: /news/
+Allow: /about
+Allow: /contact
+
+# Block admin and development files
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: *.map
+Disallow: /deploy-*
+Disallow: /test-*
+
+# Allow CSS, JS, and images for better rendering
+Allow: /assets/
+Allow: /images/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.webp
+Allow: *.svg
+
+# Sitemap location
+Sitemap: https://ecomotech.online/sitemap.xml
+
+# Crawl delay to be respectful
+Crawl-delay: 1
+
+# Special rules for different bots
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
