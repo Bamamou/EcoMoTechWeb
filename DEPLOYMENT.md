@@ -1,6 +1,41 @@
-# Deployment Guide
+# 🚀 EcoMoTech Deployment Guide
 
-This project supports dual deployment to both GitHub Pages and Netlify with environment-specific configurations.
+## Multiple Deployment Options
+
+This project supports deployment to GitHub Pages, Netlify, and **Namecheap hosting** with automated GitHub Actions.
+
+## 🌐 Automated Deployment to Namecheap
+
+### 📋 Prerequisites
+
+1. **Namecheap Hosting Account** with cPanel access
+2. **FTP/FTPS credentials** for your hosting
+3. **GitHub repository** with proper secrets configured
+
+### 🔐 Required GitHub Secrets
+
+Add these secrets in your GitHub repository:
+**Settings → Secrets and variables → Actions → New repository secret**
+
+| Secret Name | Description | Example Value |
+|-------------|-------------|---------------|
+| `FTP_SERVER` | Your FTP server address | `ftp.yourdomain.com` |
+| `FTP_USERNAME` | Your cPanel username | `your_cpanel_user` |
+| `FTP_PASSWORD` | Your cPanel password | `your_secure_password` |
+| `FTP_PORT` | FTP/FTPS port number | `990` (FTPS) or `21` (FTP) |
+| `FTP_DIR` | Target directory on server | `/public_html/ecomotech.online/` |
+
+### 🚀 Deployment Process
+
+The GitHub Action automatically:
+1. **Builds** the React application
+2. **Verifies** build output
+3. **Deploys** to your Namecheap server via FTPS
+4. **Notifies** of success/failure
+
+**Trigger Methods:**
+- **Automatic**: Push to `main` branch
+- **Manual**: Actions tab → "Deploy EcoMoTech to Namecheap" → Run workflow
 
 ## Deployment Options
 

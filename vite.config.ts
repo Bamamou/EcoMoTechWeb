@@ -13,7 +13,7 @@ export default defineConfig({
     port: 8080,
   },
   plugins: [react()],
-  base: '/EcoMoTechWeb/',  // Must match your GitHub repository name
+  base: '/',  // Changed from '/EcoMoTechWeb/' to '/' for subdomain deployment
   server: {
     port: 3000,
     proxy: {
@@ -46,6 +46,8 @@ export default defineConfig({
           'form-vendor': ['@tanstack/react-query', 'zod']
         }
       }
-    }
+    },
+    // Ensure .htaccess and other static files are copied
+    copyPublicDir: true
   }
 });
