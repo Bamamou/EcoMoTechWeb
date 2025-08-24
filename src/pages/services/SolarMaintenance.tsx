@@ -501,11 +501,11 @@ const SolarMaintenance = () => {
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-sm">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>Emergency: (555) 123-SOLAR</span>
+              <span>Emergency: (0086) 18810799128-SOLAR</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>om@ecomotech.com</span>
+              <span>ecomotech@outlook.com</span>
             </div>
             <div className="flex items-center gap-2">
               <Headphones className="w-4 h-4" />

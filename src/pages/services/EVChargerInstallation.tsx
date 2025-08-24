@@ -442,7 +442,9 @@ const EVChargerInstallation = () => {
                 alt={chargerTypes[activeChargerType].title}
                 className="rounded-2xl shadow-xl"
               />
-              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+              
+              {/* Desktop overlay - hidden on mobile */}
+              <div className="hidden md:block absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 ${
                     chargerTypes[activeChargerType].color === 'blue' ? 'bg-blue-100' :
@@ -455,6 +457,25 @@ const EVChargerInstallation = () => {
                   <div>
                     <p className="text-xs text-gray-600">Solution Type</p>
                     <p className="font-semibold text-gray-900">{chargerTypes[activeChargerType].title}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile info card - shown only on mobile */}
+              <div className="md:hidden mt-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-100">
+                <div className="flex items-center gap-3">
+                  <div className={`w-10 h-10 ${
+                    chargerTypes[activeChargerType].color === 'blue' ? 'bg-blue-100' :
+                    chargerTypes[activeChargerType].color === 'green' ? 'bg-green-100' :
+                    chargerTypes[activeChargerType].color === 'purple' ? 'bg-purple-100' :
+                    'bg-gray-100'
+                  } rounded-full flex items-center justify-center`}>
+                    {chargerTypes[activeChargerType].icon}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-gray-600 font-medium">Solution Type</p>
+                    <p className="font-bold text-gray-900 text-lg">{chargerTypes[activeChargerType].title}</p>
+                    <p className="text-sm text-gray-600 mt-1">{chargerTypes[activeChargerType].subtitle}</p>
                   </div>
                 </div>
               </div>
@@ -727,7 +748,7 @@ const EVChargerInstallation = () => {
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-sm">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>Call: (555) 123-CHARGE</span>
+              <span>Call: (0086) 18810799128-CHARGE</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
