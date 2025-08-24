@@ -62,7 +62,7 @@ const EVRepair = () => {
       subtitle: "Comprehensive system analysis and fault detection",
       icon: <Search className="w-6 h-6" />,
       color: "blue",
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "images/Services/electric motorcycle.png",
       features: [
         "Complete electrical system diagnostics",
         "Battery health assessment and testing",
@@ -87,7 +87,7 @@ const EVRepair = () => {
       subtitle: "Regular service to keep your EV running perfectly",
       icon: <Settings className="w-6 h-6" />,
       color: "green",
-      image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "images/Services/electric motorcycle.png",
       features: [
         "Scheduled maintenance programs",
         "Battery conditioning and balancing",
@@ -112,7 +112,7 @@ const EVRepair = () => {
       subtitle: "Professional repair services for all EV components",
       icon: <Wrench className="w-6 h-6" />,
       color: "green",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "images/Services/electric motorcycle.png",
       features: [
         "Battery pack repair and replacement",
         "Motor rebuild and repair",
@@ -202,13 +202,13 @@ const EVRepair = () => {
     {
       type: "tricycle",
       name: "Electric Tricycles", 
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "images/Services/tricycles repair tech.png",
       description: "Expert repair for electric tricycles and cargo bikes"
     },
     {
       type: "commercial",
       name: "Commercial EVs",
-      image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "images/Services/EV repair.png",
       description: "Fleet service for commercial electric vehicles"
     }
   ];
@@ -310,7 +310,7 @@ const EVRepair = () => {
             
             <div className="relative">
               <ResponsiveImage 
-                src="images/Electric motorcycles/electric motorcycle.webp"
+                src="images/Services/electric motorcycle.png"
                 alt="Electric Vehicle Repair Service"
                 className="rounded-2xl shadow-2xl"
               />
@@ -462,7 +462,7 @@ const EVRepair = () => {
             </div>
 
             <div className="relative">
-              <img 
+              <ResponsiveImage 
                 src={serviceTypes[activeServiceType].image}
                 alt={serviceTypes[activeServiceType].title}
                 className="rounded-2xl shadow-xl"
