@@ -97,6 +97,17 @@ export const newsItems = [
     link: "/news/ev-charging-africa"
   },
   {
+    id: 10,
+    title: "Introduction to Renewable Energy Feasibility Assessments",
+    excerpt: "Nearly half of renewable energy projects worldwide fail to move beyond the planning stage due to poor feasibility assessments. Learn how structured evaluation is essential before committing resources to any project.",
+    content: "Did you know that nearly half of renewable energy projects worldwide fail to move beyond the planning stage—not because of technology limitations, but because of poor feasibility assessments? This reality highlights why a structured evaluation is essential before committing time, money, and resources to any project...",
+    date: "August 27, 2025",
+    author: "EcoMoTech Research Team",
+    category: "Research & Development",
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    link: "/news/renewable-energy-feasibility-assessments"
+  },
+  {
   id: "9",
   title: "The Growth of EV Charging Infrastructure in Africa",
   description: "Exploring the development and future of electric vehicle charging infrastructure across Africa.",
