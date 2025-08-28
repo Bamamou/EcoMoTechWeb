@@ -40,14 +40,24 @@ const ProductsPage = () => {
             "position": 2,
             "item": {
               "@type": "ProductGroup",
-              "name": "Electric Vehicles",
-              "description": "Sustainable electric motorcycles and mobility solutions",
+              "name": "Electric Motorcycles",
+              "description": "High-performance electric motorcycles for urban mobility",
               "url": "https://ecomotech.online/products/electric-motorcycles"
             }
           },
           {
             "@type": "ListItem",
             "position": 3,
+            "item": {
+              "@type": "ProductGroup",
+              "name": "Electric Tricycles",
+              "description": "Sustainable three-wheeled electric vehicles for passenger and cargo transport",
+              "url": "https://ecomotech.online/products/electric-tricycles"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
             "item": {
               "@type": "ProductGroup",
               "name": "EV Chargers",
@@ -57,7 +67,7 @@ const ProductsPage = () => {
           },
           {
             "@type": "ListItem",
-            "position": 4,
+            "position": 5,
             "item": {
               "@type": "ProductGroup",
               "name": "Energy Storage",
@@ -96,7 +106,7 @@ const ProductsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/products/solar-panels" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <ResponsiveImage
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                src="images/Solar panels/PV.avif"
                 alt="Solar Panels"
                 className="w-full h-60 object-cover"
               />
@@ -191,6 +201,18 @@ const ProductsPage = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">Electric Motorcycles</h3>
                 <p className="text-gray-600">High-performance electric motorcycles for urban mobility.</p>
+              </div>
+            </Link>
+
+            <Link to="/products/electric-tricycles" className="block bg-ecomotech-gray rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <ResponsiveImage
+                src="images/tricycles/Urban.webp"
+                alt="Electric Tricycles"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Electric Tricycles</h3>
+                <p className="text-gray-600">Sustainable three-wheeled electric vehicles for passenger and cargo transport.</p>
               </div>
             </Link>
 

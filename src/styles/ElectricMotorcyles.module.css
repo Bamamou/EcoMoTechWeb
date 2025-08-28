@@ -8,9 +8,11 @@
   }
   
   .imageContainer {
-   
+    @apply flex items-center justify-center bg-gray-50;
     height: 300px; /* Fixed height for consistent product display */
-    width: 400px;
+    width: 100%; /* Make it responsive to container width */
+    max-width: 400px; /* Maximum width on larger screens */
+    margin: 0 auto; /* Center the container */
     border-radius: 0.75rem 0.75rem 0 0;
   }
   
@@ -20,6 +22,23 @@
     object-position: center;
     padding: 0.5rem;
     transform-origin: center;
+    max-width: 100%; /* Ensure image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    .imageContainer {
+      height: 250px; /* Slightly smaller on mobile */
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .productImage {
+      padding: 1rem; /* More padding on mobile for better fit */
+      max-height: 100%;
+      width: auto;
+    }
   }
   
   .productImage:hover {
