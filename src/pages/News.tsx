@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Calendar, ArrowRight, Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 import Layout from "@/components/layout/Layout";
 import { useSEO } from "@/hooks/useSEO";
 import { getPageSEO } from "@/lib/seo";
@@ -104,17 +105,17 @@ export const newsItems = [
     date: "August 27, 2025",
     author: "EcoMoTech Research Team",
     category: "Research & Development",
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/Renewable Energy Feasibility Assessment.jpg",
     link: "/news/renewable-energy-feasibility-assessments"
   },
   {
-  id: "9",
+  id: 9,
   title: "The Growth of EV Charging Infrastructure in Africa",
   description: "Exploring the development and future of electric vehicle charging infrastructure across Africa.",
   date: "2025-06-20",
   category: "Infrastructure",
   tags: ["Electric Vehicles", "Infrastructure", "Sustainable Energy"],
-  image: "/EcoMoTechWeb/images/News/Charging station in Africa.png",
+  image: "images/News/Charging station in Africa.png",
   link: "/news/ev-charging-infrastructure-africa"
   }
 ];
@@ -259,10 +260,11 @@ const News = () => {
                         <div className="flex flex-col md:flex-row">
                           <div className="md:w-1/3">
                             <div className="h-64 md:h-full overflow-hidden">
-                              <img
+                              <ResponsiveImage
                                 src={item.image}
                                 alt={item.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                fallback="https://images.unsplash.com/photo-1497436072909-f5e4be1713d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                               />
                             </div>
                           </div>

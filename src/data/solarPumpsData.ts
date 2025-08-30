@@ -140,10 +140,10 @@ export const solarPumps: SolarPump[] = [
     category: "surface",
     image:   "images/Solar pumbs/products/solar-surface-pump2.webp",
     images: {
-      main:  "images/Solar pumbs/products/dc-solar-pump-for-well.webp",
+      main: "images/Solar pumbs/products/solar-surface-pump2.webp",
       gallery: [
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1572901334602-f40b66634ba5?w=500&h=400&fit=crop&auto=format",
+        "images/Solar pumbs/products/solar-surface-pump2.webp",
+       "images/Solar pumbs/products/solar-surface-pump2.webp",
         "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=400&fit=crop&auto=format",
         "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=400&fit=crop&auto=format"
       ]
@@ -220,10 +220,10 @@ export const solarPumps: SolarPump[] = [
     category: "irrigation",
     image: "images/Solar pumbs/products/dc-solar-pump-for-well.webp",
     images: {
-      main: "https://images.unsplash.com/photo-1572901334602-f40b66634ba5?w=500&h=400&fit=crop&auto=format",
+      main: "images/Solar pumbs/products/dc-solar-pump-for-well.webp",
       gallery: [
-        "https://images.unsplash.com/photo-1572901334602-f40b66634ba5?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=400&fit=crop&auto=format",
+        "images/Solar pumbs/products/dc-solar-pump-for-well.webp",
+        "images/Solar pumbs/products/dc-solar-pump-for-well.webp",
         "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=400&fit=crop&auto=format",
         "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop&auto=format"
       ]
@@ -301,10 +301,10 @@ export const solarPumps: SolarPump[] = [
     category: "surface",
     image: "images/Solar pumbs/products/lead.webp",
     images: {
-      main: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=400&fit=crop&auto=format",
+      main: "images/Solar pumbs/products/lead.webp",
       gallery: [
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=400&fit=crop&auto=format",
+        "images/Solar pumbs/products/lead.webp",
+        "images/Solar pumbs/products/lead.webp",
         "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop&auto=format",
         "https://images.unsplash.com/photo-1572901334602-f40b66634ba5?w=500&h=400&fit=crop&auto=format"
       ]
@@ -381,10 +381,10 @@ export const solarPumps: SolarPump[] = [
     category: "submersible",
     image: "./images/Solar pumbs/products/Lead big height small flw.webp",
     images: {
-      main: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=400&fit=crop&auto=format",
+      main: "images/Solar pumbs/products/Lead big height small flw.webp",
       gallery: [
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=400&fit=crop&auto=format",
+        "images/Solar pumbs/products/Lead big height small flw.webp",
+        "images/Solar pumbs/products/Lead big height small flw.webp",
         "https://images.unsplash.com/photo-1572901334602-f40b66634ba5?w=500&h=400&fit=crop&auto=format",
         "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&h=400&fit=crop&auto=format"
       ]

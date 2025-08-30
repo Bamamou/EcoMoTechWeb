@@ -526,8 +526,8 @@ const SolarConsultancy = () => {
                 <Phone className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Call Our Experts</h3>
                 <p className="text-blue-200 mb-4">Speak directly with our solar consultants</p>
-                <a href="tel:+1234567890" className="text-emerald-400 font-bold text-lg hover:text-white transition-colors">
-                  +1 (234) 567-8900
+                <a href="tel:+8618810799128" className="text-emerald-400 font-bold text-lg hover:text-white transition-colors">
+                  +86 188 1079 9128
                 </a>
               </div>
               
@@ -535,8 +535,8 @@ const SolarConsultancy = () => {
                 <Mail className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Email Consultation</h3>
                 <p className="text-blue-200 mb-4">Get detailed information via email</p>
-                <a href="mailto:solar@ecomotech.com" className="text-emerald-400 font-bold text-lg hover:text-white transition-colors">
-                  solar@ecomotech.com
+                <a href="mailto:ecomotech@outlook.com" className="text-emerald-400 font-bold text-lg hover:text-white transition-colors">
+                  ecomotech@outlook.com
                 </a>
               </div>
             </div>

@@ -38,13 +38,13 @@ export const tricycleProducts: TricycleProduct[] = [
 This commercial-grade electric tricycle features a weatherproof cargo compartment, advanced battery management system, and regenerative braking technology. Perfect for delivery services, logistics companies, and commercial operations requiring reliable, eco-friendly transportation.
 
 Built with premium materials and backed by our comprehensive warranty, the Cargo Pro 3000 delivers outstanding performance while reducing operating costs and environmental impact.`,
-    price: 3299,
-    originalPrice: 3699,
+    price: 1999,
+    originalPrice: 2699,
     image: '/images/tricycles/cargo.png',
     gallery: [
-      '/images/tricycles/electric tricycle.webp',
-      '/images/tricycles/electric motorcycle.webp',
-      '/images/BESS/battery system.webp'
+      '/images/tricycles/EcoMoTech Cargo Pro 3000.avif',
+      '/images/tricycles/EcoMoTech Cargo Pro.avif',
+      '/images/tricycles/EcoMoTech Cargo Pro 300.avif',
     ],
     category: 'commercial',
     badge: 'bestseller',
