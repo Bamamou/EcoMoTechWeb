@@ -11,6 +11,9 @@ Allow: /news/
 Allow: /about
 Allow: /contact
 
+# Important pages for brand recognition
+Crawl-delay: 1
+
 # Block admin and development files
 Disallow: /admin/
 Disallow: /.git/
@@ -18,6 +21,29 @@ Disallow: /node_modules/
 Disallow: /src/
 Disallow: *.map
 Disallow: /deploy-*
+Disallow: /.env*
+Disallow: /vite.config.*
+
+# Special directives for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://ecomotech.online/sitemap.xml
+
+# Important: EcoMoTech brand pages
+# These pages are critical for brand recognition
+Allow: /
+Allow: /products
+Allow: /services
+Allow: /about
+Allow: /contact
+Allow: /news
 Disallow: /test-*
 
 # Allow CSS, JS, and images for better rendering

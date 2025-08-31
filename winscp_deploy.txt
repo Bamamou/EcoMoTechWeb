@@ -1,4 +1,4 @@
-open ftp://Bamamou@ecomotech.online:Jesuisde94,@ecomotech.online 
+open ftp://bamamounicolas@ecomotech:Jesuisde94.@ecomotech.online 
 cd /home/afrixajs/ecomotech.online/ 
 put -transfer=binary dist\* 
 exit 
