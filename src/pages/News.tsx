@@ -39,18 +39,18 @@ export const newsItems = [
     date: "February 15, 2023",
     author: "Emma Nelson",
     category: "Projects",
-    image: "/EcoMoTechWeb/images/News/new-solar-panel-series.jpg",
+    image: "/EcoMoTechWeb/images/News/Sustainable Energy Solutions for Remote Communities.jpg",
     link: "/news/remote-communities"
   },
   {
     id: 4,
-    title: "Ecomotech Partners with Leading Research University",
-    excerpt: "New research partnership aims to develop next-generation solar storage technology with higher capacity and longer lifespan.",
+    title: "Powering Africa Together Through Corporate–Local Collaboration",
+    excerpt: "Africa stands at a pivotal moment of its renewable energy journey, knowing how big corporations and local renewable energy firms can team up to unlock renewable energy success is crucial.",
     content: "Ecomotech has entered into a strategic research partnership with the renowned Green Energy Institute at State University to accelerate the development of next-generation energy storage solutions. This collaboration brings together Ecomotech's industry expertise with the cutting-edge research capabilities of one of the world's leading renewable energy research institutions.\n\nThe three-year partnership will focus on developing advanced battery technology specifically designed for solar energy storage applications. Research will target significant improvements in storage capacity, charge/discharge efficiency, and overall lifespan – addressing key challenges in current renewable energy systems.\n\n'Effective energy storage is the missing piece in making renewable energy truly competitive with traditional power sources,' said Dr. James Williams, Director of Research at Ecomotech. 'This partnership combines the theoretical innovation of academia with our practical experience implementing real-world solar solutions.'\n\nThe research initiative has received partial funding through a government renewable energy innovation grant, with both Ecomotech and State University making significant resource commitments. The partners aim to have commercially viable prototypes ready for testing within 18 months.",
     date: "January 28, 2023",
     author: "Dr. James Williams",
     category: "Research & Development",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/News/Partnership.png",
     link: "/news/research-partnership"
   },
   {
@@ -109,14 +109,15 @@ export const newsItems = [
     link: "/news/renewable-energy-feasibility-assessments"
   },
   {
-  id: 9,
-  title: "The Growth of EV Charging Infrastructure in Africa",
-  description: "Exploring the development and future of electric vehicle charging infrastructure across Africa.",
-  date: "2025-06-20",
-  category: "Infrastructure",
-  tags: ["Electric Vehicles", "Infrastructure", "Sustainable Energy"],
-  image: "images/News/Charging station in Africa.png",
-  link: "/news/ev-charging-infrastructure-africa"
+    id: 9,
+    title: "The Growth of EV Charging Infrastructure in Africa",
+    excerpt: "Exploring the development and future of electric vehicle charging infrastructure across Africa, supporting sustainable transportation solutions for the continent.",
+    content: "The electric vehicle charging infrastructure in Africa is experiencing unprecedented growth, marking a significant shift towards sustainable transportation across the continent. This development represents a crucial step in addressing both environmental concerns and the growing demand for clean mobility solutions.\n\nRecent investments in charging infrastructure have focused on major urban centers, with plans for expansion into rural areas. The integration of solar-powered charging stations has been particularly successful, providing reliable charging capabilities even in areas with unstable grid connections.\n\nThis infrastructure development is creating new opportunities for local businesses, job creation, and technological advancement across the African continent.",
+    date: "June 20, 2025",
+    author: "EcoMoTech Infrastructure Team",
+    category: "Infrastructure",
+    image: "/EcoMoTechWeb/images/News/Charging station in Africa.png",
+    link: "/news/ev-charging-infrastructure-africa"
   }
 ];
 

@@ -59,48 +59,39 @@ const RemoteCommunities = () => {
 
   return (
     <Layout>
-      <article className="min-h-screen bg-gradient-to-br from-white via-ecomotech-light-gray to-slate-50">
+      <article className="min-h-screen bg-white">
         {/* Hero Section */}
-        <div className="relative pt-24 pb-12 overflow-hidden bg-white">
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-6xl mx-auto text-center">
-              <div className="flex justify-center gap-3 mb-6 flex-wrap">
-                <Badge className="bg-ecomotech-green/10 text-ecomotech-dark-green border-ecomotech-green/30 px-4 py-2">
-                  <Lightbulb className="w-4 h-4 mr-2" />
+        <div className="pt-24 pb-12 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex gap-3 mb-6 flex-wrap">
+                <span className="inline-flex items-center px-4 py-2 text-base font-medium text-ecomotech-blue bg-ecomotech-blue/10 rounded-full">
+                  <Lightbulb className="w-5 h-5 mr-2" />
                   Sustainable Energy
-                </Badge>
-                <Badge className="bg-ecomotech-blue/10 text-ecomotech-dark-blue border-ecomotech-blue/30 px-4 py-2">
-                  <MapPin className="w-4 h-4 mr-2" />
+                </span>
+                <span className="inline-flex items-center px-4 py-2 text-base font-medium text-gray-600 bg-gray-100 rounded-full">
+                  <MapPin className="w-5 h-5 mr-2" />
                   Remote Communities
-                </Badge>
-                <Badge className="bg-ecomotech-dark-green/10 text-ecomotech-dark-green border-ecomotech-dark-green/30 px-4 py-2">
-                  <Globe className="w-4 h-4 mr-2" />
+                </span>
+                <span className="inline-flex items-center px-4 py-2 text-base font-medium text-gray-600 bg-gray-100 rounded-full">
+                  <Globe className="w-5 h-5 mr-2" />
                   Africa
-                </Badge>
-                <Badge className="bg-ecomotech-dark-blue/10 text-ecomotech-dark-blue border-ecomotech-dark-blue/30 px-4 py-2">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Energy Access
-                </Badge>
+                </span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-ecomotech-dark-gray mb-6 leading-tight">
-                Sustainable Energy Solutions for
-                <span className="block bg-gradient-to-r from-ecomotech-green via-ecomotech-blue to-ecomotech-dark-green bg-clip-text text-transparent mt-2">
-                  Remote Communities in Africa
-                </span>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+                Sustainable Energy Solutions for Remote Communities in Africa
               </h1>
               
-              <p className="text-xl md:text-2xl text-ecomotech-dark-gray/80 mb-8 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-2xl text-gray-600 mb-10 leading-relaxed">
                 A comprehensive analysis of sustainable energy technologies, implementation strategies, and transformative impacts for underserved African communities
               </p>
               
-              <div className="flex items-center justify-center text-ecomotech-dark-gray/70 mb-8 flex-wrap gap-2">
+              <div className="flex items-center text-lg text-gray-500 mb-8 flex-wrap gap-4">
                 <time dateTime="2025-09-01" className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
                   September 1, 2025
                 </time>
-                <span className="mx-4 hidden sm:block">·</span>
                 <span className="flex items-center">
                   <Users className="w-5 h-5 mr-2" />
                   Energy Access Research Team
@@ -111,40 +102,35 @@ const RemoteCommunities = () => {
         </div>
 
         {/* Share Button Section */}
-        <div className="container mx-auto px-4 pb-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-r from-ecomotech-green/10 to-ecomotech-blue/10 p-6 rounded-xl border border-ecomotech-green/20">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <Share2 className="w-6 h-6 text-ecomotech-green" />
-                  <div>
-                    <h3 className="font-semibold text-ecomotech-dark-gray">Share This Article</h3>
-                    <p className="text-sm text-gray-600">Help spread awareness about sustainable energy solutions</p>
-                  </div>
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="flex items-center gap-3">
+                <Share2 className="w-6 h-6 text-gray-600" />
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900">Share This Article</h3>
+                  <p className="text-base text-gray-600">Help spread awareness about sustainable energy solutions</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={handleShare}
-                    className="flex items-center gap-2 px-4 py-2 bg-ecomotech-green text-white rounded-lg hover:bg-ecomotech-dark-green transition-colors"
-                  >
-                    <Share2 className="w-4 h-4" />
-                    Share
-                  </button>
-                  <button
-                    onClick={() => window.open(`https://twitter.com/intent/tweet?text=Sustainable energy solutions transforming remote African communities!&url=${window.location.href}`)}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                  >
-                    <Twitter className="w-4 h-4" />
-                    Tweet
-                  </button>
-                  <button
-                    onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`)}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                    LinkedIn
-                  </button>
-                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleShare}
+                  className="px-3 py-2 text-sm text-gray-600 hover:text-ecomotech-blue transition-colors"
+                >
+                  <Share2 className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => window.open(`https://twitter.com/intent/tweet?text=Sustainable energy solutions transforming remote African communities!&url=${window.location.href}`)}
+                  className="px-3 py-2 text-sm text-gray-600 hover:text-blue-500 transition-colors"
+                >
+                  <Twitter className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`)}
+                  className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </button>
               </div>
             </div>
           </div>
@@ -152,78 +138,76 @@ const RemoteCommunities = () => {
 
         {/* Introduction */}
         <div className="container mx-auto px-4 py-12">
-          <div className="max-w-6xl mx-auto">
-            <Card className="bg-gradient-to-br from-ecomotech-dark-gray via-ecomotech-dark-blue to-ecomotech-dark-green border-none shadow-2xl mb-12">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-white/10 rounded-full backdrop-blur-sm">
-                    <Lightbulb className="w-8 h-8 text-ecomotech-green" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-white">Introduction</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-ecomotech-blue/10 rounded-lg">
+                  <Lightbulb className="w-7 h-7 text-ecomotech-blue" />
                 </div>
-                <p className="text-blue-100 text-lg leading-relaxed">
-                  Remote communities across Africa face persistent energy access challenges, compromising healthcare, education, livelihoods, and overall well-being. This article synthesizes the latest in sustainable energy technologies, implementation case studies, economic and social impacts, barriers and solutions, policy frameworks, and future trends to offer a holistic understanding of how to drive energy access in these underserved contexts.
-                </p>
-              </CardContent>
-            </Card>
+                <h2 className="text-3xl font-bold text-gray-900">Introduction</h2>
+              </div>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Remote communities across Africa face persistent energy access challenges, compromising healthcare, education, livelihoods, and overall well-being. This article synthesizes the latest in sustainable energy technologies, implementation case studies, economic and social impacts, barriers and solutions, policy frameworks, and future trends to offer a holistic understanding of how to drive energy access in these underserved contexts.
+              </p>
+            </div>
 
             {/* Challenges Section */}
-            <div className="mb-8">
-              <div className="p-6">
+            <div className="mb-12">
+              <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-red-100 rounded-full">
-                    <AlertTriangle className="w-6 h-6 text-red-600" />
+                  <div className="p-3 bg-orange-100 rounded-lg">
+                    <AlertTriangle className="w-7 h-7 text-orange-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">1. Challenges in Providing Sustainable Energy to Remote Communities in Africa</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">1. Challenges in Providing Sustainable Energy to Remote Communities in Africa</h3>
                 </div>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <div className="bg-gradient-to-br from-red-50 to-orange-50 p-4 rounded-xl border border-red-200">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-start gap-3">
-                      <Users className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                      <Users className="w-6 h-6 text-gray-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-red-800 mb-2">Sparse Populations</h4>
-                        <p className="text-red-700">Low electricity demand and scattered settlements raise infrastructure costs and reduce commercial feasibility</p>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">Sparse Populations</h4>
+                        <p className="text-lg text-gray-600">Low electricity demand and scattered settlements raise infrastructure costs and reduce commercial feasibility</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-4 rounded-xl border border-orange-200">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-start gap-3">
-                      <Zap className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
+                      <Zap className="w-6 h-6 text-gray-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-orange-800 mb-2">Grid Extension Costs</h4>
-                        <p className="text-orange-700">High cost of grid expansion and limited power infrastructure inhibits rural electrification</p>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">Grid Extension Costs</h4>
+                        <p className="text-lg text-gray-600">High cost of grid expansion and limited power infrastructure inhibits rural electrification</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 rounded-xl border border-yellow-200">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-start gap-3">
-                      <DollarSign className="w-5 h-5 text-yellow-600 mt-1 flex-shrink-0" />
+                      <DollarSign className="w-6 h-6 text-gray-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-yellow-800 mb-2">Economic Constraints</h4>
-                        <p className="text-yellow-700">Financial sustainability barriers; many projects fail to scale beyond donor-funded pilots</p>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">Economic Constraints</h4>
+                        <p className="text-lg text-gray-600">Financial sustainability barriers; many projects fail to scale beyond donor-funded pilots</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-200">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-start gap-3">
-                      <Settings className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <Settings className="w-6 h-6 text-gray-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-blue-800 mb-2">Maintenance Shortfalls</h4>
-                        <p className="text-blue-700">Poor after-installation support, limited technical skills, and weak maintenance frameworks</p>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">Maintenance Shortfalls</h4>
+                        <p className="text-lg text-gray-600">Poor after-installation support, limited technical skills, and weak maintenance frameworks</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-xl border border-purple-200">
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-start gap-3">
-                      <Shield className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <Shield className="w-6 h-6 text-gray-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-purple-800 mb-2">Policy Limitations</h4>
-                        <p className="text-purple-700">Inadequate community acceptance and weak regulatory frameworks hinder uptake</p>
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">Policy Limitations</h4>
+                        <p className="text-lg text-gray-600">Inadequate community acceptance and weak regulatory frameworks hinder uptake</p>
                       </div>
                     </div>
                   </div>
@@ -232,69 +216,69 @@ const RemoteCommunities = () => {
             </div>
 
             {/* Technologies Section */}
-            <div className="mb-8">
-              <div className="p-6">
+            <div className="mb-12">
+              <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-green-100 rounded-full">
-                    <Sun className="w-6 h-6 text-ecomotech-green" />
+                  <div className="p-3 bg-green-100 rounded-lg">
+                    <Sun className="w-7 h-7 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">2. Sustainable Energy Technologies Suited for Remote African Contexts</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">2. Sustainable Energy Technologies Suited for Remote African Contexts</h3>
                 </div>
 
                 <div className="space-y-6">
                   {/* Solar PV */}
-                  <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Sun className="w-6 h-6 text-yellow-600" />
-                      <h4 className="text-xl font-bold text-yellow-800">Solar Photovoltaic (PV) Systems</h4>
+                      <Sun className="w-7 h-7 text-ecomotech-blue" />
+                      <h4 className="text-2xl font-semibold text-gray-900">Solar Photovoltaic (PV) Systems</h4>
                     </div>
-                    <p className="text-yellow-700 mb-3">Solar mini-grids and home systems provide scalable, modular solutions for lighting, refrigeration, and productive use.</p>
-                    <div className="bg-white/60 p-3 rounded-lg">
-                      <p className="text-yellow-800"><strong>Innovation:</strong> Pay-as-you-go (PAYG) models via mobile payments enhance affordability and access</p>
+                    <p className="text-xl text-gray-700 mb-4 leading-relaxed">Solar mini-grids and home systems provide scalable, modular solutions for lighting, refrigeration, and productive use.</p>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <p className="text-lg text-gray-800"><strong>Innovation:</strong> Pay-as-you-go (PAYG) models via mobile payments enhance affordability and access</p>
                     </div>
                   </div>
 
                   {/* Solar + Storage */}
-                  <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Battery className="w-6 h-6 text-blue-600" />
-                      <h4 className="text-xl font-bold text-blue-800">Solar-plus-Storage Hybrid Mini-grids</h4>
+                      <Battery className="w-7 h-7 text-ecomotech-blue" />
+                      <h4 className="text-2xl font-semibold text-gray-900">Solar-plus-Storage Hybrid Mini-grids</h4>
                     </div>
-                    <p className="text-blue-700">Especially where demand grows, integrating batteries ensures reliability and continuous service</p>
+                    <p className="text-xl text-gray-700 leading-relaxed">Especially where demand grows, integrating batteries ensures reliability and continuous service</p>
                   </div>
 
                   {/* Other Technologies Grid */}
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-xl border border-green-200">
+                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Leaf className="w-6 h-6 text-green-600" />
-                        <h4 className="text-lg font-bold text-green-800">Biomass-Based Mini-grids</h4>
+                        <h4 className="text-xl font-semibold text-gray-900">Biomass-Based Mini-grids</h4>
                       </div>
-                      <p className="text-green-700">Innovative uses of agricultural residues (rice husks, palm fruit bunches) power biomass gasifier systems</p>
+                      <p className="text-lg text-gray-700">Innovative uses of agricultural residues (rice husks, palm fruit bunches) power biomass gasifier systems</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-xl border border-cyan-200">
+                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
-                        <Droplets className="w-6 h-6 text-cyan-600" />
-                        <h4 className="text-lg font-bold text-cyan-800">Micro-Hydro Systems</h4>
+                        <Droplets className="w-6 h-6 text-blue-600" />
+                        <h4 className="text-xl font-semibold text-gray-900">Micro-Hydro Systems</h4>
                       </div>
-                      <p className="text-cyan-700">Small-scale hydro systems utilizing rivers or waterfalls supply power with minimal environmental impact</p>
+                      <p className="text-lg text-gray-700">Small-scale hydro systems utilizing rivers or waterfalls supply power with minimal environmental impact</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-gray-50 to-slate-50 p-6 rounded-xl border border-gray-200">
+                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Factory className="w-6 h-6 text-gray-600" />
-                        <h4 className="text-lg font-bold text-gray-800">Hybrid Solar-Diesel</h4>
+                        <h4 className="text-xl font-semibold text-gray-900">Hybrid Solar-Diesel</h4>
                       </div>
-                      <p className="text-gray-700">Effective in complex settings like refugee camps, reducing costs and emissions</p>
+                      <p className="text-lg text-gray-700">Effective in complex settings like refugee camps, reducing costs and emissions</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                       <div className="flex items-center gap-3 mb-3">
                         <Sun className="w-6 h-6 text-orange-600" />
-                        <h4 className="text-lg font-bold text-orange-800">Concentrating Solar Power (CSP)</h4>
+                        <h4 className="text-xl font-semibold text-gray-900">Concentrating Solar Power (CSP)</h4>
                       </div>
-                      <p className="text-orange-700">Pilot systems show promise, though component reliability remains a challenge</p>
+                      <p className="text-lg text-gray-700">Pilot systems show promise, though component reliability remains a challenge</p>
                     </div>
                   </div>
                 </div>
@@ -305,93 +289,85 @@ const RemoteCommunities = () => {
 
         {/* Case Studies Section */}
         <div className="container mx-auto px-4 py-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <div className="p-6">
+              <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-blue-100 rounded-full">
-                    <BookOpen className="w-6 h-6 text-ecomotech-blue" />
+                  <div className="p-3 bg-blue-100 rounded-lg">
+                    <BookOpen className="w-7 h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">3. Case Studies: Real-World Impact and Lessons Learned</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">3. Case Studies: Real-World Impact and Lessons Learned</h3>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-6 mb-8">
                   {/* Cameroon Case Study */}
-                  <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <MapPin className="w-5 h-5 text-green-600" />
-                        <h4 className="text-lg font-bold text-green-800">Cameroon's Renewable Energy Mapping</h4>
-                      </div>
-                      <p className="text-green-700 mb-3">
-                        Partnership between University of Buea and local councils mapped resources (biomass, rivers, waterfalls, solar), planning 54 power generators for 480 villages—a replicable sustainability model.
-                      </p>
-                      <Badge className="bg-green-100 text-green-800">Systematic Planning</Badge>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                      <MapPin className="w-5 h-5 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Cameroon's Renewable Energy Mapping</h4>
+                    </div>
+                    <p className="text-lg text-gray-700 mb-3">
+                      Partnership between University of Buea and local councils mapped resources (biomass, rivers, waterfalls, solar), planning 54 power generators for 480 villages—a replicable sustainability model.
+                    </p>
+                    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Systematic Planning</span>
+                  </div>
 
                   {/* Namibia Case Study */}
-                  <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <AlertTriangle className="w-5 h-5 text-orange-600" />
-                        <h4 className="text-lg font-bold text-orange-800">Namibia's Tsumkwe and Gam Mini-grids</h4>
-                      </div>
-                      <p className="text-orange-700 mb-3">
-                        Hybrid solar mini-grids revealed technical challenges: battery overheating, poor maintenance, demand-capacity mismatch. Improvements include better monitoring and maintenance protocols.
-                      </p>
-                      <Badge className="bg-orange-100 text-orange-800">Lessons Learned</Badge>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                      <AlertTriangle className="w-5 h-5 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Namibia's Tsumkwe and Gam Mini-grids</h4>
+                    </div>
+                    <p className="text-lg text-gray-700 mb-3">
+                      Hybrid solar mini-grids revealed technical challenges: battery overheating, poor maintenance, demand-capacity mismatch. Improvements include better monitoring and maintenance protocols.
+                    </p>
+                    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Lessons Learned</span>
+                  </div>
 
                   {/* Kenya & Nigeria Success */}
-                  <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <TrendingUp className="w-5 h-5 text-blue-600" />
-                        <h4 className="text-lg font-bold text-blue-800">Kenya & Nigeria: Socioeconomic Impact</h4>
-                      </div>
-                      <p className="text-blue-700 mb-3">
-                        Cohort study found household median income quadrupled, gender equality improved, and kerosene dependence reduced post-connection—transformative potential demonstrated.
-                      </p>
-                      <Badge className="bg-blue-100 text-blue-800">4x Income Growth</Badge>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                      <TrendingUp className="w-5 h-5 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Kenya & Nigeria: Socioeconomic Impact</h4>
+                    </div>
+                    <p className="text-lg text-gray-700 mb-3">
+                      Cohort study found household median income quadrupled, gender equality improved, and kerosene dependence reduced post-connection—transformative potential demonstrated.
+                    </p>
+                    <span className="inline-block px-3 py-1 bg-ecomotech-blue/10 text-ecomotech-blue text-sm rounded-full">4x Income Growth</span>
+                  </div>
 
                   {/* Mali Village */}
-                  <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <Lightbulb className="w-5 h-5 text-purple-600" />
-                        <h4 className="text-lg font-bold text-purple-800">Mali's Village of Karan</h4>
-                      </div>
-                      <p className="text-purple-700 mb-3">
-                        Solar mini-grid "jolted the village to life": enabled small businesses, saved diesel costs, improved safety. Scaling faces political instability and limited investments.
-                      </p>
-                      <Badge className="bg-purple-100 text-purple-800">Village Transformation</Badge>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Lightbulb className="w-5 h-5 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Mali's Village of Karan</h4>
+                    </div>
+                    <p className="text-lg text-gray-700 mb-3">
+                      Solar mini-grid "jolted the village to life": enabled small businesses, saved diesel costs, improved safety. Scaling faces political instability and limited investments.
+                    </p>
+                    <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Village Transformation</span>
+                  </div>
                 </div>
 
                 {/* PAYG Entrepreneurs */}
-                <div className="bg-gradient-to-r from-ecomotech-green/5 to-ecomotech-blue/5 p-6 rounded-xl border border-ecomotech-green/20">
-                  <h4 className="text-xl font-bold text-ecomotech-dark-gray mb-4 flex items-center">
-                    <Award className="w-5 h-5 mr-2 text-ecomotech-green" />
+                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                  <h4 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
+                    <Award className="w-6 h-6 mr-3 text-gray-600" />
                     Innovative PAYG Entrepreneurs
                   </h4>
                   
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="bg-white p-4 rounded-lg">
-                      <h5 className="font-semibold text-ecomotech-blue mb-2">Bboxx</h5>
-                      <p className="text-gray-600">Serves 3.6M Africans via PAYG solar, batteries, devices; aims for 36M with $100M funding</p>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-white p-6 rounded-lg border border-gray-200">
+                      <h5 className="text-xl font-semibold text-gray-900 mb-3">Bboxx</h5>
+                      <p className="text-lg text-gray-700">Serves 3.6M Africans via PAYG solar, batteries, devices; aims for 36M with $100M funding</p>
                     </div>
-                    <div className="bg-white p-4 rounded-lg">
-                      <h5 className="font-semibold text-ecomotech-green mb-2">d.light</h5>
-                      <p className="text-gray-600">Reaches 30M homes across 72 countries, avoiding 38M metric tons of CO₂</p>
+                    <div className="bg-white p-6 rounded-lg border border-gray-200">
+                      <h5 className="text-xl font-semibold text-gray-900 mb-3">d.light</h5>
+                      <p className="text-lg text-gray-700">Reaches 30M homes across 72 countries, avoiding 38M metric tons of CO₂</p>
                     </div>
-                    <div className="bg-white p-4 rounded-lg">
-                      <h5 className="font-semibold text-ecomotech-dark-blue mb-2">PEG Africa</h5>
-                      <p className="text-gray-600">PAYG solar and irrigation in West Africa with innovative finance models</p>
+                    <div className="bg-white p-6 rounded-lg border border-gray-200">
+                      <h5 className="text-xl font-semibold text-gray-900 mb-3">PEG Africa</h5>
+                      <p className="text-lg text-gray-700">PAYG solar and irrigation in West Africa with innovative finance models</p>
                     </div>
                   </div>
                 </div>
@@ -399,49 +375,49 @@ const RemoteCommunities = () => {
             </div>
 
             {/* Impacts Section */}
-            <div className="mb-8">
-              <div className="p-6">
+            <div className="mb-12">
+              <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-green-100 rounded-full">
-                    <BarChart className="w-6 h-6 text-ecomotech-green" />
+                  <div className="p-3 bg-green-100 rounded-lg">
+                    <BarChart className="w-7 h-7 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">4. Economic, Social, and Environmental Impacts</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">4. Economic, Social, and Environmental Impacts</h3>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <DollarSign className="w-6 h-6 text-green-600" />
-                      <h4 className="text-xl font-bold text-green-800">Economic Impact</h4>
+                      <DollarSign className="w-7 h-7 text-green-600" />
+                      <h4 className="text-2xl font-semibold text-gray-900">Economic Impact</h4>
                     </div>
-                    <ul className="text-green-700 space-y-2">
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Mini-grid access quadrupled median incomes in some areas</li>
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Reduced generator costs significantly</li>
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Boosted small enterprises (bakeries saved &gt;50%)</li>
+                    <ul className="text-lg text-gray-700 space-y-3">
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Mini-grid access quadrupled median incomes in some areas</li>
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Reduced generator costs significantly</li>
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Boosted small enterprises (bakeries saved &gt;50%)</li>
                     </ul>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Heart className="w-6 h-6 text-blue-600" />
-                      <h4 className="text-xl font-bold text-blue-800">Social Impact</h4>
+                      <Heart className="w-7 h-7 text-blue-600" />
+                      <h4 className="text-2xl font-semibold text-gray-900">Social Impact</h4>
                     </div>
-                    <ul className="text-blue-700 space-y-2">
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Better lighting improved safety</li>
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Strengthened healthcare delivery</li>
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Enhanced connectivity and education</li>
+                    <ul className="text-lg text-gray-700 space-y-3">
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Better lighting improved safety</li>
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Strengthened healthcare delivery</li>
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Enhanced connectivity and education</li>
                     </ul>
                   </div>
 
-                  <div className="bg-gradient-to-br from-emerald-50 to-green-50 p-6 rounded-xl border border-emerald-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Leaf className="w-6 h-6 text-emerald-600" />
-                      <h4 className="text-xl font-bold text-emerald-800">Environmental Impact</h4>
+                      <Leaf className="w-7 h-7 text-green-600" />
+                      <h4 className="text-2xl font-semibold text-gray-900">Environmental Impact</h4>
                     </div>
-                    <ul className="text-emerald-700 space-y-2">
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Reduced reliance on fossil fuels</li>
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Cut emissions significantly</li>
-                      <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />Sustainable resource utilization</li>
+                    <ul className="text-lg text-gray-700 space-y-3">
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Reduced reliance on fossil fuels</li>
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Cut emissions significantly</li>
+                      <li className="flex items-start"><CheckCircle className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-gray-400" />Sustainable resource utilization</li>
                     </ul>
                   </div>
                 </div>
@@ -449,47 +425,47 @@ const RemoteCommunities = () => {
             </div>
 
             {/* Barriers and Solutions */}
-            <div className="mb-8">
-              <div className="p-6">
+            <div className="mb-12">
+              <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-orange-100 rounded-full">
-                    <Shield className="w-6 h-6 text-orange-600" />
+                  <div className="p-3 bg-orange-100 rounded-lg">
+                    <Shield className="w-7 h-7 text-orange-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">5. Barriers to Adoption and Strategies to Overcome Them</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">5. Barriers to Adoption and Strategies to Overcome Them</h3>
                 </div>
                 
                 <div className="overflow-x-auto">
-                  <table className="w-full border-collapse bg-white rounded-xl shadow-sm">
+                  <table className="w-full border-collapse bg-white rounded-lg shadow-sm border border-gray-200">
                     <thead>
-                      <tr className="bg-ecomotech-light-gray">
-                        <th className="text-left p-4 font-bold text-ecomotech-dark-gray border-b">Barrier</th>
-                        <th className="text-left p-4 font-bold text-ecomotech-dark-gray border-b">Strategy/Solution</th>
+                      <tr className="bg-gray-50">
+                        <th className="text-left p-6 text-xl font-semibold text-gray-900 border-b border-gray-200">Barrier</th>
+                        <th className="text-left p-6 text-xl font-semibold text-gray-900 border-b border-gray-200">Strategy/Solution</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="border-b">
-                        <td className="p-4 font-semibold text-red-700">Economic / Financing Risks</td>
-                        <td className="p-4 text-gray-700">Implement PAYG models, microfinancing, subsidies (e.g., customs duty exemptions)</td>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-6 text-lg font-semibold text-gray-900">Economic / Financing Risks</td>
+                        <td className="p-6 text-lg text-gray-700">Implement PAYG models, microfinancing, subsidies (e.g., customs duty exemptions)</td>
                       </tr>
-                      <tr className="border-b bg-gray-50">
-                        <td className="p-4 font-semibold text-orange-700">Maintenance & O&M Weaknesses</td>
-                        <td className="p-4 text-gray-700">Embed maintenance from design stage, train local technicians, utilize remote-monitoring</td>
+                      <tr className="border-b border-gray-100 bg-gray-25">
+                        <td className="p-6 text-lg font-semibold text-gray-900">Maintenance & O&M Weaknesses</td>
+                        <td className="p-6 text-lg text-gray-700">Embed maintenance from design stage, train local technicians, utilize remote-monitoring</td>
                       </tr>
-                      <tr className="border-b">
-                        <td className="p-4 font-semibold text-blue-700">Community Acceptance</td>
-                        <td className="p-4 text-gray-700">Involve communities in planning, governance, community ownership models</td>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-6 text-lg font-semibold text-gray-900">Community Acceptance</td>
+                        <td className="p-6 text-lg text-gray-700">Involve communities in planning, governance, community ownership models</td>
                       </tr>
-                      <tr className="border-b bg-gray-50">
-                        <td className="p-4 font-semibold text-purple-700">Policy & Regulatory Gaps</td>
-                        <td className="p-4 text-gray-700">Establish supportive frameworks, transparent licensing, and tariffs</td>
+                      <tr className="border-b border-gray-100 bg-gray-25">
+                        <td className="p-6 text-lg font-semibold text-gray-900">Policy & Regulatory Gaps</td>
+                        <td className="p-6 text-lg text-gray-700">Establish supportive frameworks, transparent licensing, and tariffs</td>
                       </tr>
-                      <tr className="border-b">
-                        <td className="p-4 font-semibold text-red-700">Political Instability</td>
-                        <td className="p-4 text-gray-700">Prioritize resilient models, local partnerships to maintain service</td>
+                      <tr className="border-b border-gray-100">
+                        <td className="p-6 text-lg font-semibold text-gray-900">Political Instability</td>
+                        <td className="p-6 text-lg text-gray-700">Prioritize resilient models, local partnerships to maintain service</td>
                       </tr>
-                      <tr className="bg-gray-50">
-                        <td className="p-4 font-semibold text-green-700">Technology Sustainability</td>
-                        <td className="p-4 text-gray-700">Use hybrid systems, diversify energy mix, invest in robust design</td>
+                      <tr className="bg-gray-25">
+                        <td className="p-6 text-lg font-semibold text-gray-900">Technology Sustainability</td>
+                        <td className="p-6 text-lg text-gray-700">Use hybrid systems, diversify energy mix, invest in robust design</td>
                       </tr>
                     </tbody>
                   </table>
@@ -498,42 +474,42 @@ const RemoteCommunities = () => {
             </div>
 
             {/* Policy Frameworks */}
-            <div className="mb-8">
-              <div className="p-6">
+            <div className="mb-12">
+              <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-purple-100 rounded-full">
-                    <Building className="w-6 h-6 text-purple-600" />
+                  <div className="p-3 bg-blue-100 rounded-lg">
+                    <Building className="w-7 h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">6. Policy Frameworks & Community Engagement Best Practices</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">6. Policy Frameworks & Community Engagement Best Practices</h3>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border border-purple-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Users className="w-6 h-6 text-purple-600" />
-                      <h4 className="text-lg font-bold text-purple-800">Renewable Energy Communities</h4>
+                      <Users className="w-7 h-7 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Renewable Energy Communities</h4>
                     </div>
-                    <p className="text-purple-700">
+                    <p className="text-lg text-gray-700">
                       RECs in select African countries highlight how governance, funding, and citizen participation drive sustainability
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Shield className="w-6 h-6 text-blue-600" />
-                      <h4 className="text-lg font-bold text-blue-800">Regulatory Success Stories</h4>
+                      <Shield className="w-7 h-7 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Regulatory Success Stories</h4>
                     </div>
-                    <p className="text-blue-700">
+                    <p className="text-lg text-gray-700">
                       Policy regimes stimulate rural electrification through innovative business models and licensing
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <Target className="w-6 h-6 text-green-600" />
-                      <h4 className="text-lg font-bold text-green-800">Community-Driven Implementation</h4>
+                      <Target className="w-7 h-7 text-gray-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Community-Driven Implementation</h4>
                     </div>
-                    <p className="text-green-700">
+                    <p className="text-lg text-gray-700">
                       Training "Solar Mamas" and embedding local engagement ensures ownership and continuity
                     </p>
                   </div>
@@ -545,52 +521,52 @@ const RemoteCommunities = () => {
             <div className="mb-8">
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-cyan-100 rounded-full">
-                    <TrendingUp className="w-6 h-6 text-cyan-600" />
+                  <div className="p-3 bg-blue-100 rounded-lg">
+                    <TrendingUp className="w-7 h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">7. Future Trends & Innovations</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">7. Future Trends & Innovations</h3>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
-                    <div className="flex items-center gap-3 mb-3">
-                      <Phone className="w-6 h-6 text-blue-600" />
-                      <h4 className="text-lg font-bold text-blue-800">Scalable PAYG Solar Expansion</h4>
+                <div className="space-y-6">
+                  <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Phone className="w-7 h-7 text-blue-600" />
+                      <h4 className="text-xl font-semibold text-gray-900">Scalable PAYG Solar Expansion</h4>
                     </div>
-                    <p className="text-blue-700">Companies like Bboxx and d.light, backed by substantial investments, aim to extend reach to tens of millions across Africa</p>
+                    <p className="text-lg text-gray-700">Companies like Bboxx and d.light, backed by substantial investments, aim to extend reach to tens of millions across Africa</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-xl border border-cyan-200">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Droplets className="w-6 h-6 text-cyan-600" />
-                        <h4 className="text-lg font-bold text-cyan-800">Integrated Energy-Water Solutions</h4>
+                    <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Droplets className="w-7 h-7 text-cyan-600" />
+                        <h4 className="text-xl font-semibold text-gray-900">Integrated Energy-Water Solutions</h4>
                       </div>
-                      <p className="text-cyan-700">Combined solar-water installations promote multi-sectoral development</p>
+                      <p className="text-lg text-gray-700">Combined solar-water installations promote multi-sectoral development</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Settings className="w-6 h-6 text-green-600" />
-                        <h4 className="text-lg font-bold text-green-800">Embedded O&M Solutions</h4>
+                    <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Settings className="w-7 h-7 text-green-600" />
+                        <h4 className="text-xl font-semibold text-gray-900">Embedded O&M Solutions</h4>
                       </div>
-                      <p className="text-green-700">Durable system design, community toolkits, and offline learning</p>
+                      <p className="text-lg text-gray-700">Durable system design, community toolkits, and offline learning</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
-                      <div className="flex items-center gap-3 mb-3">
-                        <BarChart className="w-6 h-6 text-purple-600" />
-                        <h4 className="text-lg font-bold text-purple-800">Data-Driven Planning</h4>
+                    <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        <BarChart className="w-7 h-7 text-purple-600" />
+                        <h4 className="text-xl font-semibold text-gray-900">Data-Driven Planning</h4>
                       </div>
-                      <p className="text-purple-700">Renewable energy mapping provides strategic resource allocation insights</p>
+                      <p className="text-lg text-gray-700">Renewable energy mapping provides strategic resource allocation insights</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Home className="w-6 h-6 text-orange-600" />
-                        <h4 className="text-lg font-bold text-orange-800">Refugee Camp Solutions</h4>
+                    <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Home className="w-7 h-7 text-orange-600" />
+                        <h4 className="text-xl font-semibold text-gray-900">Refugee Camp Solutions</h4>
                       </div>
-                      <p className="text-orange-700">Hybrid solar-diesel microgrids in humanitarian zones show cost reduction promise</p>
+                      <p className="text-lg text-gray-700">Hybrid solar-diesel microgrids in humanitarian zones show cost reduction promise</p>
                     </div>
                   </div>
                 </div>
@@ -601,169 +577,169 @@ const RemoteCommunities = () => {
             <div className="mb-8">
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-ecomotech-green/10 rounded-full">
-                    <Award className="w-6 h-6 text-ecomotech-green" />
+                  <div className="p-3 bg-blue-100 rounded-lg">
+                    <Award className="w-7 h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-ecomotech-dark-gray">EcoMoTech Solutions for Remote Communities</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">EcoMoTech Solutions for Remote Communities</h3>
                 </div>
                 
-                <p className="text-gray-700 mb-6 text-lg">
+                <p className="text-lg text-gray-700 mb-6">
                   Based on the challenges and opportunities identified in this analysis, EcoMoTech offers proven, field-tested solutions specifically designed for remote African communities.
                 </p>
 
                 <div className="grid lg:grid-cols-3 gap-6">
                   {/* Solar Street Lights */}
-                  <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-yellow-200 hover:shadow-lg transition-shadow h-full">
-                    <CardContent className="p-6 h-full flex flex-col">
+                  <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
+                    <CardContent className="p-8 h-full flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 bg-yellow-100 rounded-lg">
-                          <Sun className="w-6 h-6 text-yellow-600" />
+                        <div className="p-3 bg-yellow-100 rounded-lg">
+                          <Sun className="w-7 h-7 text-yellow-600" />
                         </div>
-                        <h4 className="text-xl font-bold text-yellow-800">Solar Street Lights</h4>
+                        <h4 className="text-xl font-semibold text-gray-900">Solar Street Lights</h4>
                       </div>
                       
-                      <p className="text-yellow-700 mb-4">
+                      <p className="text-lg text-gray-700 mb-6">
                         Autonomous lighting solutions that enhance safety, extend productive hours, and reduce crime in remote communities.
                       </p>
                       
-                      <div className="space-y-2 mb-6 flex-grow">
-                        <div className="flex items-center text-yellow-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-yellow-600" />
-                          <span>All-in-one integrated design</span>
+                      <div className="space-y-3 mb-6 flex-grow">
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-yellow-600" />
+                          <span className="text-lg">All-in-one integrated design</span>
                         </div>
-                        <div className="flex items-center text-yellow-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-yellow-600" />
-                          <span>Motion sensor technology</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-yellow-600" />
+                          <span className="text-lg">Motion sensor technology</span>
                         </div>
-                        <div className="flex items-center text-yellow-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-yellow-600" />
-                          <span>5-7 year lifespan</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-yellow-600" />
+                          <span className="text-lg">5-7 year lifespan</span>
                         </div>
-                        <div className="flex items-center text-yellow-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-yellow-600" />
-                          <span>Remote monitoring capability</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-yellow-600" />
+                          <span className="text-lg">Remote monitoring capability</span>
                         </div>
                       </div>
                       
                       <Link 
                         to="/products/street-lights" 
-                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-yellow-600 to-orange-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-yellow-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-auto"
+                        className="inline-flex items-center justify-center w-full bg-gray-800 text-white px-6 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors mt-auto"
                       >
                         <Sun className="mr-2 w-5 h-5" />
                         View Street Lights
-                        <ExternalLink className="ml-2 w-4 h-4" />
+                        <ExternalLink className="ml-2 w-5 h-5" />
                       </Link>
                     </CardContent>
                   </Card>
 
                   {/* Home Systems */}
-                  <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200 hover:shadow-lg transition-shadow h-full">
-                    <CardContent className="p-6 h-full flex flex-col">
+                  <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
+                    <CardContent className="p-8 h-full flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 bg-blue-100 rounded-lg">
-                          <Home className="w-6 h-6 text-blue-600" />
+                        <div className="p-3 bg-blue-100 rounded-lg">
+                          <Home className="w-7 h-7 text-blue-600" />
                         </div>
-                        <h4 className="text-xl font-bold text-blue-800">Solar Home Systems</h4>
+                        <h4 className="text-xl font-semibold text-gray-900">Solar Home Systems</h4>
                       </div>
                       
-                      <p className="text-blue-700 mb-4">
+                      <p className="text-lg text-gray-700 mb-6">
                         Complete household energy solutions providing reliable power for lighting, phone charging, and small appliances.
                       </p>
                       
-                      <div className="space-y-2 mb-6 flex-grow">
-                        <div className="flex items-center text-blue-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-blue-600" />
-                          <span>Modular expandable design</span>
+                      <div className="space-y-3 mb-6 flex-grow">
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-blue-600" />
+                          <span className="text-lg">Modular expandable design</span>
                         </div>
-                        <div className="flex items-center text-blue-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-blue-600" />
-                          <span>PAYG financing options</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-blue-600" />
+                          <span className="text-lg">PAYG financing options</span>
                         </div>
-                        <div className="flex items-center text-blue-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-blue-600" />
-                          <span>Multiple power outlets</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-blue-600" />
+                          <span className="text-lg">Multiple power outlets</span>
                         </div>
-                        <div className="flex items-center text-blue-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-blue-600" />
-                          <span>Mobile app monitoring</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-blue-600" />
+                          <span className="text-lg">Mobile app monitoring</span>
                         </div>
                       </div>
                       
                       <Link 
                         to="/products/home-systems" 
-                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-auto"
+                        className="inline-flex items-center justify-center w-full bg-gray-800 text-white px-6 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors mt-auto"
                       >
                         <Home className="mr-2 w-5 h-5" />
                         View Home Systems
-                        <ExternalLink className="ml-2 w-4 h-4" />
+                        <ExternalLink className="ml-2 w-5 h-5" />
                       </Link>
                     </CardContent>
                   </Card>
 
                   {/* Battery Energy Storage */}
-                  <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 hover:shadow-lg transition-shadow h-full">
-                    <CardContent className="p-6 h-full flex flex-col">
+                  <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow h-full">
+                    <CardContent className="p-8 h-full flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 bg-green-100 rounded-lg">
-                          <Battery className="w-6 h-6 text-green-600" />
+                        <div className="p-3 bg-green-100 rounded-lg">
+                          <Battery className="w-7 h-7 text-green-600" />
                         </div>
-                        <h4 className="text-xl font-bold text-green-800">Battery Energy Storage</h4>
+                        <h4 className="text-xl font-semibold text-gray-900">Battery Energy Storage</h4>
                       </div>
                       
-                      <p className="text-green-700 mb-4">
+                      <p className="text-lg text-gray-700 mb-6">
                         Advanced lithium battery systems for mini-grids and community installations with smart management systems.
                       </p>
                       
-                      <div className="space-y-2 mb-6 flex-grow">
-                        <div className="flex items-center text-green-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          <span>Long-cycle lithium technology</span>
+                      <div className="space-y-3 mb-6 flex-grow">
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
+                          <span className="text-lg">Long-cycle lithium technology</span>
                         </div>
-                        <div className="flex items-center text-green-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          <span>Smart battery management</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
+                          <span className="text-lg">Smart battery management</span>
                         </div>
-                        <div className="flex items-center text-green-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          <span>Climate-resistant design</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
+                          <span className="text-lg">Climate-resistant design</span>
                         </div>
-                        <div className="flex items-center text-green-700">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          <span>Scalable configurations</span>
+                        <div className="flex items-center text-gray-700">
+                          <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
+                          <span className="text-lg">Scalable configurations</span>
                         </div>
                       </div>
                       
                       <Link 
                         to="/products/energy-storage" 
-                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-auto"
+                        className="inline-flex items-center justify-center w-full bg-gray-800 text-white px-6 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors mt-auto"
                       >
                         <Battery className="mr-2 w-5 h-5" />
                         View Energy Storage
-                        <ExternalLink className="ml-2 w-4 h-4" />
+                        <ExternalLink className="ml-2 w-5 h-5" />
                       </Link>
                     </CardContent>
                   </Card>
                 </div>
 
                 {/* Call to Action */}
-                <div className="mt-8 bg-gradient-to-r from-ecomotech-dark-gray to-ecomotech-dark-blue p-6 rounded-xl text-center">
-                  <h4 className="text-xl font-bold text-white mb-3">Ready to Transform Your Community?</h4>
-                  <p className="text-blue-100 mb-4">
+                <div className="mt-8 bg-gray-100 p-8 rounded-lg text-center border border-gray-200">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Community?</h4>
+                  <p className="text-lg text-gray-700 mb-6">
                     Contact EcoMoTech to discuss customized sustainable energy solutions for your remote community project.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center px-6 py-3 bg-ecomotech-green text-white font-medium rounded-lg hover:bg-ecomotech-dark-green transition-colors"
+                      className="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors"
                     >
-                      <Phone className="w-4 h-4 mr-2" />
+                      <Phone className="w-5 h-5 mr-2" />
                       Get a Consultation
                     </Link>
                     <Link
                       to="/products"
-                      className="inline-flex items-center px-6 py-3 bg-white text-ecomotech-dark-gray font-medium rounded-lg hover:bg-gray-100 transition-colors"
+                      className="inline-flex items-center px-6 py-3 bg-white text-gray-800 font-semibold rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                     >
-                      <ArrowRight className="w-4 h-4 mr-2" />
+                      <ArrowRight className="w-5 h-5 mr-2" />
                       View All Products
                     </Link>
                   </div>
@@ -772,18 +748,18 @@ const RemoteCommunities = () => {
             </div>
 
             {/* Conclusion */}
-            <Card className="bg-gradient-to-br from-ecomotech-dark-gray via-ecomotech-dark-blue to-ecomotech-dark-green border-none shadow-2xl mb-12">
+            <Card className="bg-gray-50 border border-gray-200 shadow-sm mb-12">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-white/10 rounded-full backdrop-blur-sm">
-                    <ArrowRight className="w-8 h-8 text-ecomotech-green" />
+                  <div className="p-3 bg-blue-100 rounded-lg">
+                    <ArrowRight className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h2 className="text-3xl font-bold text-white">Conclusion</h2>
+                  <h2 className="text-3xl font-bold text-gray-900">Conclusion</h2>
                 </div>
-                <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   Sustainable energy technologies—solar PV, micro-hydro, biomass, hybrid mini-grids—offer viable, transformative pathways for remote African communities. Real-world projects reveal powerful economic, social, and environmental gains.
                 </p>
-                <p className="text-blue-100 text-lg leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed">
                   At the same time, achieving scale requires addressing economic viability, strong O&M systems, inclusive governance, and enabling policies. Innovations in financing (e.g., PAYG), integrated development approaches, long-term maintenance frameworks, and data-centric planning herald a promising future. By centering communities, empowering local actors, and smartly leveraging technology, Africa can drive equitable, reliable, and sustainable energy access for all its remote communities.
                 </p>
               </CardContent>
