@@ -237,7 +237,7 @@ const SolarPanelDetails = () => {
                 </button>
               </div>
               <div className="mt-4 text-center text-blue-100 text-sm">
-                📞 +237 6 71 23 45 67 | 📧 info@ecomotech.com
+                📞 +86 188 1079 9128 | 📧 ecomotech@outlook.com
               </div>
             </div>
           </div>
