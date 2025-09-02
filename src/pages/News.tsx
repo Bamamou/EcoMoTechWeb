@@ -55,14 +55,14 @@ export const newsItems = [
   },
   {
     id: 5,
-    title: "Annual Sustainability Report Shows Record Carbon Offset",
-    excerpt: "Ecomotech's installed systems prevented over 500,000 metric tons of CO2 emissions last year, equivalent to planting 25 million trees.",
-    content: "Ecomotech has released its annual sustainability report, revealing that our solar installations collectively prevented more than 500,000 metric tons of carbon dioxide emissions in the past year. This milestone represents a 35% increase from the previous year and is equivalent to the carbon sequestration capability of approximately 25 million mature trees.\n\n'These numbers aren't just statistics – they represent real environmental impact,' said Elena Gomez, Sustainability Director at Ecomotech. 'Each solar panel we install contributes to the vital work of reducing our global carbon footprint.'\n\nThe report also highlights Ecomotech's internal sustainability initiatives, including our transition to 100% renewable energy across all manufacturing facilities, a 40% reduction in water usage through improved processes, and significant decreases in packaging waste through our redesigned packaging program.\n\nThe company has set ambitious targets for the coming year, aiming to increase total carbon offset by an additional 40% while further reducing the environmental impact of our manufacturing and distribution operations.\n\n'As a renewable energy company, we believe we must lead by example in all aspects of sustainability,' added Gomez. 'Our commitment extends beyond the products we create to encompass every aspect of how we operate as a business.'",
-    date: "December 10, 2022",
-    author: "Elena Gomez",
-    category: "Sustainability",
-    image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1141&q=80",
-    link: "/news/sustainability-report"
+    title: "The Role of Resource Assessment in Renewable Energy Project Development",
+    excerpt: "Discover how accurate resource assessment is essential for successful renewable energy projects in Guinea and across West Africa.",
+    content: "Renewable energy project development begins with a fundamental step: resource assessment. Without accurate knowledge of the resource potential, investments risk being misallocated, projects underperform, and energy access goals remain unmet. For solar projects in Guinea—a country endowed with vast solar potential but facing pressing energy access challenges—resource assessment is not just a technical exercise, but a cornerstone of sustainable development.\n\nResource assessment determines whether a site can reliably generate the expected amount of energy over the project's lifetime. It ensures project bankability, helps attract financing, and minimizes risks for developers, governments, and communities. For solar projects, precise assessment of solar irradiance is vital to estimate annual energy production, optimize system design, and ensure long-term financial viability.\n\nGuinea lies within the high solar irradiation belt of West Africa, with average GHI values between 4.5–5.5 kWh/m²/day—ideal for photovoltaic projects. However, the country's alternating rainy and dry seasons introduce significant fluctuations in solar availability, making accurate resource assessment crucial for project success.\n\nCase studies from Guinea's solar initiatives, including the Kaloum Solar Project in Conakry and the Boke Mini-Grid Pilot, have demonstrated that projects with rigorous, long-term solar resource assessments secured stronger financing and achieved better-than-expected performance, while those relying solely on satellite data without validation faced operational underperformance.",
+    date: "September 2, 2025",
+    author: "EcoMoTech Technical Team",
+    category: "Technical Analysis",
+    image: "/EcoMoTechWeb/images/News/Resource Assessment in Renewable Energy Project.png",
+    link: "/news/resource-assessment"
   },
   {
     id: 6,

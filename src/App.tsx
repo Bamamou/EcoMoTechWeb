@@ -48,7 +48,7 @@ const NewSolarPanelSeries = React.lazy(() => import("./pages/articles/NewSolarPa
 const DistributionCenter = React.lazy(() => import("./pages/articles/DistributionCenter"));
 const RemoteCommunities = React.lazy(() => import("./pages/articles/RemoteCommunities"));
 const ResearchPartnership = React.lazy(() => import("./pages/articles/ResearchPartnership"));
-const SustainabilityReport = React.lazy(() => import("./pages/articles/SustainabilityReport"));
+const ResourceAssessment = React.lazy(() => import("./pages/articles/ResourceAssessment"));
 const StreetLighting = React.lazy(() => import("./pages/articles/StreetLighting"));
 const ElectricMobilityAfrica = React.lazy(() => import("./pages/articles/ElectricMobilityAfrica"));
 const EVChargingAfrica = React.lazy(() => import("./pages/articles/EVChargingAfrica"));
@@ -111,7 +111,7 @@ const App = () => (
             <Route path="/news/distribution-center" element={<DistributionCenter />} />
             <Route path="/news/remote-communities" element={<RemoteCommunities />} />
             <Route path="/news/research-partnership" element={<ResearchPartnership />} />
-            <Route path="/news/sustainability-report" element={<SustainabilityReport />} />
+            <Route path="/news/resource-assessment" element={<ResourceAssessment />} />
             <Route path="/news/street-lighting" element={<StreetLighting />} />
             <Route path="/news/electric-mobility-africa" element={<ElectricMobilityAfrica />} />
             <Route path="/news/ev-charging-africa" element={<EVChargingAfrica />} />

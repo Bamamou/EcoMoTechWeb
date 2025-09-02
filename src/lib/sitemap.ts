@@ -179,7 +179,7 @@ const newsPages: SitemapURL[] = [
     priority: 0.5
   },
   {
-    loc: 'https://ecomotech.online/news/sustainability-report',
+    loc: 'https://ecomotech.online/news/resource-assessment',
     lastmod: '2022-12-01',
     changefreq: 'yearly',
     priority: 0.5
