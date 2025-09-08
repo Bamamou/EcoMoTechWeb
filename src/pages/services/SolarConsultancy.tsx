@@ -309,48 +309,120 @@ const SolarConsultancy = () => {
               </p>
             </div>
 
-            {/* Service Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {Object.entries(consultancyServices).map(([key, service], index) => {
-                const colors = [
-                  { 
-                    active: 'bg-blue-500 border-blue-500 text-white', 
-                    inactive: 'bg-white text-gray-600 border-gray-200 hover:border-blue-500 hover:text-blue-500'
-                  },
-                  { 
-                    active: 'bg-emerald-600 border-emerald-600 text-white', 
-                    inactive: 'bg-white text-gray-600 border-gray-200 hover:border-emerald-600 hover:text-emerald-600'
-                  },
-                  { 
-                    active: 'bg-purple-500 border-purple-500 text-white', 
-                    inactive: 'bg-white text-gray-600 border-gray-200 hover:border-purple-500 hover:text-purple-500'
-                  },
-                  { 
-                    active: 'bg-teal-500 border-teal-500 text-white', 
-                    inactive: 'bg-white text-gray-600 border-gray-200 hover:border-teal-500 hover:text-teal-500'
-                  }
-                ];
-                const colorScheme = colors[index % colors.length];
-                
-                return (
-                  <button
-                    key={key}
-                    onClick={() => setActiveService(key)}
-                    className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 border-2 ${
-                      activeService === key
-                        ? colorScheme.active
-                        : colorScheme.inactive
-                    }`}
-                  >
-                    {service.icon}
-                    <span className="hidden sm:inline">{service.title.split(' &')[0]}</span>
-                  </button>
-                );
-              })}
+            {/* Service Navigation - Desktop Tabs & Mobile All-Visible Cards */}
+            <div className="mb-12">
+              {/* Desktop Tab Navigation */}
+              <div className="hidden md:flex flex-wrap justify-center gap-4">
+                {Object.entries(consultancyServices).map(([key, service], index) => {
+                  const colors = [
+                    { 
+                      active: 'bg-blue-500 border-blue-500 text-white', 
+                      inactive: 'bg-white text-gray-600 border-gray-200 hover:border-blue-500 hover:text-blue-500'
+                    },
+                    { 
+                      active: 'bg-emerald-600 border-emerald-600 text-white', 
+                      inactive: 'bg-white text-gray-600 border-gray-200 hover:border-emerald-600 hover:text-emerald-600'
+                    },
+                    { 
+                      active: 'bg-purple-500 border-purple-500 text-white', 
+                      inactive: 'bg-white text-gray-600 border-gray-200 hover:border-purple-500 hover:text-purple-500'
+                    },
+                    { 
+                      active: 'bg-teal-500 border-teal-500 text-white', 
+                      inactive: 'bg-white text-gray-600 border-gray-200 hover:border-teal-500 hover:text-teal-500'
+                    }
+                  ];
+                  const colorScheme = colors[index % colors.length];
+                  
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => setActiveService(key)}
+                      className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 border-2 ${
+                        activeService === key
+                          ? colorScheme.active
+                          : colorScheme.inactive
+                      }`}
+                    >
+                      {service.icon}
+                      <span>{service.title.split(' &')[0]}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Mobile All Services Display */}
+              <div className="md:hidden space-y-6">
+                {Object.entries(consultancyServices).map(([key, service], index) => {
+                  const colors = [
+                    { bg: 'bg-blue-50', border: 'border-blue-200', icon: 'text-blue-600', title: 'text-blue-900' },
+                    { bg: 'bg-emerald-50', border: 'border-emerald-200', icon: 'text-emerald-600', title: 'text-emerald-900' },
+                    { bg: 'bg-purple-50', border: 'border-purple-200', icon: 'text-purple-600', title: 'text-purple-900' },
+                    { bg: 'bg-teal-50', border: 'border-teal-200', icon: 'text-teal-600', title: 'text-teal-900' }
+                  ];
+                  const colorScheme = colors[index % colors.length];
+                  
+                  return (
+                    <div key={key} className={`${colorScheme.bg} ${colorScheme.border} border-2 rounded-xl p-6`}>
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className={`${colorScheme.icon}`}>
+                          {service.icon}
+                        </div>
+                        <h3 className={`text-lg font-bold ${colorScheme.title}`}>
+                          {service.title}
+                        </h3>
+                      </div>
+                      
+                      <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      <div className="space-y-2">
+                        {service.details.map((detail, detailIndex) => (
+                          <div key={detailIndex} className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-700 text-sm">{detail}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Service deliverables for mobile */}
+                      <div className="mt-4 pt-4 border-t border-gray-200">
+                        <h4 className="font-semibold text-gray-900 mb-3 text-sm">Service Deliverables:</h4>
+                        <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
+                          <div className="flex items-center gap-2">
+                            <FileText className="w-3 h-3" />
+                            <span>Technical reports</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <BarChart3 className="w-3 h-3" />
+                            <span>Analysis & recommendations</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Database className="w-3 h-3" />
+                            <span>Technical specifications</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Users className="w-3 h-3" />
+                            <span>Expert consultation</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-3 pt-3 border-t border-gray-200">
+                          <div className="flex justify-between items-center text-xs">
+                            <span className="text-gray-500">Duration: 2-6 weeks</span>
+                            <span className="font-semibold text-emerald-600">From $2,500</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Active Service Content */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+            {/* Active Service Content - Desktop Only */}
+            <div className="hidden md:block bg-white rounded-2xl shadow-xl p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 <div>
                   <div className="inline-flex items-center gap-3 text-ecomotech-blue mb-6">
@@ -408,7 +480,7 @@ const SolarConsultancy = () => {
                       </div>
                       <div className="flex justify-between">
                         <span>Starting From:</span>
-                        <span className="font-semibold text-ecomotech-green">$5,000</span>
+                        <span className="font-semibold text-ecomotech-green">$2,500</span>
                       </div>
                       <div className="flex justify-between">
                         <span>Warranty:</span>

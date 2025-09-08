@@ -47,7 +47,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
-        price: "Starting from $60",
+        price: "Starting from $45",
         details: {
           specifications: {
             nominalVoltage: "12V",
@@ -107,7 +107,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
-        price: "Starting from $100",
+        price: "Starting from $49",
         details: {
           specifications: {
             nominalVoltage: "12V",
@@ -168,7 +168,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
-        price: "Starting from $100",
+        price: "Starting from $59",
         details: {
           specifications: {
             nominalVoltage: "12V",
@@ -229,7 +229,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Compact all-in-one energy storage system with built-in inverter",
-        price: "Starting from $100",
+        price: "Starting from $69",
         details: {
           specifications: {
             nominalVoltage: "12V",
@@ -292,7 +292,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Versatile all-in-one solution for home backup power",
-        price: "Starting from $399",
+        price: "Starting from $79",
         details: {
           specifications: {
             nominalVoltage: "24V",
@@ -352,7 +352,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Professional all-in-one ESS for small offices and homes",
-        price: "Starting from $499",
+        price: "Starting from $89",
         details: {
           specifications: {
             nominalVoltage: "24V",
@@ -407,7 +407,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Professional all-in-one ESS for small offices and homes",
-        price: "Starting from $500",
+        price: "Starting from $95",
         details: {
           specifications: {
             nominalVoltage: "24V",
@@ -462,7 +462,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Professional all-in-one ESS for small offices and homes",
-        price: "Starting from $600",
+        price: "Starting from $99",
         details: {
           specifications: {
             nominalVoltage: "24V",
@@ -517,7 +517,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "High-performance all-in-one ESS for demanding applications",
-        price: "Starting from $699",
+        price: "Starting from $100",
         details: {
           specifications: {
             nominalVoltage: "24V",
@@ -574,7 +574,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Professional-grade all-in-one ESS for medium-sized applications",
-        price: "Starting from $799",
+        price: "Starting from $109",
         details: {
           specifications: {
             nominalVoltage: "48V",
@@ -629,7 +629,7 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "Advanced all-in-one ESS for large homes and small businesses",
-        price: "Starting from $899",
+        price: "Starting from $129",
         details: {
           specifications: {
             nominalVoltage: "48V",
@@ -674,18 +674,18 @@ export const batteryProducts: BatterySystem[] = [
         id: "EcoStore AIO 2000",
         name: "EcoStore AIO 2000",
         capacity: "2kW",
-        image: "images/BESS/aio2000.jpg",
+        image: "images/BESS/EcoStore AIO 2000.jpg",
         images: {
-            main: "images/BESS/aio300.jpg",
+            main: "images/BESS/EcoStore AIO 2000k.jpg",
             gallery: [
-              "images/BESS/aio300-front.jpg",
-              "images/BESS/aio300-side.jpg",
-              "images/BESS/aio300-back.jpg",
-              "images/BESS/aio300-display.jpg"
+              "images/BESS/EcoStore AIO 2000k.jpg",
+              "images/BESS/EcoStore AIO 2000kW.jpg",
+              "images/BESS/EcoStore AIO 2000 size.jpg",
+              "images/BESS/EcoStore AIO 2000.jpg"
             ]
           },
         description: "Commercial all-in-one ESS with advanced features",
-        price: "Starting from $999",
+        price: "Starting from $149",
         details: {
           specifications: {
             nominalVoltage: "48V",
@@ -728,25 +728,25 @@ export const batteryProducts: BatterySystem[] = [
         }
       },
       {
-        id: "EcoStore AIO 3000",
-        name: "EcoStore AIO 3000",
-        capacity: "3kW",
-        image: "images/BESS/aio3000.jpg",
+        id: "EcoStore AIO 2500",
+        name: "EcoStore AIO 2500",
+        capacity: "2.5kW",
+        image: "images/BESS/EcoStore AIO 2500.jpg",
         images: {
-            main: "images/BESS/aio300.jpg",
+            main: "images/BESS/EcoStore AIO 2000.jpg",
             gallery: [
-              "images/BESS/aio300-front.jpg",
-              "images/BESS/aio300-side.jpg",
+              "images/BESS/EcoStore AIO 2000kWh.jpg",
+              "images/BESS/EcoStore AIO 2500k.jpg",
               "images/BESS/aio300-back.jpg",
               "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Industrial all-in-one ESS for demanding commercial applications",
-        price: "Starting from $1099",
+        price: "Starting from $159",
         details: {
           specifications: {
             nominalVoltage: "48V",
-            capacity: "62.5Ah / 3kWh",
+            capacity: "62.5Ah / 2.5kWh",
             maxCharge: "50A",
             maxDischarge: "50A",
             cycleLife: "10000+ cycles ",
@@ -788,25 +788,25 @@ export const batteryProducts: BatterySystem[] = [
     
       // Third row - Existing battery products
       {
-        id: "EcoStore Home 5",
-        name: "EcoStore Home 5",
-        capacity: "5kWh",
-        image: "images/BESS/home5.jpg",
+        id: "EcoStore Home 3",
+        name: "EcoStore Home 3",
+        capacity: "3kWh",
+        image: "images/BESS/EcoStore Home 3.jpg",
         images: {
-            main: "images/BESS/aio300.jpg",
+            main: "images/BESS/EcoStore Home 3k.jpg",
             gallery: [
-              "images/BESS/aio300-front.jpg",
-              "images/BESS/aio300-side.jpg",
-              "images/BESS/aio300-back.jpg",
+              "images/BESS/EcoStore Home 3k.jpg",
+              "images/BESS/EcoStore Home 3kW.jpg",
+              "images/BESS/EcoStore Home 3.jpg",
               "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Perfect entry-level battery storage for residential solar systems",
-        price: "Starting from $1199",
+        price: "Starting from $169",
         details: {
           specifications: {
             nominalVoltage: "48V",
-            capacity: "100Ah / 5kWh",
+            capacity: "100Ah / 3kWh",
             maxCharge: "50A",
             maxDischarge: "50A",
             cycleLife: "6000+ cycles ",
@@ -842,25 +842,25 @@ export const batteryProducts: BatterySystem[] = [
         }
       },
       {
-        id: "EcoStore Pro 10",
-        name: "EcoStore Pro 10",
-        capacity: "10kWh",
-        image: "images/BESS/pro10.jpg",
+        id: "EcoStore Pro 3.5",
+        name: "EcoStore Pro 3.5",
+        capacity: "3.5kWh",
+        image: "images/BESS/EcoStore Pro 3.5.jpg",
         images: {
             main: "images/BESS/aio300.jpg",
             gallery: [
-              "images/BESS/aio300-front.jpg",
-              "images/BESS/aio300-side.jpg",
+              "images/BESS/EcoStore Pro 3.5.jpg",
+              "images/BESS/EcoStore Pro 3.5k.jpg",
               "images/BESS/aio300-back.jpg",
               "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Advanced energy storage solution for medium-sized homes",
-        price: "Starting from $1499",
+        price: "Starting from $179",
         details: {
           specifications: {
             nominalVoltage: "48V",
-            capacity: "200Ah / 10kWh",
+            capacity: "200Ah / 3.5kWh",
             maxCharge: "100A",
             maxDischarge: "100A",
             cycleLife: "8000+ cycles ",
@@ -897,10 +897,10 @@ export const batteryProducts: BatterySystem[] = [
         }
       },
       {
-        id: "EcoStore Max 15",
-        name: "EcoStore Max 15",
-        capacity: "15kWh",
-        image: "images/BESS/max15.jpg",
+        id: "EcoStore Max 3.5",
+        name: "EcoStore Max 3.5",
+        capacity: "3.5kWh",
+        image: "images/BESS/EcoStore Max 3.5.jpg",
         images: {
             main: "images/BESS/aio300.jpg",
             gallery: [
@@ -911,11 +911,11 @@ export const batteryProducts: BatterySystem[] = [
             ]
           },
         description: "High-capacity storage for large residential and small commercial applications",
-        price: "Starting from $1699",
+        price: "Starting from $189",
         details: {
           specifications: {
             nominalVoltage: "48V",
-            capacity: "300Ah / 15kWh",
+            capacity: "300Ah / 3.5kWh",
             maxCharge: "150A",
             maxDischarge: "150A",
             cycleLife: "10000+ cycles ",
@@ -952,26 +952,199 @@ export const batteryProducts: BatterySystem[] = [
           warranty: "15 years or 10000 cycles"
         }
       },
+
       {
-        id: "EcoStore Commercial 20",
-        name: "EcoStore Commercial 20",
-        capacity: "20kWh",
-        image: "images/BESS/commercial20.jpg",
+        id: "EcoStore Max 5",
+        name: "EcoStore Max 5",
+        capacity: "5kWh",
+        image: "images/BESS/EcoStore Max 5.jpg",
         images: {
             main: "images/BESS/aio300.jpg",
             gallery: [
-              "images/BESS/aio300-front.jpg",
-              "images/BESS/aio300-side.jpg",
-              "images/BESS/aio300-back.jpg",
+              "images/BESS/EcoStore Max 5k.jpg",
+              "images/BESS/EcoStore Max 5.jpg",
+              "images/BESS/EcoStore Max 5kW.jpg",
+              "images/BESS/EcoStore Max 5kWh.jpg"
+            ]
+          },
+        description: "High-capacity storage for large residential and small commercial applications",
+        price: "Starting from $199",
+        details: {
+          specifications: {
+            nominalVoltage: "48V",
+            capacity: "300Ah / 5kWh",
+            maxCharge: "150A",
+            maxDischarge: "150A",
+            cycleLife: "10000+ cycles ",
+            efficiency: "≥97%"
+          },
+          physical: {
+            dimensions: "750 x 600 x 300mm",
+            weight: "145kg",
+            ipRating: "IP66",
+            operatingTemp: "-30°C to 55°C"
+          },
+          features: [
+            "AI-powered BMS",
+            "7-inch Touch Display",
+            "5G/4G/WiFi Connectivity",
+            "Expandable up to 12 units",
+            "Modular design"
+          ],
+          protection: [
+            "Active thermal management",
+            "Intelligent cell balancing",
+            "Fire suppression system",
+            "Multi-level surge protection",
+            "Arc fault detection"
+          ],
+          certification: [
+            "CE",
+            "TÜV",
+            "IEC62619",
+            "UL1973",
+            "VDE2510",
+            "AS4086"
+          ],
+          warranty: "15 years or 10000 cycles"
+        }
+      },
+
+      {
+        id: "EcoStore ProMax 5.5",
+        name: "EcoStore ProMax 5.5",
+        capacity: "5.5kWh",
+        image: "images/BESS/ProMax5.5.jpg",
+        images: {
+            main: "images/BESS/aio300.jpg",
+            gallery: [
+              "images/BESS/ProMax 5.5k.jpg",
+              "images/BESS/ProMax5.5kw.jpg",
+              "images/BESS/ProMax5.5kWh.jpg",
+              "images/BESS/ProMax5.5.jpg"
+            ]
+          },
+        description: "High-capacity storage for large residential and small commercial applications",
+        price: "Starting from $209",
+        details: {
+          specifications: {
+            nominalVoltage: "48V",
+            capacity: "300Ah / 5.5kWh",
+            maxCharge: "150A",
+            maxDischarge: "150A",
+            cycleLife: "10000+ cycles ",
+            efficiency: "≥97%"
+          },
+          physical: {
+            dimensions: "750 x 600 x 300mm",
+            weight: "145kg",
+            ipRating: "IP66",
+            operatingTemp: "-30°C to 55°C"
+          },
+          features: [
+            "AI-powered BMS",
+            "7-inch Touch Display",
+            "5G/4G/WiFi Connectivity",
+            "Expandable up to 12 units",
+            "Modular design"
+          ],
+          protection: [
+            "Active thermal management",
+            "Intelligent cell balancing",
+            "Fire suppression system",
+            "Multi-level surge protection",
+            "Arc fault detection"
+          ],
+          certification: [
+            "CE",
+            "TÜV",
+            "IEC62619",
+            "UL1973",
+            "VDE2510",
+            "AS4086"
+          ],
+          warranty: "15 years or 10000 cycles"
+        }
+      },
+
+      {
+        id: "EcoStore Commercial 10",
+        name: "EcoStore Commercial 10",
+        capacity: "10kWh",
+        image: "images/BESS/EcoStore Commercial 10.jpg",
+        images: {
+            main: "images/BESS/EcoStore Commercial 10.jpg",
+            gallery: [
+              "images/BESS/EcoStore Commercial 10k.jpg",
+              "images/BESS/EcoStore Commercial 10kW.jpg",
+              "images/BESS/EcoStore Commercial 10kWh.jpg",
               "images/BESS/aio300-display.jpg"
             ]
           },
         description: "Industrial-grade energy storage for commercial and industrial use",
-        price: "Starting from $2199",
+        price: "Starting from $229",
         details: {
           specifications: {
-            nominalVoltage: "48V",
-            capacity: "400Ah / 20kWh",
+            nominalVoltage: "51.2V",
+            capacity: "400Ah / 10kWh",
+            maxCharge: "200A",
+            maxDischarge: "200A",
+            cycleLife: "12000+ cycles ",
+            efficiency: "≥98%"
+          },
+          physical: {
+            dimensions: "800 x 650 x 350mm",
+            weight: "185kg",
+            ipRating: "IP66",
+            operatingTemp: "-40°C to 60°C"
+          },
+          features: [
+            "Enterprise-grade BMS",
+            "10-inch Industrial Touch Display",
+            "5G/Ethernet Connectivity",
+            "Expandable up to 16 units",
+            "Rack-mounted design"
+          ],
+          protection: [
+            "Advanced thermal management",
+            "Real-time cell monitoring",
+            "Automatic fire suppression",
+            "Industrial surge protection",
+            "Predictive fault detection"
+          ],
+          certification: [
+            "CE",
+            "TÜV",
+            "IEC62619",
+            "UL1973",
+            "VDE2510",
+            "AS4086",
+            "ISO9001"
+          ],
+          warranty: "20 years or 12000 cycles"
+        }
+      },
+
+      {
+        id: "EcoStore Commercial Pro 15",
+        name: "EcoStore Commercial Pro 15",
+        capacity: "15kWh",
+        image: "images/BESS/Pro 15.jpg",
+        images: {
+            main: "images/BESS/EcoStore Commercial 10.jpg",
+            gallery: [
+              "images/BESS/Pro 15.jpg",
+              "images/BESS/Pro 15k.jpg",
+              "images/BESS/Pro 15kW.jpg",
+              "images/BESS/aio300-display.jpg"
+            ]
+          },
+        description: "Industrial-grade energy storage for commercial and industrial use",
+        price: "Starting from $239",
+        details: {
+          specifications: {
+            nominalVoltage: "51.2V",
+            capacity: "400Ah / 15kWh",
             maxCharge: "200A",
             maxDischarge: "200A",
             cycleLife: "12000+ cycles ",
