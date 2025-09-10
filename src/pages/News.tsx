@@ -118,6 +118,17 @@ export const newsItems = [
     category: "Infrastructure",
     image: "/EcoMoTechWeb/images/News/Charging station in Africa.png",
     link: "/news/ev-charging-infrastructure-africa"
+  },
+  {
+    id: 10,
+    title: "Énergie Solaire pour les Centres de Santé Communautaires : Une Révolution pour la Santé Rurale",
+    excerpt: "Découvrez comment l'énergie solaire révolutionne les soins de santé ruraux en Afrique subsaharienne, transformant l'accès aux services médicaux pour des millions de personnes.",
+    content: "Dans de nombreuses régions rurales d'Afrique subsaharienne, l'accès à une électricité fiable demeure un défi majeur, particulièrement pour les infrastructures essentielles telles que les centres de santé. Environ 25 000 établissements de santé n'ont aucun accès à l'électricité, tandis que près de 70 000 autres ne bénéficient que d'un accès partiel ou intermittent.\n\nL'adoption de solutions d'énergie solaire pour les centres de santé communautaires représente une véritable révolution, permettant des consultations 24h/24, la conservation des vaccins, l'amélioration des procédures médicales et la préparation aux urgences. Cette technologie transforme non seulement la qualité des soins mais génère également des avantages socio-économiques et environnementaux durables.\n\nLes projets réussis à Madagascar, en RD Congo, en Zambie, au Ghana, au Bénin et au Sénégal démontrent une réduction de plus de 60% de la dépendance aux combustibles fossiles et une amélioration significative des résultats pour les patients.",
+    date: "10 septembre 2025",
+    author: "Équipe technique EcoMoTech",
+    category: "Santé & Énergie Solaire",
+    image: "/EcoMoTechWeb/images/News/energie solaire.png",
+    link: "/news/solar-healthcare-lighting"
   }
 ];
 

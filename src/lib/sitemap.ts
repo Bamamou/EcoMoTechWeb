@@ -207,6 +207,12 @@ const newsPages: SitemapURL[] = [
     lastmod: '2022-08-30',
     changefreq: 'yearly',
     priority: 0.5
+  },
+  {
+    loc: 'https://ecomotech.online/news/solar-healthcare-lighting',
+    lastmod: '2025-09-10',
+    changefreq: 'yearly',
+    priority: 0.5
   }
 ];
 
