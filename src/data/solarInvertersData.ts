@@ -68,7 +68,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Perfect for residential installations, the 5kW inverter offers excellent efficiency and smart features for optimal solar power conversion. Advanced MPPT technology ensures maximum energy harvest even in challenging conditions.",
-    price: "Starting from $520",
+    price: "Starting from $409",
     category: "residential",
     brand: "Growatt",
     specifications: {
@@ -167,7 +167,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Ideal for commercial applications, this 10kW inverter combines high performance with advanced monitoring capabilities. Features three-phase output and enhanced grid support functions for demanding installations.",
-    price: "Starting from $1010",
+    price: "Starting from $809",
     category: "commercial",
     brand: "Growatt",
     specifications: {
@@ -266,7 +266,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Our premium 15kW inverter delivers exceptional performance for large commercial installations with advanced grid support features. Engineered for reliability and maximum energy yield in demanding environments.",
-    price: "Starting from $1510",
+    price: "Starting from $1210",
     category: "commercial",
     brand: "Growatt",
     specifications: {
@@ -365,7 +365,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Sungrow's versatile 8kW inverter designed for medium-sized residential and small commercial installations. Features advanced AI-powered optimization and comprehensive monitoring capabilities.",
-    price: "Starting from $850",
+    price: "Starting from $750",
     category: "residential",
     brand: "Sungrow",
     specifications: {
@@ -462,7 +462,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Advanced 10kW commercial inverter with cutting-edge monitoring and diagnostic capabilities.",
-    price: "Starting from $980",
+    price: "Starting from $880",
     category: "commercial",
     brand: "Sungrow",
     specifications: {
@@ -557,7 +557,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "High-performance 12kW inverter perfect for large residential and commercial solar installations.",
-    price: "Starting from $1199",
+    price: "Starting from $1099",
     category: "commercial",
     brand: "Sungrow",
     specifications: {
@@ -652,7 +652,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Compact and reliable 3kW inverter perfect for small residential solar installations with excellent monitoring capabilities.",
-    price: "Starting from $249",
+    price: "Starting from $209",
     category: "residential",
     brand: "GoodWe",
     specifications: {
@@ -746,7 +746,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Versatile 6kW dual-MPPT inverter designed for medium-sized residential solar systems with advanced safety features.",
-    price: "Starting from $549",
+    price: "Starting from $509",
     category: "residential",
     brand: "GoodWe",
     specifications: {
@@ -841,7 +841,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "High-performance 10kW inverter suitable for larger residential and small commercial installations with comprehensive protection features.",
-    price: "Starting from $900",
+    price: "Starting from $609",
     category: "commercial",
     brand: "GoodWe",
     specifications: {
@@ -1031,7 +1031,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Advanced 8kW inverter with cloud-based monitoring and superior grid integration capabilities for larger homes.",
-    price: "Starting from $799.00",
+    price: "Starting from $509.00",
     category: "commercial",
     brand: "EcoMoTech",
     specifications: {
@@ -1125,7 +1125,7 @@ export const solarInverters: SolarInverter[] = [
       ]
     },
     description: "Premium 10kW inverter with future-ready features including battery storage compatibility and smart grid integration.",
-    price: "Starting from $809.00",
+    price: "Starting from $609.00",
     category: "commercial",
     brand: "EcoMoTech",
     specifications: {
