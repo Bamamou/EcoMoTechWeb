@@ -55,6 +55,7 @@ const EVChargingAfrica = React.lazy(() => import("./pages/articles/EVChargingAfr
 const EVChargingInfrastructureInAfrica = React.lazy(() => import("./pages/articles/EVChargingInfrastructureInAfrica"));
 const RenewableEnergyFeasibilityAssessments = React.lazy(() => import("./pages/articles/RenewableEnergyFeasibilityAssessments"));
 const SolarHealthcareLighting = React.lazy(() => import("./pages/articles/SolarHealthcareLighting"));
+const BESSRentalServices = React.lazy(() => import("./pages/articles/BESSRentalServices"));
 
 const queryClient = new QueryClient();
 
@@ -119,6 +120,7 @@ const App = () => (
             <Route path="/news/ev-charging-infrastructure-africa" element={<EVChargingInfrastructureInAfrica />} />
             <Route path="/news/renewable-energy-feasibility-assessments" element={<RenewableEnergyFeasibilityAssessments />} />
             <Route path="/news/solar-healthcare-lighting" element={<SolarHealthcareLighting />} />
+            <Route path="/news/bess-rental-services" element={<BESSRentalServices />} />
             
             {/* Service Routes */}
             <Route path="/services/solar-installation" element={<SolarInstallation />} />

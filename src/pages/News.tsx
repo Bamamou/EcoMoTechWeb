@@ -129,6 +129,17 @@ export const newsItems = [
     category: "Santé & Énergie Solaire",
     image: "/EcoMoTechWeb/images/News/energie solaire.png",
     link: "/news/solar-healthcare-lighting"
+  },
+  {
+    id: 11,
+    title: "Location de Systèmes de Stockage d'Énergie Tout-en-Un (BESS) : Un Modèle Innovant au Service de la Transition Énergétique",
+    excerpt: "Découvrez comment la location de systèmes BESS révolutionne l'accès au stockage d'énergie, offrant flexibilité, efficacité économique et durabilité pour tous types d'organisations.",
+    content: "Un Battery Energy Storage System (BESS) tout-en-un est une solution intégrée combinant batteries, onduleurs, systèmes de gestion (BMS/EMS) et dispositifs de sécurité dans un seul module prêt à l'emploi. La location de ces systèmes consiste à mettre à disposition, pour une durée déterminée, un équipement complet permettant de stocker et restituer l'énergie sans que l'utilisateur ait à supporter les coûts d'acquisition ni la gestion technique lourde.\n\nLes principaux avantages incluent l'efficacité économique sans investissement initial élevé, la flexibilité et évolutivité selon la demande, la réduction des risques avec maintenance incluse, l'optimisation des flux de trésorerie en OPEX plutôt qu'en CAPEX, et l'accès à la dernière technologie. Les applications couvrent l'intégration des énergies renouvelables, la stabilisation du réseau, la gestion des pointes, l'alimentation de secours et les événements temporaires.\n\nLes analystes prévoient une croissance annuelle de plus de 20% du marché des BESS en location d'ici 2030, portée par la décarbonation des systèmes électriques et l'essor des énergies intermittentes.",
+    date: "14 septembre 2025",
+    author: "Équipe technique EcoMoTech",
+    category: "Stockage d'Énergie BESS",
+    image: "/EcoMoTechWeb/images/News/battery-15kw home.png",
+    link: "/news/bess-rental-services"
   }
 ];
 
