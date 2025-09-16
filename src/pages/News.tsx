@@ -10,6 +10,17 @@ import { getPageSEO } from "@/lib/seo";
 
 export const newsItems = [
   {
+    id: 12,
+    title: "Essential Components and Best Practices for Commercial PV Systems Integrated with Battery Energy Storage and Grid Connection",
+    excerpt: "Comprehensive guide to designing commercial photovoltaic installations with battery energy storage systems, covering key components, integration techniques, and grid-connection requirements.",
+    content: "Commercial photovoltaic (PV) installations combined with Battery Energy Storage Systems (BESS) are increasingly deployed to enhance energy reliability, support peak shaving, and enable participation in demand response programs. This comprehensive guide covers the essential components, integration techniques, grid-connection requirements, and applicable standards for successful implementation.",
+    date: "September 16, 2025",
+    author: "EcoMoTech Technical Team",
+    category: "Technical Guide",
+    image: "/EcoMoTechWeb/images/News/components.png",
+    link: "/news/commercial-pv-bess-systems"
+  },
+  {
     id: 1,
     title: "Ecomotech Launches New High-Efficiency Solar Panel Series",
     excerpt: "Our latest solar panel technology achieves record-breaking efficiency rates, making solar energy more accessible and affordable than ever before.",
