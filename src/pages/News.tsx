@@ -94,7 +94,7 @@ export const newsItems = [
     date: "October 15, 2022",
     author: "Marcus Adebayo",
     category: "Electric Mobility",
-    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    image: "/EcoMoTechWeb/images/Electric motorcycles/KingChe red front.jpg",
     link: "/news/electric-mobility-africa"
   },
   {
