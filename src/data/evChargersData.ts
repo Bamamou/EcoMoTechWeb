@@ -41,7 +41,7 @@ export const evChargerProducts: EVChargerProduct[] = [
     Features advanced safety systems including overcurrent protection, ground fault detection, and temperature monitoring. The sleek, weatherproof design complements any home exterior while providing years of reliable service.
 
     Perfect for daily charging needs, this charger delivers optimal charging speeds while being energy-efficient and cost-effective for home use.`,
-    price: 699,
+    price: 499,
     originalPrice: 799,
     image: '/images/chargers/Aeiusny 7kW.jpg',
     gallery: [
@@ -89,7 +89,7 @@ export const evChargerProducts: EVChargerProduct[] = [
     Ideal for businesses wanting to provide EV charging for employees and customers. The integrated payment system supports multiple payment methods including RFID cards, mobile apps, and contactless payments.
 
     Advanced load management ensures optimal power distribution across multiple charging sessions, while comprehensive monitoring provides detailed usage analytics and revenue tracking.`,
-    price: 2499,
+    price: 1499,
     image: '/images/chargers/charger design.png',
     gallery: [
       '/images/chargers/charger design.png',
@@ -136,7 +136,7 @@ export const evChargerProducts: EVChargerProduct[] = [
     Designed for high-traffic locations like highway service stations, this charger features a robust, weather-resistant design capable of operating in all conditions. The large color display provides real-time charging information and easy payment processing.
 
     Multiple safety systems ensure safe operation, while the modular design allows for easy maintenance and upgrades.`,
-    price: 12999,
+    price: 599,
     originalPrice: 14999,
     image: '/images/chargers/Ecocharge.png',
     gallery: [
@@ -184,7 +184,7 @@ export const evChargerProducts: EVChargerProduct[] = [
     Perfect for apartment dwellers, renters, or as a backup charging solution. The intelligent design includes multiple safety features and adapters for different outlet types. The weather-resistant construction allows for outdoor use when needed.
 
     Features LED indicators for charging status and fault diagnosis, making it easy to monitor your charging session.`,
-    price: 299,
+    price: 199,
     image: '/images/chargers/Aeiusny 7kW.jpg',
     gallery: [
       '/images/chargers/Aeiusny 7kW.jpg'
@@ -229,7 +229,7 @@ export const evChargerProducts: EVChargerProduct[] = [
     Features include employee access management through RFID cards or mobile app, detailed reporting for facility managers, and load balancing across multiple units. The sleek design integrates well with modern office environments.
 
     Built for durability with minimal maintenance requirements, making it ideal for busy workplace environments where reliability is crucial.`,
-    price: 1299,
+    price: 699,
     image: '/images/chargers/charger design.png',
     gallery: [
       '/images/chargers/charger design.png'
@@ -274,8 +274,8 @@ export const evChargerProducts: EVChargerProduct[] = [
     Features dual charging cables for simultaneous charging of two vehicles, advanced cooling systems for consistent high-power delivery, and a premium user interface with multiple payment options.
 
     Built for commercial operators who demand the highest reliability and fastest charging speeds. The modular design ensures easy maintenance and future upgrades.`,
-    price: 35999,
-    originalPrice: 39999,
+    price: 999,
+    originalPrice: 1499,
     image: '/images/chargers/Ecocharge.png',
     gallery: [
       '/images/chargers/Ecocharge.png'
