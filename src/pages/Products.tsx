@@ -177,6 +177,18 @@ const ProductsPage = () => {
                 <p className="text-gray-600">Efficient solar-powered pumping solutions for agricultural and irrigation needs.</p>
               </div>
             </Link>
+
+            <Link to="/products/solar-appliances" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <ResponsiveImage
+                src="/images/BESS/aio500-front.webp"
+                alt="Solar Appliances"
+                className="w-full h-60 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Solar Appliances</h3>
+                <p className="text-gray-600">Off-grid solar appliances including air conditioners, refrigerators, fans, and more.</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -49,6 +49,7 @@ const Navbar = () => {
 				{ name: "Street Lights", path: "/products/street-lights" },
 				{ name: "Energy Storage", path: "/products/energy-storage" },
 				{ name: "Solar Pumps", path: "/products/solar-pumbs" },
+				{ name: "Solar Appliances", path: "/products/solar-appliances" },
 				{ name: "Electric Motorcycles", path: "/products/electric-motorcycles" },
 				{ name: "Electric Tricycles", path: "/products/electric-tricycles" },
 				{ name: "EV Chargers", path: "/products/ev-chargers" },

@@ -27,6 +27,9 @@ import EnergyAssessment from "@/pages/services/EnergyAssessment";
 import SolarInverters from "./components/products/SolarInverters";
 import JobDetails from "./pages/JobDetails";
 
+// Import Solar Appliances components
+const SolarAppliances = React.lazy(() => import("./components/products/SolarAppliances"));
+const SolarApplianceDetails = React.lazy(() => import("./components/products/SolarApplianceDetails"));
 
 // Lazy load all routes
 const About = React.lazy(() => import("./pages/About"));
@@ -107,6 +110,10 @@ const App = () => (
             <Route path="/products/ev-chargers/:id" element={<EVChargerDetails />} />
             <Route path="/products/solar-pumbs" element={<SolarPumbs />} />
             <Route path="/products/solar-pumbs/:id" element={<SolarPumpDetails />} />
+            
+            {/* Solar Appliances Routes */}
+            <Route path="/products/solar-appliances" element={<SolarAppliances />} />
+            <Route path="/products/solar-appliances/:id" element={<SolarApplianceDetails />} />
             
             {/* News Routes */}
             <Route path="/news" element={<News />} />
