@@ -302,7 +302,7 @@ export const solarAppliancesData: SolarAppliance[] = [
     solarPanelCapacity: "400W",
     batteryCapacity: "100Ah Lithium",
     description: "Energy-efficient solar-powered refrigerator with dual compartment design. Features intelligent temperature control and can operate continuously on solar power with battery backup.",
-    price: "$1,850",
+    price: "$499",
     category: "refrigeration",
     image: "/images/SolarAppliances/Fridges/REF-SOLAR-200L.webp",
     images: {
@@ -367,7 +367,7 @@ export const solarAppliancesData: SolarAppliance[] = [
     solarPanelCapacity: "60W",
     batteryCapacity: "15Ah Lithium",
     description: "Professional solar-powered security camera system with 4G connectivity, night vision, and weatherproof design. Features AI motion detection and cloud storage capabilities.",
-    price: "$685",
+    price: "$99",
     category: "security",
     image: "/images/SolarAppliances/Cameras/Outdoor.jpg",
     images: {
@@ -428,13 +428,13 @@ export const solarAppliancesData: SolarAppliance[] = [
   // POWER STORAGE SYSTEMS
   {
     id: "sa-powerbank-001",
-    name: "EcoMoTech SolarPower Station Pro",
-    model: "PWR-SOLAR-1000W",
+    name: "EcoMoTech SolarPower bank Pro",
+    model: "PWR-SOLAR-10000mAh",
     power: "1000W Output",
     solarPanelCapacity: "200W",
-    batteryCapacity: "1000Wh Lithium",
-    description: "Portable solar power station with multiple output options. Features fast charging, pure sine wave inverter, and can power small appliances and charge multiple devices simultaneously.",
-    price: "$1,295",
+    batteryCapacity: "10000mAh Lithium",
+    description: "Portable solar power station with multiple output options. Features fast charging, and can power small appliances and charge multiple devices simultaneously.",
+    price: "$39",
     category: "power-storage",
     image: "/images/SolarAppliances/Power banks/20kmAh.webp",
     images: {
@@ -449,18 +449,17 @@ export const solarAppliancesData: SolarAppliance[] = [
       powerConsumption: "Input: Solar 200W max, AC 300W max",
       solarPanelWattage: "200W Foldable Monocrystalline",
       batteryType: "Lithium Iron Phosphate (LiFePO4)",
-      batteryCapacity: "1000Wh (25.6V, 40Ah)",
+      batteryCapacity: "200wh (25.6V, 10Ah)",
       chargingTime: "5-6 hours solar, 3 hours AC",
       operatingTime: "Variable based on load",
-      dimensions: "350 x 230 x 280 mm",
+      dimensions: "150 x 130 x 180 mm",
       weight: "13.5 kg",
       operatingTemperature: "-10°C to +40°C",
       certification: ["UL", "CE", "FCC", "PSE"],
       warranty: "5 years battery, 2 years electronics"
     },
     features: [
-      "1000W pure sine wave AC inverter",
-      "Multiple output ports (AC, USB-C PD, USB-A, 12V DC)",
+      "Multiple output ports (AC, USB-C PD, USB-A, USB-B, 12V DC)",
       "Wireless charging pad",
       "LCD display with real-time monitoring",
       "Emergency LED flashlight with SOS mode",
@@ -501,7 +500,7 @@ export const solarAppliancesData: SolarAppliance[] = [
     solarPanelCapacity: "150W",
     batteryCapacity: "30Ah Lithium",
     description: "Intelligent solar-powered rice cooker with multiple cooking programs. Features non-stick inner pot, keep-warm function, and energy-efficient heating technology.",
-    price: "$425",
+    price: "$125",
     category: "cooking",
     image:  "/images/SolarAppliances/Rice Cooker/rice cooker pv.avif",
     images: {

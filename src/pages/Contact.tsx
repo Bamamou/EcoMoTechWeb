@@ -98,11 +98,12 @@ const Contact = () => {
             {/* WhatsApp */}
             <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center mb-4">
-                <Icon 
-                  icon="logos:whatsapp-icon" 
-                  className="h-8 w-8" 
-                  style={{ filter: 'brightness(0) invert(1)' }} 
-                />
+                <a href="https://wa.me/8618810799128" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                  <Icon 
+                    icon="logos:whatsapp-icon" 
+                    className="h-8 w-8 transition-transform hover:scale-110" 
+                  />
+                </a>
               </div>
               <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
               <a 
@@ -119,7 +120,9 @@ const Contact = () => {
             {/* Email */}
             <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4">
-                <Mail className="h-7 w-7 text-white" />
+                <a href="mailto:ecomotech@outlook.com" aria-label="Send Email">
+                  <Mail className="h-7 w-7 text-white transition-transform hover:scale-110" />
+                </a>
               </div>
               <h3 className="text-xl font-semibold mb-2">Email</h3>
               <a 

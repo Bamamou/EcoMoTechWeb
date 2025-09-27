@@ -180,7 +180,7 @@ const ProductsPage = () => {
 
             <Link to="/products/solar-appliances" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <ResponsiveImage
-                src="/images/BESS/aio500-front.webp"
+                src="/images/SolarAppliances/image.png"
                 alt="Solar Appliances"
                 className="w-full h-60 object-cover"
               />

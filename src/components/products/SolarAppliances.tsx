@@ -84,27 +84,27 @@ const SolarAppliances = () => {
         {/* Hero Section */}
         <section className="pt-24 pb-12 px-4">
           <div className="container mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Zap className="w-8 h-8 text-blue-600" />
-              <Sun className="w-8 h-8 text-yellow-500" />
+            <div className="flex items-center justify-center gap-1 mb-2 sm:gap-2 sm:mb-4">
+              <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
+              <Sun className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-4">
               Solar Appliances & Off-Grid Solutions
             </h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-700 mb-4 sm:mb-8 max-w-xs sm:max-w-3xl mx-auto">
               Power your daily life with our innovative solar-powered appliances. From cooling and refrigeration to security and cooking - all running on clean, renewable energy.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-              <div className="flex items-center gap-1">
-                <Battery className="w-4 h-4" />
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
+              <div className="flex items-center gap-0.5 sm:gap-1">
+                <Battery className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>Battery Backup Included</span>
               </div>
-              <div className="flex items-center gap-1">
-                <Sun className="w-4 h-4" />
+              <div className="flex items-center gap-0.5 sm:gap-1">
+                <Sun className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>100% Solar Powered</span>
               </div>
-              <div className="flex items-center gap-1">
-                <Zap className="w-4 h-4" />
+              <div className="flex items-center gap-0.5 sm:gap-1">
+                <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>Energy Efficient</span>
               </div>
             </div>
@@ -114,20 +114,20 @@ const SolarAppliances = () => {
         {/* Category Overview */}
         <section className="py-8 px-4 bg-white">
           <div className="container mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-6">Product Categories</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-6">Product Categories</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-8">
               {solarApplianceCategories.map((category) => {
                 const IconComponent = categoryIcons[category.id as SolarAppliance['category']];
                 return (
-                  <Card key={category.id} className="hover:shadow-lg transition-shadow cursor-pointer" 
+                  <Card key={category.id} className="hover:shadow-lg transition-shadow cursor-pointer p-2 sm:p-0" 
                         onClick={() => setSelectedCategory(category.id)}>
-                    <CardContent className="p-4 text-center">
-                      <div className="mx-auto w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2">
-                        <IconComponent className="w-5 h-5 text-blue-600" />
+                    <CardContent className="p-2 sm:p-4 text-center">
+                      <div className="mx-auto w-7 h-7 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center mb-1 sm:mb-2">
+                        <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                       </div>
-                      <h3 className="font-semibold text-sm mb-1">{category.name}</h3>
-                      <p className="text-xs text-gray-600 mb-2">{category.count} Products</p>
-                      <Button variant="outline" size="sm" className="text-xs px-3 py-1 h-7">View</Button>
+                      <h3 className="font-semibold text-xs sm:text-sm mb-0.5 sm:mb-1">{category.name}</h3>
+                      <p className="text-[10px] sm:text-xs text-gray-600 mb-1 sm:mb-2">{category.count} Products</p>
+                      <Button variant="outline" size="sm" className="text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 h-6 sm:h-7">View</Button>
                     </CardContent>
                   </Card>
                 );
@@ -314,7 +314,7 @@ const SolarAppliances = () => {
               <Button size="lg" variant="secondary" asChild>
                 <Link to="/contact">Get Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white">
                 <Link to="/services/solar-consultancy">View Services</Link>
               </Button>
             </div>
