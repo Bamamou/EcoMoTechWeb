@@ -502,13 +502,13 @@ export const solarAppliancesData: SolarAppliance[] = [
     description: "Intelligent solar-powered rice cooker with multiple cooking programs. Features non-stick inner pot, keep-warm function, and energy-efficient heating technology.",
     price: "$125",
     category: "cooking",
-    image:  "/images/SolarAppliances/Rice Cooker/rice cooker pv.avif",
+    image:  "/images/SolarAppliances/Rice Cooker/24V-Portable-Solar-Battery-Power-Supply-Rice-Cooker-Cooking.webp",
     images: {
-      main: "/images/SolarAppliances/Rice Cooker/24V-Portable-Solar-Battery-Power-Supply-Rice-Cooker-Cooking.avif",
+      main: "/images/SolarAppliances/Rice Cooker/24V-Portable-Solar-Battery-Power-Supply-Rice-Cooker-Cooking.webp",
       gallery: [
-        "/images/SolarAppliances/Rice Cooker/rice cooker pv.jpeg",
-         "/images/SolarAppliances/Rice Cooker/24V-Portable-Solar-Battery-Power-Supply-Rice-Cooker-Cooking.avif",
-        "/images/SolarAppliances/Rice Cooker/rice cooker pv.jpeg",
+        "/images/SolarAppliances/Rice Cooker/rice cooker pv.webp",
+         "/images/SolarAppliances/Rice Cooker/24V-Portable-Solar-Battery-Power-Supply-Rice-Cooker-Cooking.webp",
+        "/images/SolarAppliances/Rice Cooker/rice cooker pv.webp",
       ]
     },
     specifications: {

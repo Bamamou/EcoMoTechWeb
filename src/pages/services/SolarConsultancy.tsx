@@ -204,10 +204,12 @@ const SolarConsultancy = () => {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                    <Calculator className="w-5 h-5 mr-2" />
-                    Request Consultation
-                  </Button>
+                   <Link to="/contact">
+                    <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                      <Calculator className="w-5 h-5 mr-2" />
+                      Request Consultation
+                    </Button>
+                  </Link>
                   <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-ecomotech-blue px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all duration-300 shadow-md hover:shadow-lg">
                     <Download className="w-5 h-5 mr-2" />
                     Download Case Studies
@@ -614,10 +616,12 @@ const SolarConsultancy = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Free Consultation
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Free Consultation
+                </Button>
+              </Link>
               <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-ecomotech-blue px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all duration-300">
                 <Download className="w-5 h-5 mr-2" />
                 Request Proposal

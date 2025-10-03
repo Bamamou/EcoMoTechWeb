@@ -78,7 +78,7 @@ const ServicesPage = () => {
       company: "GreenTech Industries",
       content: "EcoMoTech transformed our energy infrastructure with their professional solar installation. Outstanding service and results!",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/AboutUs/businesowner.jpg"
     },
     {
       name: "Sitanilas Kamano",
@@ -86,7 +86,7 @@ const ServicesPage = () => {
       company: "TechCorp Solutions",
       content: "Their EV charging infrastructure setup was flawless. The team's expertise and attention to detail exceeded our expectations.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/AboutUs/customer.webp"
     },
     {
       name: "Dr. Maria, Sylla",
@@ -94,7 +94,7 @@ const ServicesPage = () => {
       company: "EcoVision Corp",
       content: "Professional consultancy that helped us reduce energy costs by 40%. Highly recommend their expertise and innovative solutions.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/AboutUs/customerbattery.png"
     }
   ];
 
@@ -497,7 +497,7 @@ const ServicesPage = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@ecomotech.online</span>
+                <span>ecomotech@outlook.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />

@@ -33,7 +33,7 @@ export const solarPanelProducts: Product[] = [
       "Weight": "23.5kg",
       "Operating Temperature": "-40°C to +85°C"
     },
-    image: "images/Solar panels/450W mono.avif"
+    image: "images/Solar panels/450W mono.png"
   },
   {
     id: "poly-420w",

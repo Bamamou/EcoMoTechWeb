@@ -25,10 +25,10 @@ const Footer = () => {
               <a href="https://x.com/ecomotech" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+              <a href="https://www.linkedin.com/company/ecomotech/" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-ecomotech-green transition-colors">
+              <a href="https://www.instagram.com/ecomotech.online/" className="text-gray-400 hover:text-ecomotech-green transition-colors">
                 <Instagram size={20} />
               </a>
             </div>

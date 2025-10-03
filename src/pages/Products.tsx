@@ -106,7 +106,7 @@ const ProductsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/products/solar-panels" className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <ResponsiveImage
-                src="images/Solar panels/PV.avif"
+                src="images/Solar panels/PV.webp"
                 alt="Solar Panels"
                 className="w-full h-60 object-cover"
               />

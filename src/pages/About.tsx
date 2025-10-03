@@ -6,6 +6,13 @@ import { ResponsiveImage, img } from "@/components/ui/responsive-image";
 import { useSEO } from "@/hooks/useSEO";
 import { getPageSEO } from "@/lib/seo";
 
+// Team member portfolio URLs
+const teamPortfolios = {
+  nicolasBamamou: "https://bamamounicolas.site/",
+  kagomaJaros: "https://www.linkedin.com/in/jairos-kagoma-932a59241/",
+  sulaymanNjie: "https://www.linkedin.com/in/sulayman-njie-msc-7a226a3a/"
+};
+
 const AboutPage = () => {
   // SEO optimization
   const aboutSEO = getPageSEO('about');
@@ -170,7 +177,7 @@ const AboutPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
-            <div className={styles.teamMember}>
+            <a href={teamPortfolios.nicolasBamamou} target="_blank" rel="noopener noreferrer" className={`${styles.teamMember} ${styles.teamMemberLink}`}>
               <div className={styles.teamImageWrapper}>
                 <div className={styles.imageContainer}>
                   <ResponsiveImage 
@@ -188,10 +195,10 @@ const AboutPage = () => {
                   With over 10 years of experience in renewable energy, Nicolas leads Ecomotech's strategic vision and global operations.
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* Team Member 2 */}
-            <div className={styles.teamMember}>
+            <a href={teamPortfolios.kagomaJaros} target="_blank" rel="noopener noreferrer" className={`${styles.teamMember} ${styles.teamMemberLink}`}>
               <div className={styles.teamImageWrapper}>
                 <div className={styles.imageContainer}>
                   <ResponsiveImage 
@@ -209,10 +216,10 @@ const AboutPage = () => {
                   Kagoma from Tanzania drives Ecomotech's technology development, focusing on innovation and enhancing our product performance.
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* Team Member 3 */}
-            <div className={styles.teamMember}>
+            <a href={teamPortfolios.sulaymanNjie} target="_blank" rel="noopener noreferrer" className={`${styles.teamMember} ${styles.teamMemberLink}`}>
               <div className={styles.teamImageWrapper}>
                 <div className={styles.imageContainer}>
                   <ResponsiveImage 
@@ -230,7 +237,7 @@ const AboutPage = () => {
                   Njie also known as Brainysoul oversees Ecomotech's operations, ensuring efficient production and delivery of our solar solutions.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
