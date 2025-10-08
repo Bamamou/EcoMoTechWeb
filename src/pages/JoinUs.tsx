@@ -20,8 +20,49 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
+import { Linkedin, Briefcase, ArrowRight } from "lucide-react";
 
 const departments = [...new Set(jobPostings.map(job => job.department))];
+
+const LinkedInCTA = () => {
+  return (
+    <div className="max-w-4xl mx-auto mb-8">
+      <Card className="bg-gradient-to-r from-blue-600 to-blue-700 border-none text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-32 -mt-32 opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-800 rounded-full -ml-24 -mb-24 opacity-20"></div>
+        <CardContent className="pt-8 pb-8 relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                <Linkedin className="w-10 h-10 text-blue-600" />
+              </div>
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-2 flex items-center justify-center md:justify-start gap-2">
+                <Briefcase className="w-6 h-6" />
+                More Opportunities on LinkedIn
+              </h3>
+              <p className="text-blue-100 text-lg">
+                Don't see the perfect role? Follow us on LinkedIn for the latest job openings, company updates, and insights into life at Ecomotech.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold shadow-lg"
+                onClick={() => window.open('https://www.linkedin.com/company/ecomotech/', '_blank')}
+              >
+                Visit LinkedIn
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
 
 const JoinUs = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string>("all");
@@ -125,11 +166,53 @@ const JoinUs = () => {
             </div>
           </div>
 
+          {/* LinkedIn CTA */}
+          <LinkedInCTA />
+
           {/* Job Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-12">
             {filteredJobs.map((job) => (
               <JobCard key={job.id} job={job} />
             ))}
+          </div>
+
+          {/* Bottom LinkedIn CTA */}
+          <div className="max-w-6xl mx-auto">
+            <Card className="bg-white border-2 border-blue-600">
+              <CardContent className="pt-8 pb-8">
+                <div className="text-center max-w-2xl mx-auto">
+                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Linkedin className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+                    Stay Connected for Future Opportunities
+                  </h3>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Follow Ecomotech on LinkedIn to stay updated on new job openings, company news, industry insights, and be the first to know about exciting career opportunities in renewable energy.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <Button
+                      size="lg"
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8"
+                      onClick={() => window.open('https://www.linkedin.com/company/ecomotech/?viewAsMember=true', '_blank')}
+                    >
+                      <Linkedin className="mr-2 w-5 h-5" />
+                      Follow on LinkedIn
+                    </Button>
+                    <span className="text-gray-500">or</span>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold px-8"
+                      onClick={() => window.open('https://www.linkedin.com/company/ecomotech/?viewAsMember=true', '_blank')}
+                    >
+                      <Briefcase className="mr-2 w-5 h-5" />
+                      View All Jobs on LinkedIn
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

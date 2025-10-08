@@ -60,6 +60,9 @@ const RenewableEnergyFeasibilityAssessments = React.lazy(() => import("./pages/a
 const SolarHealthcareLighting = React.lazy(() => import("./pages/articles/SolarHealthcareLighting"));
 const BESSRentalServices = React.lazy(() => import("./pages/articles/BESSRentalServices"));
 const CommercialPVBESSSystems = React.lazy(() => import("./pages/articles/CommercialPVBESSSystems"));
+const BatterySafetyStandards = React.lazy(() => import("./pages/articles/BatterySafetyStandards"));
+const ThermalManagementWhitePaper = React.lazy(() => import("./pages/articles/ThermalManagementWhitePaper"));
+const BMSSoftwareDesign = React.lazy(() => import("./pages/articles/BMSSoftwareDesign"));
 
 const queryClient = new QueryClient();
 
@@ -130,6 +133,9 @@ const App = () => (
             <Route path="/news/solar-healthcare-lighting" element={<SolarHealthcareLighting />} />
             <Route path="/news/bess-rental-services" element={<BESSRentalServices />} />
             <Route path="/news/commercial-pv-bess-systems" element={<CommercialPVBESSSystems />} />
+            <Route path="/news/battery-safety-standards" element={<BatterySafetyStandards />} />
+            <Route path="/news/thermal-management-whitepaper" element={<ThermalManagementWhitePaper />} />
+            <Route path="/news/bms-software-design" element={<BMSSoftwareDesign />} />
             
             {/* Service Routes */}
             <Route path="/services/solar-installation" element={<SolarInstallation />} />

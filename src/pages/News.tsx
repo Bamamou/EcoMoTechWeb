@@ -10,6 +10,39 @@ import { getPageSEO } from "@/lib/seo";
 
 export const newsItems = [
   {
+    id: 15,
+    title: "Advanced Battery Management System Software Design for EV Applications",
+    excerpt: "Comprehensive analysis of advanced software design for Battery Management Systems (BMS) in electric vehicle applications, covering modular architectures, SOC/SOH estimation algorithms, and cell balancing strategies.",
+    content: "This white paper provides a comprehensive analysis of advanced software design for Battery Management Systems (BMS) in electric vehicle (EV) applications. It delves into critical components, including modular and scalable software architectures, sophisticated State-of-Charge (SOC) and State-of-Health (SOH) estimation algorithms, and robust cell balancing strategies. The document also examines communication protocol frameworks, fault detection and diagnostics methodologies, secure Over-the-Air (OTA) update mechanisms, and the principles of hardware-software co-design.",
+    date: "October 8, 2025",
+    author: "Manus, Senior BMS Engineer",
+    category: "White Paper",
+    image: "/EcoMoTechWeb/images/News/BMS SW.png",
+    link: "/news/bms-software-design"
+  },
+  {
+    id: 14,
+    title: "White Paper: Advanced Thermal Management Strategies for High-Performance EV Battery Modules",
+    excerpt: "Comprehensive analysis of cutting-edge thermal management strategies, offering a data-driven guide for the design and implementation of next-generation EV battery cooling systems.",
+    content: "The rapid advancement of electric vehicle (EV) technology has placed increasing demands on the performance, safety, and longevity of battery systems. Effective thermal management is paramount to achieving these goals. This white paper provides comprehensive analysis of cooling methodologies, thermal interface materials, optimization techniques, CFD simulation, and real-world validation including case studies from Tesla and BMW.",
+    date: "October 7, 2025",
+    author: "EcoMoTech Technical Team",
+    category: "White Paper",
+    image: "/EcoMoTechWeb/images/News/Thermal management.png",
+    link: "/news/thermal-management-whitepaper"
+  },
+  {
+    id: 13,
+    title: "Comprehensive Guide to Lithium-Ion Battery Safety Standards",
+    excerpt: "An authoritative reference for engineers, designers, manufacturers, and quality assurance professionals covering critical safety standards governing lithium-ion batteries across all applications.",
+    content: "The rapid proliferation of lithium-ion batteries across a vast array of applications, from consumer electronics to electric vehicles and large-scale energy storage, has brought the issue of battery safety to the forefront. This comprehensive guide provides detailed analysis of the most critical safety standards including UN 38.3, IEC 62133, UL 2580, IEC 62660 series, and other key regulations governing the design, manufacturing, testing, and transportation of lithium-ion batteries.",
+    date: "October 7, 2025",
+    author: "EcoMoTech Technical Team",
+    category: "Technical Guide",
+    image: "/EcoMoTechWeb/images/News/Safety standards.png",
+    link: "/news/battery-safety-standards"
+  },
+  {
     id: 12,
     title: "Essential Components and Best Practices for Commercial PV Systems Integrated with Battery Energy Storage and Grid Connection",
     excerpt: "Comprehensive guide to designing commercial photovoltaic installations with battery energy storage systems, covering key components, integration techniques, and grid-connection requirements.",
@@ -244,7 +277,7 @@ const News = () => {
               <div className="bg-ecomotech-light-gray p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2">
-                  {["All Categories", "Product News", "Company News", "Projects", "Research & Development", "Sustainability", "Case Studies", "Electric Mobility", "Infrastructure"].map((category) => (
+                  {["All Categories", "White Paper", "Technical Guide", "Technical Analysis", "Product News", "Company News", "Projects", "Research & Development", "Case Studies", "Electric Mobility", "Infrastructure", "Santé & Énergie Solaire", "Stockage d'Énergie BESS"].map((category) => (
                     <li key={category}>
                       <button
                         onClick={() => handleCategoryClick(category)}

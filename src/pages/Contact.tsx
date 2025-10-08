@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowUpRight, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Icon } from '@iconify/react';
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/components/ui/use-toast";
@@ -80,11 +80,11 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-ecomotech-dark-blue text-white">
+      <section className="pt-24 pb-12 bg-ecomotech-dark-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Contact Us</h1>
-            <p className="text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Contact Us</h1>
+            <p className="text-lg md:text-xl opacity-90 animate-fade-in" style={{animationDelay: "0.2s"}}>
               Have questions about our products or services? Get in touch with our team.
             </p>
           </div>
@@ -92,20 +92,20 @@ const Contact = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* WhatsApp */}
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center mb-4">
+            <div className="flex flex-col items-center text-center p-5 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center mb-3">
                 <a href="https://wa.me/8618810799128" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                   <Icon 
                     icon="logos:whatsapp-icon" 
-                    className="h-8 w-8 transition-transform hover:scale-110" 
+                    className="h-7 w-7 transition-transform hover:scale-110" 
                   />
                 </a>
               </div>
-              <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
+              <h3 className="text-lg font-semibold mb-2">WhatsApp</h3>
               <a 
                 href="https://wa.me/8618810799128" 
                 target="_blank"
@@ -118,13 +118,13 @@ const Contact = () => {
             </div>
 
             {/* Email */}
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-4">
+            <div className="flex flex-col items-center text-center p-5 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-3">
                 <a href="mailto:ecomotech@outlook.com" aria-label="Send Email">
-                  <Mail className="h-7 w-7 text-white transition-transform hover:scale-110" />
+                  <Mail className="h-6 w-6 text-white transition-transform hover:scale-110" />
                 </a>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <h3 className="text-lg font-semibold mb-2">Email</h3>
               <a 
                 href="mailto:ecomotech@outlook.com" 
                 className="text-gray-600 hover:text-blue-500 transition-colors flex items-center gap-2"
@@ -135,11 +135,11 @@ const Contact = () => {
             </div>
 
             {/* Address */}
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mb-4">
-                <MapPin className="h-7 w-7 text-white" />
+            <div className="flex flex-col items-center text-center p-5 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mb-3">
+                <MapPin className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Address</h3>
+              <h3 className="text-lg font-semibold mb-2">Address</h3>
               <p className="text-gray-600 group-hover:text-purple-500 transition-colors">
                 28 Yizhuang Economic Development Zone<br />
                 Daxing District, Beijing, 16801
@@ -147,16 +147,139 @@ const Contact = () => {
             </div>
 
             {/* Business Hours */}
-            <div className="flex flex-col items-center text-center p-6 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mb-4">
-                <Clock className="h-7 w-7 text-white" />
+            <div className="flex flex-col items-center text-center p-5 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center mb-3">
+                <Clock className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Business Hours</h3>
+              <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
               <p className="text-gray-600">
                 Monday - Friday: 9AM - 6PM<br />
                 Saturday: 10AM - 4PM
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Connect With Us</h2>
+            <div className="w-20 h-1 bg-ecomotech-green mx-auto mb-4"></div>
+            <p className="max-w-2xl mx-auto text-base text-gray-600">
+              Follow us on social media to stay updated on our latest products, industry news, and sustainable energy solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/ecomotech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+              aria-label="Follow us on LinkedIn"
+            >
+              <div className="flex flex-col items-center text-center p-4 bg-ecomotech-light-gray rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0A66C2] 
+                              flex items-center justify-center mb-3 
+                              transform transition-all duration-300 
+                              group-hover:scale-110 group-hover:shadow-xl">
+                  <Linkedin className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                </div>
+                <h3 className="text-base font-semibold mb-1 text-gray-800 group-hover:text-[#0A66C2] transition-colors">
+                  LinkedIn
+                </h3>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center text-xs transition-colors">
+                  Follow Us <ArrowUpRight className="ml-1 h-3 w-3" />
+                </span>
+              </div>
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/people/Ecomotech/61574949172407/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+              aria-label="Follow us on Facebook"
+            >
+              <div className="flex flex-col items-center text-center p-4 bg-ecomotech-light-gray rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#1877F2] 
+                              flex items-center justify-center mb-3 
+                              transform transition-all duration-300 
+                              group-hover:scale-110 group-hover:shadow-xl">
+                  <Facebook className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                </div>
+                <h3 className="text-base font-semibold mb-1 text-gray-800 group-hover:text-[#1877F2] transition-colors">
+                  Facebook
+                </h3>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center text-xs transition-colors">
+                  Follow Us <ArrowUpRight className="ml-1 h-3 w-3" />
+                </span>
+              </div>
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/ecomotech.online/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+              aria-label="Follow us on Instagram"
+            >
+              <div className="flex flex-col items-center text-center p-4 bg-ecomotech-light-gray rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 
+                              flex items-center justify-center mb-3 
+                              transform transition-all duration-300 
+                              group-hover:scale-110 group-hover:shadow-xl">
+                  <Instagram className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                </div>
+                <h3 className="text-base font-semibold mb-1 text-gray-800 group-hover:text-pink-600 transition-colors">
+                  Instagram
+                </h3>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center text-xs transition-colors">
+                  Follow Us <ArrowUpRight className="ml-1 h-3 w-3" />
+                </span>
+              </div>
+            </a>
+
+            {/* X (Twitter) */}
+            <a
+              href="https://x.com/ecomotech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+              aria-label="Follow us on X (Twitter)"
+            >
+              <div className="flex flex-col items-center text-center p-4 bg-ecomotech-light-gray rounded-lg 
+                            shadow-sm hover:shadow-lg transition-all duration-300
+                            transform hover:-translate-y-1">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-black 
+                              flex items-center justify-center mb-3 
+                              transform transition-all duration-300 
+                              group-hover:scale-110 group-hover:shadow-xl">
+                  <Twitter className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                </div>
+                <h3 className="text-base font-semibold mb-1 text-gray-800 group-hover:text-black transition-colors">
+                  X (Twitter)
+                </h3>
+                <span className="text-ecomotech-green group-hover:text-ecomotech-dark-green 
+                               flex items-center text-xs transition-colors">
+                  Follow Us <ArrowUpRight className="ml-1 h-3 w-3" />
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
