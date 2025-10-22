@@ -1,4 +1,4 @@
-# Robots.txt for EcoMoTech - Renewable Energy Solutions
+# Robots.txt for EcoMoTech - Complete Renewable Energy Solutions for West Africa
 # https://ecomotech.online
 
 User-agent: *
@@ -10,9 +10,27 @@ Allow: /services/
 Allow: /news/
 Allow: /about
 Allow: /contact
+Allow: /join-us
 
-# Important pages for brand recognition
-Crawl-delay: 1
+# Important product categories
+Allow: /products/solar-panels
+Allow: /products/electric-motorcycles
+Allow: /products/ev-chargers
+Allow: /products/energy-storage
+Allow: /products/solar-appliances
+Allow: /products/home-systems
+Allow: /products/street-lights
+Allow: /products/electric-tricycles
+Allow: /products/solar-pumbs
+Allow: /products/solar-inverters
+
+# Important service pages
+Allow: /services/solar-installation
+Allow: /services/solar-maintenance
+Allow: /services/ev-charger-installation
+Allow: /services/ev-repair
+Allow: /services/solar-consultancy
+Allow: /services/energy-assessment
 
 # Block admin and development files
 Disallow: /admin/
@@ -23,27 +41,6 @@ Disallow: *.map
 Disallow: /deploy-*
 Disallow: /.env*
 Disallow: /vite.config.*
-
-# Special directives for search engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://ecomotech.online/sitemap.xml
-
-# Important: EcoMoTech brand pages
-# These pages are critical for brand recognition
-Allow: /
-Allow: /products
-Allow: /services
-Allow: /about
-Allow: /contact
-Allow: /news
 Disallow: /test-*
 
 # Allow CSS, JS, and images for better rendering

@@ -63,6 +63,8 @@ const CommercialPVBESSSystems = React.lazy(() => import("./pages/articles/Commer
 const BatterySafetyStandards = React.lazy(() => import("./pages/articles/BatterySafetyStandards"));
 const ThermalManagementWhitePaper = React.lazy(() => import("./pages/articles/ThermalManagementWhitePaper"));
 const BMSSoftwareDesign = React.lazy(() => import("./pages/articles/BMSSoftwareDesign"));
+const Top10BenefitsSolarEnergy = React.lazy(() => import("./pages/articles/Top10BenefitsSolarEnergy"));
+const ElectricMotorcyclesAfricanRoads = React.lazy(() => import("./pages/articles/ElectricMotorcyclesAfricanRoads"));
 
 const queryClient = new QueryClient();
 
@@ -136,6 +138,8 @@ const App = () => (
             <Route path="/news/battery-safety-standards" element={<BatterySafetyStandards />} />
             <Route path="/news/thermal-management-whitepaper" element={<ThermalManagementWhitePaper />} />
             <Route path="/news/bms-software-design" element={<BMSSoftwareDesign />} />
+            <Route path="/news/top-10-benefits-solar-energy" element={<Top10BenefitsSolarEnergy />} />
+            <Route path="/news/electric-motorcycles-african-roads" element={<ElectricMotorcyclesAfricanRoads />} />
             
             {/* Service Routes */}
             <Route path="/services/solar-installation" element={<SolarInstallation />} />

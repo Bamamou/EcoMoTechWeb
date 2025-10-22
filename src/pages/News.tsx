@@ -10,6 +10,28 @@ import { getPageSEO } from "@/lib/seo";
 
 export const newsItems = [
   {
+    id: 17,
+    title: "5 Reasons Why Electric Motorcycles Are Perfect for African Roads",
+    excerpt: "Discover why electric motorcycles are the future of transportation in West Africa — from fuel savings and durability to cleaner air and smoother rides on African roads.",
+    content: "The future of transportation in West Africa is electric, and electric motorcycles offer practical solutions to transportation challenges. From eliminating fuel costs and reducing maintenance to providing cleaner air and empowering communities, e-motorcycles are perfectly suited for African road conditions and everyday needs.",
+    date: "October 22, 2025",
+    author: "EcoMoTech Editorial Team",
+    category: "E-Mobility",
+    image: "/EcoMoTechWeb/images/News/Charging station in Africa.png",
+    link: "/news/electric-motorcycles-african-roads"
+  },
+  {
+    id: 16,
+    title: "Top 10 Benefits of Switching to Solar Energy for Homes and Businesses",
+    excerpt: "Discover the key advantages of solar energy adoption in West Africa, from significant cost savings and energy independence to environmental benefits and economic growth opportunities.",
+    content: "In West Africa, electricity access and reliability remain major challenges. This comprehensive guide explores the top 10 benefits of switching to solar energy, covering cost savings, energy independence, environmental impact, and economic opportunities. From reducing electricity bills by up to 70% to supporting local job creation, solar energy offers a transformative solution for both residential and commercial applications across the region.",
+    date: "October 22, 2025",
+    author: "EcoMoTech Editorial Team",
+    category: "Solar Guide",
+    image: "/EcoMoTechWeb/images/News/energie solaire.png",
+    link: "/news/top-10-benefits-solar-energy"
+  },
+  {
     id: 15,
     title: "Advanced Battery Management System Software Design for EV Applications",
     excerpt: "Comprehensive analysis of advanced software design for Battery Management Systems (BMS) in electric vehicle applications, covering modular architectures, SOC/SOH estimation algorithms, and cell balancing strategies.",

@@ -109,6 +109,12 @@ const productPages: SitemapURL[] = [
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'weekly',
     priority: 0.8
+  },
+  {
+    loc: 'https://ecomotech.online/products/solar-appliances',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'weekly',
+    priority: 0.8
   }
 ];
 
@@ -219,6 +225,42 @@ const newsPages: SitemapURL[] = [
     lastmod: '2025-09-14',
     changefreq: 'yearly',
     priority: 0.5
+  },
+  {
+    loc: 'https://ecomotech.online/news/commercial-pv-bess-systems',
+    lastmod: '2025-09-16',
+    changefreq: 'yearly',
+    priority: 0.6
+  },
+  {
+    loc: 'https://ecomotech.online/news/battery-safety-standards',
+    lastmod: '2025-10-07',
+    changefreq: 'yearly',
+    priority: 0.7
+  },
+  {
+    loc: 'https://ecomotech.online/news/thermal-management-whitepaper',
+    lastmod: '2025-10-07',
+    changefreq: 'yearly',
+    priority: 0.7
+  },
+  {
+    loc: 'https://ecomotech.online/news/bms-software-design',
+    lastmod: '2025-10-08',
+    changefreq: 'yearly',
+    priority: 0.7
+  },
+  {
+    loc: 'https://ecomotech.online/news/top-10-benefits-solar-energy',
+    lastmod: '2025-10-22',
+    changefreq: 'yearly',
+    priority: 0.8
+  },
+  {
+    loc: 'https://ecomotech.online/news/electric-motorcycles-african-roads',
+    lastmod: '2025-10-22',
+    changefreq: 'yearly',
+    priority: 0.8
   }
 ];
 
