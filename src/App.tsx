@@ -65,6 +65,7 @@ const ThermalManagementWhitePaper = React.lazy(() => import("./pages/articles/Th
 const BMSSoftwareDesign = React.lazy(() => import("./pages/articles/BMSSoftwareDesign"));
 const Top10BenefitsSolarEnergy = React.lazy(() => import("./pages/articles/Top10BenefitsSolarEnergy"));
 const ElectricMotorcyclesAfricanRoads = React.lazy(() => import("./pages/articles/ElectricMotorcyclesAfricanRoads"));
+const SmartInvertersHybridSystems = React.lazy(() => import("./pages/articles/SmartInvertersHybridSystems"));
 
 const queryClient = new QueryClient();
 
@@ -140,6 +141,7 @@ const App = () => (
             <Route path="/news/bms-software-design" element={<BMSSoftwareDesign />} />
             <Route path="/news/top-10-benefits-solar-energy" element={<Top10BenefitsSolarEnergy />} />
             <Route path="/news/electric-motorcycles-african-roads" element={<ElectricMotorcyclesAfricanRoads />} />
+            <Route path="/news/smart-inverters-hybrid-systems" element={<SmartInvertersHybridSystems />} />
             
             {/* Service Routes */}
             <Route path="/services/solar-installation" element={<SolarInstallation />} />

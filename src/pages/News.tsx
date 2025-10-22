@@ -10,6 +10,17 @@ import { getPageSEO } from "@/lib/seo";
 
 export const newsItems = [
   {
+    id: 18,
+    title: "Understanding Smart Inverters and Their Role in Hybrid Systems",
+    excerpt: "Discover how smart inverters are revolutionizing hybrid energy systems by enhancing efficiency, stability, and grid interaction. Learn their functions, benefits, challenges, and real-world applications.",
+    content: "Smart inverters are redefining how energy is managed in hybrid systems. Beyond conversion, they bring intelligence, adaptability, and communication, transforming renewable installations into responsive and resilient energy ecosystems. This comprehensive guide covers their technical functionalities, benefits, challenges, and real-world applications in West Africa.",
+    date: "October 22, 2025",
+    author: "EcoMoTech Technical Team",
+    category: "Technical Guide",
+    image: "/images/Inverters/Growatt MAX 15KTL3-X.webp",
+    link: "/news/smart-inverters-hybrid-systems"
+  },
+  {
     id: 17,
     title: "5 Reasons Why Electric Motorcycles Are Perfect for African Roads",
     excerpt: "Discover why electric motorcycles are the future of transportation in West Africa — from fuel savings and durability to cleaner air and smoother rides on African roads.",

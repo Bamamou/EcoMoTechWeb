@@ -261,6 +261,12 @@ const newsPages: SitemapURL[] = [
     lastmod: '2025-10-22',
     changefreq: 'yearly',
     priority: 0.8
+  },
+  {
+    loc: 'https://ecomotech.online/news/smart-inverters-hybrid-systems',
+    lastmod: '2025-10-22',
+    changefreq: 'yearly',
+    priority: 0.8
   }
 ];
 
