@@ -2,8 +2,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import Clarity from "@microsoft/clarity";
+import SocialShareButton from "@/components/ui/SocialShareButton";
 import Index from "./pages/Index";
 import ProductsPage from "./pages/Products";
 import SolarPanels from "./components/products/SolarPanels";
@@ -84,12 +86,28 @@ const getBasename = () => {
   return import.meta.env.VITE_APP_BASENAME || '/';
 };
 
+// Component to track page views with Microsoft Clarity
+const ClarityPageTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Track page view when location changes
+    if (Clarity && typeof Clarity.event === 'function') {
+      Clarity.event(`page_view_${location.pathname.replace(/\//g, '_')}`)
+    }
+  }, [location.pathname]);
+
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <Router basename={getBasename()}>
+        <ClarityPageTracker />
+        <SocialShareButton />
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Index />} />

@@ -82,11 +82,11 @@ const SmartInvertersHybridSystems = () => {
               </button>
             </div>
             
-            <div className="mb-8">
+            <div className="mb-8 w-full">
               <ResponsiveImage
                 src="/images/Inverters/Growatt MAX 15KTL3-X.webp"
                 alt="Smart inverters in hybrid energy systems"
-                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg"
+                className="w-full h-auto object-contain rounded-lg shadow-lg"
               />
             </div>
           </div>
