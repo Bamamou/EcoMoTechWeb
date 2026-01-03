@@ -141,6 +141,8 @@ const SolarPanelDetails = () => {
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
+                    title={`View ${panel.name} image ${index + 1}`}
+                    aria-label={`View ${panel.name} image ${index + 1}`}
                     className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
                       selectedImage === index 
                         ? 'border-blue-500 opacity-100' 
@@ -237,7 +239,7 @@ const SolarPanelDetails = () => {
                 </button>
               </div>
               <div className="mt-4 text-center text-blue-100 text-sm">
-                📞 +86 188 1079 9128 | 📧 ecomotech@outlook.com
+                📞 +86 188 1079 9128 | 📧 contactus@ecomotech.online
               </div>
             </div>
           </div>
@@ -674,11 +676,7 @@ const SolarPanelDetails = () => {
                       <div className="text-sm text-gray-600">{recommendedPanel.specifications["Cell Type"]}</div>
                     </div>
                     
-                    <p className="text-gray-600 text-sm mb-4 overflow-hidden" style={{
-                      display: '-webkit-box',
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: 'vertical'
-                    }}>{recommendedPanel.description}</p>
+                    <p className={`text-gray-600 text-sm mb-4 ${styles.lineClamp2}`}>{recommendedPanel.description}</p>
                     
                     <div className="mb-4">
                       <div className="grid grid-cols-1 gap-2 text-sm">

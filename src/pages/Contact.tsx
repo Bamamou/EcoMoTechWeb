@@ -120,16 +120,16 @@ const Contact = () => {
             {/* Email */}
             <div className="flex flex-col items-center text-center p-5 bg-ecomotech-light-gray rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-3">
-                <a href="mailto:ecomotech@outlook.com" aria-label="Send Email">
+                <a href="mailto:contactus@ecomotech.online" aria-label="Send Email">
                   <Mail className="h-6 w-6 text-white transition-transform hover:scale-110" />
                 </a>
               </div>
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <a 
-                href="mailto:ecomotech@outlook.com" 
+                href="mailto:contactus@ecomotech.online" 
                 className="text-gray-600 hover:text-blue-500 transition-colors flex items-center gap-2"
               >
-                <span>ecomotech@outlook.com</span>
+                <span>contactus@ecomotech.online</span>
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>

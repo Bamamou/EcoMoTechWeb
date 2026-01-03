@@ -752,7 +752,7 @@ const EVChargerInstallation = () => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>evcharging@ecomotech.com</span>
+              <span>services@ecomotech.online</span>
             </div>
             <div className="flex items-center gap-2">
               <Headphones className="w-4 h-4" />

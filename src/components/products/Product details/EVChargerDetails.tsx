@@ -124,6 +124,8 @@ const EVChargerDetails = () => {
                       <button
                         key={index}
                         onClick={() => setSelectedImage(index)}
+                        title={`View ${charger.name} image ${index + 1}`}
+                        aria-label={`View ${charger.name} image ${index + 1}`}
                         className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
                           selectedImage === index ? 'border-green-600' : 'border-gray-200'
                         }`}

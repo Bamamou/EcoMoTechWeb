@@ -609,8 +609,8 @@ const SolarConsultancy = () => {
                 <Mail className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Email Consultation</h3>
                 <p className="text-blue-200 mb-4">Get detailed information via email</p>
-                <a href="mailto:ecomotech@outlook.com" className="text-emerald-400 font-bold text-lg hover:text-white transition-colors">
-                  ecomotech@outlook.com
+                <a href="mailto:services@ecomotech.online" className="text-emerald-400 font-bold text-lg hover:text-white transition-colors">
+                  services@ecomotech.online
                 </a>
               </div>
             </div>

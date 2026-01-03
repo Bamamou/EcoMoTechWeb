@@ -505,7 +505,7 @@ const SolarMaintenance = () => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>ecomotech@outlook.com</span>
+              <span>services@ecomotech.online</span>
             </div>
             <div className="flex items-center gap-2">
               <Headphones className="w-4 h-4" />

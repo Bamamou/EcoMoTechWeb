@@ -75,10 +75,12 @@ const EnergyAssessment = () => {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                    <Calculator className="w-5 h-5 mr-2" />
-                    Get Free Assessment Quote
-                  </Button>
+                  <Link to="/contact">
+                    <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                      <Calculator className="w-5 h-5 mr-2" />
+                      Get Free Assessment Quote
+                    </Button>
+                  </Link>
                   <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all duration-300 shadow-md hover:shadow-lg">
                     <Play className="w-5 h-5 mr-2" />
                     Watch Process Video
@@ -232,10 +234,12 @@ const EnergyAssessment = () => {
                         </div>
                       </div>
                       
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold">
-                        Schedule Assessment
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+                      <Link to="/contact">
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold">
+                          Schedule Assessment
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -343,10 +347,12 @@ const EnergyAssessment = () => {
                   </div>
 
                   <div className="text-center">
-                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Get Commercial Assessment Quote
-                    </Button>
+                    <Link to="/contact">
+                      <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <Phone className="w-5 h-5 mr-2" />
+                        Get Commercial Assessment Quote
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -453,10 +459,12 @@ const EnergyAssessment = () => {
                   </div>
 
                   <div className="text-center">
-                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Request Industrial Assessment
-                    </Button>
+                    <Link to="/contact">
+                      <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <Phone className="w-5 h-5 mr-2" />
+                        Request Industrial Assessment
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -675,10 +683,12 @@ const EnergyAssessment = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 Call (0086) 18810799128-ENERGY
               </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm">
-                <Mail className="w-5 h-5 mr-2" />
-                Get Online Quote
-              </Button>
+              <Link to="/contact">
+                <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold backdrop-blur-sm">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Get Online Quote
+                </Button>
+              </Link>
             </div>
             
             <div className="mt-8 text-center">

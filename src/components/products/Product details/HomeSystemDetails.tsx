@@ -146,7 +146,7 @@ const HomeSystemDetails = () => {
                 </button>
               </div>
               <div className={styles.ctaContact}>
-                <p>📞 +237 6 71 23 45 67 | 📧 info@ecomotech.com</p>
+                <p>📞 +237 6 71 23 45 67 | 📧 contactus@ecomotech.online</p>
               </div>
             </div>
           </div>

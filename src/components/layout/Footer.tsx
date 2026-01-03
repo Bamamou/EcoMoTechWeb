@@ -196,10 +196,10 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-ecomotech-green mr-2" />
                 <a 
-                  href="mailto:ecomotech@outlook.com"
+                  href="mailto:contactus@ecomotech.online"
                   className="text-gray-400 hover:text-ecomotech-green transition-colors flex items-center"
                 >
-                  ecomotech@outlook.com
+                  contactus@ecomotech.online
                   <ArrowUpRight className="h-4 w-4 ml-1" />
                 </a>
               </div>

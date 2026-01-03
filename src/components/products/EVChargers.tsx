@@ -203,6 +203,8 @@ const EVChargers = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
+                title="Sort products"
+                aria-label="Sort products"
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               >
                 <option value="featured">Featured</option>
@@ -249,6 +251,8 @@ const EVChargers = () => {
                   {/* Favorite Button */}
                   <button
                     onClick={() => toggleFavorite(product.id)}
+                    title={favorites.includes(product.id) ? 'Remove from favorites' : 'Add to favorites'}
+                    aria-label={favorites.includes(product.id) ? 'Remove from favorites' : 'Add to favorites'}
                     className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all"
                   >
                     <Heart 
